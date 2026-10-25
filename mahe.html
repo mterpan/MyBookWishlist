@@ -119,13 +119,14 @@ img{max-width:100%}
 @keyframes vt-in{from{opacity:0;transform:translateY(8px)}}
 .wrap{animation:page-in .35s ease both}
 @keyframes page-in{from{opacity:0;transform:translateY(8px)}}
-.cover:has(> img:not(.ok))::before{content:"";position:absolute;inset:0;z-index:2;border-radius:inherit;
-  background:linear-gradient(100deg,var(--spine) 30%,color-mix(in srgb,var(--spine) 55%,var(--surface)) 50%,var(--spine) 70%);
-  background-size:220% 100%;animation:shimmer 1.3s linear infinite}
-@keyframes shimmer{from{background-position:120% 0}to{background-position:-120% 0}}
-.cover img{opacity:0;transition:opacity .35s ease}
+.cover:has(> img:not(.ok))::before{content:"";position:absolute;inset:0;z-index:2;background:var(--spine);animation:pulse 1.1s ease-in-out infinite alternate;will-change:opacity}
+@keyframes pulse{from{opacity:1}to{opacity:.55}}
+.cover img{opacity:0;transition:opacity .3s ease}
+.cover{contain:paint}
 .cover img.ok{opacity:1}
-.book{animation:card-in .4s ease both;animation-delay:calc(var(--i,0) * 18ms)}
+.book{animation:card-in .35s ease both;animation-delay:calc(var(--i,0) * 22ms)}
+.grid .book:nth-child(n+13){animation:none}
+.shelf{content-visibility:auto;contain-intrinsic-size:auto 640px}
 @keyframes card-in{from{opacity:0;transform:translateY(10px)}}
 .shelf{animation:page-in .35s ease both}
 #grid.calm .book,#grid.calm .shelf{animation:none}
@@ -170,13 +171,14 @@ const DATA="mahe.json", EMPTY_MSG="La liste de Mahé arrive bientôt : ses livre
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const firstAuthorKey=a=>{const n=(a||"").split(",")[0].trim().split(" ");return (n[n.length-1]||"").toLowerCase()};
 const fold=s=>(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
-const olCover=isbn=>isbn?`https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg?default=false`:"";
+const olCover=isbn=>isbn?`https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg?default=false`:"";
 const gCover=id=>id?`https://books.google.com/books/content?id=${encodeURIComponent(id)}&printsec=frontcover&img=1&zoom=1`:"";
 const found={};
+const small=u=>u?u.replace(/fife=w\d+-h\d+/,"fife=w360-h540"):u;
 function sources(b){
   if(b.noCover) return [];
   const o=olCover(b.isbn), g=b.cover?gCover(b.gid):"";
-  return [...(b.covers||[]),b.cover,g,amzCover(b.isbn),o,lecCover(b.isbn),"api"].filter(Boolean);
+  return [...(b.covers||[]),small(b.cover),g,amzCover(b.isbn),o,lecCover(b.isbn),"api"].filter(Boolean);
 }
 function isbn10(i){
   if(!i||i.length!==13||!i.startsWith("978"))return "";
@@ -184,7 +186,7 @@ function isbn10(i){
   const d=(11-t%11)%11;return c+(d===10?"X":d);
 }
 const lecCover=i=>i?`https://media.e.leclerc/${i}_1?fit=fit&fmt=jpg&qlt=85&wid=450&hei=450`:"";
-const amzCover=i=>{const t=isbn10(i);return t?`https://images-na.ssl-images-amazon.com/images/P/${t}.01.LZZZZZZZ.jpg`:""};
+const amzCover=i=>{const t=isbn10(i);return t?`https://images-na.ssl-images-amazon.com/images/P/${t}.01.MZZZZZZZ.jpg`:""};
 async function gbooks(q){
   try{
     const r=await fetch(`https://www.googleapis.com/books/v1/volumes?maxResults=10&q=${encodeURIComponent(q)}`);
@@ -234,11 +236,14 @@ function coverOk(img){
 }
 function coverHTML(b){
   const ph=`<div class="ph"><b>${esc(b.title)}</b><span>${esc((b.authors||"").split(",")[0])}</span></div>`;
-  if(found[b.id]) return ph+`<img class="ok" src="${esc(found[b.id])}" alt="">`;
+  if(found[b.id]) return ph+`<img class="ok" src="${esc(found[b.id])}" alt="" decoding="async">`;
   const list=sources(b); if(!list.length) return ph;
-  if(list[0]==="api") return ph+`<img alt="" data-id="${esc(b.id)}" data-i="-1" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" onload="coverOk(this)" onerror="nextCover(this)">`;
-  return ph+`<img src="${esc(list[0])}" alt="" loading="lazy" referrerpolicy="no-referrer" data-id="${esc(b.id)}" data-i="0" onload="coverOk(this)" onerror="nextCover(this)">`;
+  const first=list[0]==="api"?"data:image/gif;base64,R0lGODlhAQABAAAAACw=":list[0];
+  return ph+`<img alt="" decoding="async" referrerpolicy="no-referrer" data-src="${esc(first)}" data-id="${esc(b.id)}" data-i="${list[0]==="api"?-1:0}" onload="coverOk(this)" onerror="nextCover(this)">`;
 }
+const io="IntersectionObserver" in window?new IntersectionObserver(es=>{for(const e of es){if(e.isIntersecting){io.unobserve(e.target);startImg(e.target)}}},{rootMargin:"400px 0px"}):null;
+function startImg(img){ if(img.dataset.src&&!img.getAttribute("src")){ img.src=img.dataset.src; } }
+function watchCovers(root,now){ for(const img of root.querySelectorAll("img[data-src]:not([src])")){ if(now||!io) startImg(img); else io.observe(img); } }
 const coll=new Intl.Collator("fr",{numeric:true});
 const tomeLabel=b=>b.series?(b.seriesNumber?`Tome ${b.seriesNumber}`:"Saga"):"";
 function card(b,showSeries){
@@ -288,8 +293,10 @@ function render(){
     const list=sortFlat((all?hits:wished).slice(),s);
     html=list.length?`<div class="grid">${list.map(b=>card(b,true)).join("")}</div>`:"";
   }
+  if(io) io.disconnect();
   $("#grid").innerHTML=html;
-  let k=0; for(const el of $("#grid").querySelectorAll(".book")){ el.style.setProperty("--i",Math.min(k++,24)); }
+  watchCovers($("#grid"),false);
+  let k=0; for(const el of $("#grid").querySelectorAll(".book")){ el.style.setProperty("--i",Math.min(k++,12)); }
   const n=books.length, nw=books.filter(b=>!b.owned).length;
   $("#count").textContent=n?(q?`${wished.length} idée${wished.length>1?"s":""} sur ${nw} correspondent`:`${nw} idée${nw>1?"s":""} de cadeau`):"";
   const e=$("#empty"); e.hidden=!!html; if(!html) e.textContent=n?(q?"Aucun livre ne correspond à cette recherche.":"Rien à offrir pour l'instant : Mahé a déjà tout !"):EMPTY_MSG;
@@ -301,7 +308,7 @@ $("#q").addEventListener("input",()=>{ $("#grid").classList.add("calm"); render(
 $("#sort").addEventListener("change",()=>{ $("#grid").classList.remove("calm"); if(document.startViewTransition && !matchMedia("(prefers-reduced-motion: reduce)").matches) document.startViewTransition(render); else render();try{localStorage.setItem("view",$("#sort").value)}catch(e){}});
 try{const s=localStorage.getItem("view");if(s)$("#sort").value=s}catch(e){}
 
-function openSheet(html){$("#sheet").innerHTML=html;$("#veil").hidden=false;document.body.style.overflow="hidden";$("#sheet").scrollTop=0}
+function openSheet(html){$("#sheet").innerHTML=html;watchCovers($("#sheet"),true);$("#veil").hidden=false;document.body.style.overflow="hidden";$("#sheet").scrollTop=0}
 function closeSheet(){
   const v=$("#veil"); if(v.hidden||v.classList.contains("closing")) return;
   if(matchMedia("(prefers-reduced-motion: reduce)").matches){ hideSheet(); return; }
