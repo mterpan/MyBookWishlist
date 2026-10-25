@@ -148,6 +148,7 @@ const olCover=isbn=>isbn?`https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg?de
 const gCover=id=>id?`https://books.google.com/books/content?id=${encodeURIComponent(id)}&printsec=frontcover&img=1&zoom=1`:"";
 const found={};
 function sources(b){
+  if(b.noCover) return [];
   const o=olCover(b.isbn), g=b.cover?gCover(b.gid):"";
   return [...(b.covers||[]),b.cover,g,o,amzCover(b.isbn),"api"].filter(Boolean);
 }
@@ -165,10 +166,20 @@ async function gbooks(q){
   }catch(e){}
   return "";
 }
+let apiActive=0; const apiWait=[];
+function apiSlot(){ return new Promise(r=>{ if(apiActive<3){apiActive++;r()} else apiWait.push(r) }) }
+function apiDone(){ const n=apiWait.shift(); if(n) n(); else apiActive--; }
+function cacheGet(k){ try{return localStorage.getItem("cv:"+k)}catch(e){return null} }
+function cacheSet(k,v){ try{localStorage.setItem("cv:"+k,v)}catch(e){} }
 async function apiCover(b){
-  const title=(b.title||"").split(/ [:\-–] /)[0].trim();
-  const author=(b.authors||"").split(",")[0].trim().split(" ").pop();
-  return (b.isbn&&await gbooks(`isbn:${b.isbn}`))||await gbooks(`intitle:${title} inauthor:${author}`)||await gbooks(`${title} ${author}`);
+  const key=b.id, c=cacheGet(key); if(c!==null) return c;
+  await apiSlot();
+  try{
+    const title=(b.title||"").split(/ [:\-–] /)[0].trim();
+    const author=(b.authors||"").split(",")[0].trim().split(" ").pop();
+    const url=(b.coverQuery&&await gbooks(b.coverQuery))||(b.isbn&&await gbooks(`isbn:${b.isbn}`))||await gbooks(`intitle:${title} inauthor:${author}`);
+    cacheSet(key,url||""); return url||"";
+  } finally { apiDone(); }
 }
 async function nextCover(img){
   const b=books.find(x=>x.id===img.dataset.id); if(!b){img.remove();return}
@@ -263,7 +274,8 @@ function showDetail(id){
   const b=books.find(x=>x.id===id); if(!b) return; openId=id;
   history.replaceState(null,"","#"+id);
   const facts=[b.year&&`Parution ${b.year}`,b.pages&&`${b.pages} pages`,b.publisher].filter(Boolean);
-  const syn=b.synopsis?b.synopsis.split(/\n+/).map(p=>`<p>${esc(p)}</p>`).join(""):`<p class="none">Pas de résumé pour ce livre.</p>`;
+  const about=(seriesMeta[b.series]||{}).about;
+  const syn=(b.synopsis?b.synopsis.split(/\n+/).map(p=>`<p>${esc(p)}</p>`).join(""):"")+(about?`<p class="label" style="margin-top:14px">À propos de la série</p><p>${esc(about)}</p>`:"")||`<p class="none">Pas de résumé pour ce livre.</p>`;
   openSheet(`<div class="sheet-top"><span class="label">Fiche du livre</span><button id="close">Fermer</button></div>
   <div class="detail">
     <div class="cover">${coverHTML(b)}</div>
@@ -276,10 +288,10 @@ function showDetail(id){
       ${facts.length?`<ul class="facts">${facts.map(f=>`<li>${esc(f)}</li>`).join("")}</ul>`:""}
       <div class="links">
         ${b.isbn?`<span class="notice">ISBN ${esc(b.isbn)}</span>`:""}
-        ${b.link?`<a href="${esc(b.link)}" target="_blank" rel="noopener">${b.link.includes("google")?"Voir sur Google Livres":"Voir la fiche éditeur"}</a>`:""}
+        ${b.link?`<a href="${esc(b.link)}" target="_blank" rel="noopener">${b.link.includes("google")?"Voir sur Google Livres":b.link.includes("hachette-collections")?"Commander sur Hachette Collections":"Voir la fiche éditeur"}</a>`:""}
       </div>
     </div>
-    <div class="syn"><p class="label">Résumé</p>${syn}</div>
+    <div class="syn">${b.synopsis?`<p class="label">Résumé</p>`:""}${syn}</div>
   </div>`);
   $("#close").onclick=closeSheet;
 }
