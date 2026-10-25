@@ -120,8 +120,8 @@ const olCover=isbn=>isbn?`https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg?de
 const gCover=id=>id?`https://books.google.com/books/content?id=${encodeURIComponent(id)}&printsec=frontcover&img=1&zoom=1`:"";
 const found={};
 function sources(b){
-  const o=olCover(b.isbn);
-  return [b.cover,o,"api"].filter(Boolean);
+  const o=olCover(b.isbn), g=b.cover?gCover(b.gid):"";
+  return [b.cover,g,o,"api"].filter(Boolean);
 }
 async function apiCover(b){
   const q=b.isbn?`isbn:${b.isbn}`:`intitle:${b.title} inauthor:${(b.authors||"").split(",")[0]}`;
