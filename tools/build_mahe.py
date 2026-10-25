@@ -18,7 +18,7 @@ SERIES = {
         wanted=["P'tit Loup rentre à l'école", "P'tit Loup aime son doudou", "P'tit Loup a peur du noir",
                 "P'tit Loup prépare Noël", "P'tit Loup n'aime que les pâtes", "P'tit Loup dit toujours non",
                 "P'tit Loup a un bobo", "P'tit Loup part en vacances", "P'tit Loup ne veut pas partager",
-                "P'tit Loup aime sa gardienne", "P'tit Loup s'habille tout seul", "Au dodo, P'tit Loup !",
+                "P'tit Loup aime sa nounou", "P'tit Loup s'habille tout seul", "Au dodo, P'tit Loup !",
                 "P'tit Loup fait une colère", "P'tit Loup part en voyage", "P'tit Loup apprend à jardiner",
                 "P'tit Loup est le roi de la galette", "P'tit Loup fête son anniversaire", "P'tit Loup va chez le docteur",
                 "P'tit Loup fait du ski", "P'tit Loup se lave tout seul", "P'tit Loup veut être le chef",
@@ -28,6 +28,9 @@ SERIES = {
                 "P'tit Loup est poli", "P'tit Loup se déguise", "P'tit Loup veut devenir pompier",
                 "P'tit Loup ne veut pas aller à l'école", "P'tit Loup visite Paris", "P'tit Loup fête Halloween",
                 "P'tit Loup aime les livres", "P'tit Loup fait des crêpes",
+                "P'tit Loup à la piscine", "P'tit Loup ne met plus de couches", "P'tit Loup a un animal de compagnie",
+                "P'tit Loup passe une journée sans écran", "P'tit Loup apprend à s'habiller", "P'tit Loup attend le Père Noël",
+                "P'tit Loup aime l'école", "P'tit Loup à la ferme", "P'tit Loup va à la plage", "P'tit Loup veut tout faire comme un grand",
                 ("P'tit Loup adore les dinosaures", "9791039577403", "2026")],
     ),
     "Les émotions de Gaston": dict(
@@ -48,7 +51,8 @@ SERIES = {
         wanted=["Azuro le dragon bleu", "Azuro et l'œuf mystérieux", "Azuro à l'école des monstres",
                 "Azuro et la fée des glaces", "Azuro au royaume des dragons", "Azuro et le défi du Père Noël",
                 "Azuro et la dernière licorne", "Azuro et la sorcière", "Azuro et le château oublié",
-                "Azuro sur la piste de Jippy", "Azuro et l'île fantastique", "Azuro, il faut sauver la Lune !"],
+                "Azuro sur la piste de Jippy", "Azuro et l'île fantastique", "Azuro, il faut sauver la Lune !",
+                "Azuro et le cristal chantant", "Azuro, un cadeau magique pour maman", "Azuro et les dragons"],
     ),
     "Bluey": dict(
         qprefix="Bluey", qkey="Hachette",
@@ -139,5 +143,9 @@ for name, s in SERIES.items():
             b["coverQuery"] = f"{s['qprefix']} {title} {s['qkey']}".strip()
             books.append(b)
 
+ISBN = json.load(open("tools/isbn.json"))
+for b in books:
+    if not b.get("isbn") and b["title"] in ISBN:
+        b["isbn"] = ISBN[b["title"]]
 json.dump({"series": series_meta, "books": books}, open("mahe.json", "w"), ensure_ascii=False, indent=1)
 print(len(books), "livres,", sum(1 for b in books if not b.get("owned")), "souhaités")

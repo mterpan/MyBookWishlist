@@ -153,13 +153,14 @@ const found={};
 function sources(b){
   if(b.noCover) return [];
   const o=olCover(b.isbn), g=b.cover?gCover(b.gid):"";
-  return [...(b.covers||[]),b.cover,g,o,amzCover(b.isbn),"api"].filter(Boolean);
+  return [...(b.covers||[]),b.cover,g,amzCover(b.isbn),o,lecCover(b.isbn),"api"].filter(Boolean);
 }
 function isbn10(i){
   if(!i||i.length!==13||!i.startsWith("978"))return "";
   const c=i.slice(3,12);let t=0;for(let k=0;k<9;k++)t+=(10-k)*+c[k];
   const d=(11-t%11)%11;return c+(d===10?"X":d);
 }
+const lecCover=i=>i?`https://media.e.leclerc/${i}_1?fit=fit&fmt=jpg&qlt=85&wid=450&hei=450`:"";
 const amzCover=i=>{const t=isbn10(i);return t?`https://images-na.ssl-images-amazon.com/images/P/${t}.01.LZZZZZZZ.jpg`:""};
 async function gbooks(q){
   try{
@@ -172,8 +173,15 @@ async function gbooks(q){
 let apiActive=0; const apiWait=[];
 function apiSlot(){ return new Promise(r=>{ if(apiActive<3){apiActive++;r()} else apiWait.push(r) }) }
 function apiDone(){ const n=apiWait.shift(); if(n) n(); else apiActive--; }
-function cacheGet(k){ try{return localStorage.getItem("cv:"+k)}catch(e){return null} }
+function cacheGet(k){ try{const v=localStorage.getItem("cv:"+k);return v?v:null}catch(e){return null} }
 function cacheSet(k,v){ try{localStorage.setItem("cv:"+k,v)}catch(e){} }
+async function olSearch(b){
+  try{
+    const r=await fetch(`https://openlibrary.org/search.json?limit=5&fields=cover_i&q=${encodeURIComponent((b.coverQuery||b.title))}`);
+    const d=await r.json(); const it=(d.docs||[]).find(x=>x.cover_i);
+    return it?`https://covers.openlibrary.org/b/id/${it.cover_i}-M.jpg`:"";
+  }catch(e){return ""}
+}
 async function apiCover(b){
   const key=b.id, c=cacheGet(key); if(c!==null) return c;
   await apiSlot();
@@ -181,7 +189,8 @@ async function apiCover(b){
     const title=(b.title||"").split(/ [:\-–] /)[0].trim();
     const author=(b.authors||"").split(",")[0].trim().split(" ").pop();
     const url=(b.coverQuery&&await gbooks(b.coverQuery))||(b.isbn&&await gbooks(`isbn:${b.isbn}`))||await gbooks(`intitle:${title} inauthor:${author}`);
-    cacheSet(key,url||""); return url||"";
+    const fin=url||await olSearch(b);
+    if(fin) cacheSet(key,fin); return fin||"";
   } finally { apiDone(); }
 }
 async function nextCover(img){
