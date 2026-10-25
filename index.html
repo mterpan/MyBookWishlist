@@ -57,8 +57,8 @@ h1{font:400 clamp(30px,7vw,44px)/1.1 var(--f-display);margin:0;text-wrap:balance
     <a class="card" href="maxence.html">
       <div class="spines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div>
-        <div class="who">Maxence</div>
-        <h2>Mes envies de lecture</h2>
+        <div class="who">Romans, SF et BD</div>
+        <h2>La liste de Maxence</h2>
         <p class="n" id="n-max">Romans, science-fiction, BD et éditions illustrées</p>
       </div>
       <span class="go">Voir la liste ›</span>
@@ -66,7 +66,7 @@ h1{font:400 clamp(30px,7vw,44px)/1.1 var(--f-display);margin:0;text-wrap:balance
     <a class="card mahe" href="mahe.html">
       <div class="spines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div>
-        <div class="who">Mahé</div>
+        <div class="who">Albums jeunesse</div>
         <h2>La liste de Mahé</h2>
         <p class="n" id="n-mahe">Ses séries préférées et les tomes qui lui manquent</p>
       </div>
@@ -77,7 +77,7 @@ h1{font:400 clamp(30px,7vw,44px)/1.1 var(--f-display);margin:0;text-wrap:balance
 <script>
 fetch("books.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{
   const n=Array.isArray(d)?d.length:(d.books||[]).length;
-  document.getElementById("n-max").textContent=`${n} livres · romans, science-fiction, BD et éditions illustrées`;
+  document.getElementById("n-max").textContent=`${n} livres, dont des éditions illustrées`;
 }).catch(()=>{});
 fetch("mahe.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{
   const b=Array.isArray(d)?d:(d.books||[]), w=b.filter(x=>!x.owned).length, s=new Set(b.map(x=>x.series).filter(Boolean)).size;
