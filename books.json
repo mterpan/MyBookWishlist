@@ -78,7 +78,9 @@
   "year": "2026",
   "id": "f4f53e23-3fe8-4ca5-b299-eab2275e82c7",
   "gid": "",
-  "cover": "https://images.isbndb.com/covers/24080083482926.jpg"
+  "cover": "https://images.isbndb.com/covers/24080083482926.jpg",
+  "series": "Éditions MinaLima",
+  "seriesNumber": null
  },
  {
   "addedAt": "2026-01-22",
@@ -93,7 +95,9 @@
   "year": "2025",
   "id": "647bb5ad-46e9-481a-b0c6-7dd460c565f7",
   "gid": "2pdEEQAAQBAJ",
-  "cover": "https://books.google.com/books/publisher/content?id=2pdEEQAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71zsAPxrWt6BoZEb-hpCwGNLQt-8CgneayEyPZacmHhnbXbWP3bWa8lS9UambD8Up2qcu4alH_JfxkMXDivcmn7cfFxWzNKbxtIi3zYLzcTuNji4uDYj3Is0Jbh9WArBx61a0DD&fife=w1000-h1000"
+  "cover": "https://books.google.com/books/publisher/content?id=2pdEEQAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71zsAPxrWt6BoZEb-hpCwGNLQt-8CgneayEyPZacmHhnbXbWP3bWa8lS9UambD8Up2qcu4alH_JfxkMXDivcmn7cfFxWzNKbxtIi3zYLzcTuNji4uDYj3Is0Jbh9WArBx61a0DD&fife=w1000-h1000",
+  "series": "Éditions MinaLima",
+  "seriesNumber": null
  },
  {
   "addedAt": "2025-03-28",
@@ -354,7 +358,9 @@
   "covers": [
    "https://ssr.fidelio.ca/Public/img/catalog/cover/9782075189897.jpg",
    "https://media.e.leclerc/9782075189897_1?fit=fit&op_sharpen=1&resmode=bilin&fmt=webP&qlt=85&trim=0.5%2Cwhites&wid=450&hei=450"
-  ]
+  ],
+  "series": "Éditions MinaLima",
+  "seriesNumber": null
  },
  {
   "addedAt": "2024-01-05",
