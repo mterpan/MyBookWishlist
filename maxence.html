@@ -100,6 +100,33 @@ form textarea{min-height:130px;resize:vertical}
 [hidden]{display:none!important}
 img{max-width:100%}
 .updated{color:var(--muted);font-size:12px;text-align:center}
+
+/* --- transitions & chargement --- */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:vt-out .18s ease both}
+::view-transition-new(root){animation:vt-in .26s ease both}
+@keyframes vt-out{to{opacity:0;transform:translateY(-6px)}}
+@keyframes vt-in{from{opacity:0;transform:translateY(8px)}}
+.wrap{animation:page-in .35s ease both}
+@keyframes page-in{from{opacity:0;transform:translateY(8px)}}
+.cover:has(> img:not(.ok))::before{content:"";position:absolute;inset:0;z-index:2;border-radius:inherit;
+  background:linear-gradient(100deg,var(--spine) 30%,color-mix(in srgb,var(--spine) 55%,var(--surface)) 50%,var(--spine) 70%);
+  background-size:220% 100%;animation:shimmer 1.3s linear infinite}
+@keyframes shimmer{from{background-position:120% 0}to{background-position:-120% 0}}
+.cover img{opacity:0;transition:opacity .35s ease}
+.cover img.ok{opacity:1}
+.book{animation:card-in .4s ease both;animation-delay:calc(var(--i,0) * 18ms)}
+@keyframes card-in{from{opacity:0;transform:translateY(10px)}}
+.shelf{animation:page-in .35s ease both}
+#grid.calm .book,#grid.calm .shelf{animation:none}
+.veil.closing{animation:fade-out .18s ease both}.veil.closing .sheet{animation:down .2s ease both}
+@keyframes fade-out{to{opacity:0}}@keyframes down{to{transform:translateY(60px);opacity:.6}}
+h1{view-transition-name:title-maxence}
+@media (prefers-reduced-motion:reduce){
+  .wrap,.shelf,.book,.cover:has(> img:not(.ok))::before,.veil,.sheet,.veil.closing,.veil.closing .sheet{animation:none!important}
+  .cover img{transition:none}
+  ::view-transition-old(root),::view-transition-new(root){animation:none}
+}
 </style>
 </head>
 <body>
@@ -177,11 +204,12 @@ async function nextCover(img){
 }
 function coverOk(img){
   if(img.naturalWidth<10){nextCover(img);return}
+  img.classList.add("ok");
   const b=books.find(x=>x.id===img.dataset.id); if(b) found[b.id]=img.src;
 }
 function coverHTML(b){
   const ph=`<div class="ph"><b>${esc(b.title)}</b><span>${esc((b.authors||"").split(",")[0])}</span></div>`;
-  if(found[b.id]) return ph+`<img src="${esc(found[b.id])}" alt="">`;
+  if(found[b.id]) return ph+`<img class="ok" src="${esc(found[b.id])}" alt="">`;
   const list=sources(b); if(!list.length) return ph;
   if(list[0]==="api") return ph+`<img alt="" data-id="${esc(b.id)}" data-i="-1" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" onload="coverOk(this)" onerror="nextCover(this)">`;
   return ph+`<img src="${esc(list[0])}" alt="" loading="lazy" referrerpolicy="no-referrer" data-id="${esc(b.id)}" data-i="0" onload="coverOk(this)" onerror="nextCover(this)">`;
@@ -222,6 +250,7 @@ function render(){
     html=`<div class="grid">${sortFlat(list,s).map(b=>card(b,true)).join("")}</div>`;
   }
   $("#grid").innerHTML=html;
+  let k=0; for(const el of $("#grid").querySelectorAll(".book")){ el.style.setProperty("--i",Math.min(k++,24)); }
   const n=books.length;
   $("#count").textContent=(q||f!=="all")?`${list.length} sur ${n} livres`:`${n} livres`;
   const e=$("#empty"); e.hidden=!!list.length; if(!list.length) e.textContent=n?"Aucun livre ne correspond à cette recherche.":EMPTY_MSG;
@@ -229,13 +258,18 @@ function render(){
 }
 let seriesCount={};
 $("#grid").addEventListener("click",e=>{const b=e.target.closest(".book");if(b)showDetail(b.dataset.id)});
-$("#q").addEventListener("input",render);
-$("#sort").addEventListener("change",()=>{render();try{localStorage.setItem("view",$("#sort").value)}catch(e){}});
+$("#q").addEventListener("input",()=>{ $("#grid").classList.add("calm"); render(); });
+$("#sort").addEventListener("change",()=>{ $("#grid").classList.remove("calm"); if(document.startViewTransition && !matchMedia("(prefers-reduced-motion: reduce)").matches) document.startViewTransition(render); else render();try{localStorage.setItem("view",$("#sort").value)}catch(e){}});
 $("#filter").addEventListener("change",render);
 try{const s=localStorage.getItem("view");if(s)$("#sort").value=s}catch(e){}
 
 function openSheet(html){$("#sheet").innerHTML=html;$("#veil").hidden=false;document.body.style.overflow="hidden";$("#sheet").scrollTop=0}
-function closeSheet(){$("#veil").hidden=true;document.body.style.overflow="";openId=null;if(location.hash)history.replaceState(null,"",location.pathname)}
+function closeSheet(){
+  const v=$("#veil"); if(v.hidden||v.classList.contains("closing")) return;
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches){ hideSheet(); return; }
+  v.classList.add("closing"); setTimeout(()=>{ v.classList.remove("closing"); hideSheet(); },190);
+}
+function hideSheet(){$("#veil").hidden=true;document.body.style.overflow="";openId=null;if(location.hash)history.replaceState(null,"",location.pathname)}
 $("#veil").addEventListener("click",e=>{if(e.target.id==="veil")closeSheet()});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("#veil").hidden)closeSheet()});
 
