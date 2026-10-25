@@ -48,13 +48,11 @@ h1{font:400 clamp(30px,7vw,44px)/1.1 var(--f-display);margin:0;text-wrap:balance
 @view-transition{navigation:auto}
 ::view-transition-old(root){animation:vt-out .18s ease both}
 ::view-transition-new(root){animation:vt-in .26s ease both}
-@keyframes vt-out{to{opacity:0;transform:translateY(-6px)}}
-@keyframes vt-in{from{opacity:0;transform:translateY(8px)}}
+@keyframes vt-out{to{opacity:0}}
+@keyframes vt-in{from{opacity:0}}
 .wrap{animation:page-in .35s ease both}
 .card{animation:page-in .45s ease both}.card.mahe{animation-delay:.07s}
 @keyframes page-in{from{opacity:0;transform:translateY(10px)}}
-.card:not(.mahe) h2{view-transition-name:title-maxence}
-.card.mahe h2{view-transition-name:title-mahe}
 @media (prefers-reduced-motion:reduce){.wrap,.card{animation:none}::view-transition-old(root),::view-transition-new(root){animation:none}}
 </style>
 </head>
