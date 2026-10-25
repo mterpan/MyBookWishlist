@@ -2,4 +2,6 @@
 
 Ma liste de souhaits de livres : https://mterpan.github.io/MyBookWishlist/
 
-Les livres sont dans `books.json`.
+- Liste de Mahé : https://mterpan.github.io/MyBookWishlist/mahe.html
+
+Les livres sont dans `books.json` (ma liste) et `mahe.json` (Mahé).

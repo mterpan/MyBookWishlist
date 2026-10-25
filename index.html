@@ -125,11 +125,13 @@ img{max-width:100%}
   </div>
   <main class="shelves" id="grid" aria-live="polite"></main>
   <div class="empty" id="empty" hidden></div>
+  <p class="updated"><a href="mahe.html" style="color:var(--accent)">Voir aussi la liste de Mahé</a></p>
 </div>
 <div class="veil" id="veil" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true"></div></div>
 <script>
 const $=s=>document.querySelector(s);
 let books=[], openId=null;
+const DATA="books.json", EMPTY_MSG="La liste est vide pour le moment.";
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const firstAuthorKey=a=>{const n=(a||"").split(",")[0].trim().split(" ");return (n[n.length-1]||"").toLowerCase()};
 const fold=s=>(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
@@ -219,7 +221,8 @@ function render(){
   $("#grid").innerHTML=html;
   const n=books.length;
   $("#count").textContent=(q||f!=="all")?`${list.length} sur ${n} livres`:`${n} livres`;
-  const e=$("#empty"); e.hidden=!!list.length; if(!list.length) e.textContent="Aucun livre ne correspond à cette recherche.";
+  const e=$("#empty"); e.hidden=!!list.length; if(!list.length) e.textContent=n?"Aucun livre ne correspond à cette recherche.":EMPTY_MSG;
+  $("#count").textContent=n?$("#count").textContent:"";
 }
 let seriesCount={};
 $("#grid").addEventListener("click",e=>{const b=e.target.closest(".book");if(b)showDetail(b.dataset.id)});
@@ -257,7 +260,7 @@ function showDetail(id){
   $("#close").onclick=closeSheet;
 }
 
-fetch("books.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{
+fetch(DATA,{cache:"no-cache"}).then(r=>r.json()).then(d=>{
   books=d; seriesCount={}; for(const b of books) if(b.series) seriesCount[b.series]=(seriesCount[b.series]||0)+1; render();
   const h=location.hash.slice(1); if(h) showDetail(h);
 }).catch(()=>{$("#count").textContent="";const e=$("#empty");e.hidden=false;e.textContent="La liste n'a pas pu être chargée. Rechargez la page."});
