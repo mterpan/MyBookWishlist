@@ -55,6 +55,15 @@ def olsearch(q):
         pass
     return ""
 
+def og_image(page):
+    try:
+        r = requests.get(page, headers=UA, timeout=25, allow_redirects=True)
+        m = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)', r.text) or \
+            re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image', r.text)
+        return m.group(1) if m else ""
+    except Exception:
+        return ""
+
 def candidates(b):
     isbn = b.get("isbn") or ""
     urls = list(b.get("covers") or [])
@@ -65,6 +74,9 @@ def candidates(b):
     if isbn:
         urls.append(f"https://covers.openlibrary.org/b/isbn/{isbn}-L.jpg?default=false")
         urls.append(f"https://media.e.leclerc/{isbn}_1?fit=fit&fmt=jpg&qlt=85&wid=600&hei=600")
+        urls.append(f"https://ssr.fidelio.ca/Public/img/catalog/cover/{isbn}.jpg")
+        urls.append(("page", f"https://www.placedeslibraires.fr/livre/{isbn}"))
+        urls.append(("page", f"https://www.decitre.fr/rechercher/result?q={isbn}"))
         urls.append(("lazy", f"isbn:{isbn}"))
     q = b.get("coverQuery") or f"{b.get('title','')} {(b.get('authors') or '').split(',')[0]}"
     urls.append(("lazy", q))
@@ -104,6 +116,11 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     index = json.load(open(INDEX)) if os.path.exists(INDEX) else {}
     books = load_books()
+    ids = {b["id"] for b in books}
+    for bid in [k for k in index if k not in ids]:
+        path = os.path.join(ROOT, index.pop(bid))
+        if os.path.exists(path):
+            os.remove(path)
     added, missing = [], []
     for b in books:
         bid = b["id"]
@@ -113,7 +130,7 @@ def main():
         for c in candidates(b):
             url = c
             if isinstance(c, tuple):
-                url = gbooks(c[1]) if c[0] == "lazy" else olsearch(c[1])
+                url = gbooks(c[1]) if c[0] == "lazy" else olsearch(c[1]) if c[0] == "ol" else og_image(c[1])
                 time.sleep(0.4)
             if not url:
                 continue
@@ -134,8 +151,11 @@ def main():
     print(f"Sans couverture : {len(missing)}")
     for t in missing:
         print("  -", t)
-    with open(os.path.join(OUT, "missing.txt"), "w", encoding="utf-8") as f:
-        f.write("\n".join(missing) + ("\n" if missing else ""))
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a", encoding="utf-8") as f:
+            f.write(f"### Couvertures\n\nAjoutées : {len(added)}\n\nSans couverture : {len(missing)}\n\n")
+            f.writelines(f"- {t}\n" for t in missing)
 
 if __name__ == "__main__":
     main()

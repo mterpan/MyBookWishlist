@@ -24,16 +24,17 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install requests pillow
-      - run: python tools/fetch_covers.py
-      - name: Enregistrer les nouvelles couvertures
+      - name: Télécharger et enregistrer les couvertures
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add covers
-          if git diff --cached --quiet; then
-            echo "Rien de nouveau"
-          else
+          for attempt in 1 2 3; do
+            git fetch origin main && git reset --hard origin/main
+            python tools/fetch_covers.py
+            git add -A covers
+            if git diff --cached --quiet; then echo "Rien de nouveau"; exit 0; fi
             git commit -m "Couvertures téléchargées automatiquement"
-            git pull --rebase origin main
-            git push
-          fi
+            if git push origin HEAD:main; then exit 0; fi
+            echo "Le dépôt a bougé pendant le téléchargement, nouvel essai"
+          done
+          exit 1
