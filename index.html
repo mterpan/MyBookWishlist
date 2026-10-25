@@ -121,16 +121,26 @@ const gCover=id=>id?`https://books.google.com/books/content?id=${encodeURICompon
 const found={};
 function sources(b){
   const o=olCover(b.isbn), g=b.cover?gCover(b.gid):"";
-  return [b.cover,g,o,"api"].filter(Boolean);
+  return [b.cover,g,o,amzCover(b.isbn),"api"].filter(Boolean);
 }
-async function apiCover(b){
-  const q=b.isbn?`isbn:${b.isbn}`:`intitle:${b.title} inauthor:${(b.authors||"").split(",")[0]}`;
+function isbn10(i){
+  if(!i||i.length!==13||!i.startsWith("978"))return "";
+  const c=i.slice(3,12);let t=0;for(let k=0;k<9;k++)t+=(10-k)*+c[k];
+  const d=(11-t%11)%11;return c+(d===10?"X":d);
+}
+const amzCover=i=>{const t=isbn10(i);return t?`https://images-na.ssl-images-amazon.com/images/P/${t}.01.LZZZZZZZ.jpg`:""};
+async function gbooks(q){
   try{
-    const r=await fetch(`https://www.googleapis.com/books/v1/volumes?maxResults=5&q=${encodeURIComponent(q)}`);
+    const r=await fetch(`https://www.googleapis.com/books/v1/volumes?maxResults=10&q=${encodeURIComponent(q)}`);
     const d=await r.json();
     for(const it of d.items||[]){const l=it.volumeInfo&&it.volumeInfo.imageLinks;if(l&&(l.thumbnail||l.smallThumbnail))return (l.thumbnail||l.smallThumbnail).replace(/^http:/,"https:")}
   }catch(e){}
   return "";
+}
+async function apiCover(b){
+  const title=(b.title||"").split(/ [:\-–] /)[0].trim();
+  const author=(b.authors||"").split(",")[0].trim().split(" ").pop();
+  return (b.isbn&&await gbooks(`isbn:${b.isbn}`))||await gbooks(`intitle:${title} inauthor:${author}`)||await gbooks(`${title} ${author}`);
 }
 async function nextCover(img){
   const b=books.find(x=>x.id===img.dataset.id); if(!b){img.remove();return}
