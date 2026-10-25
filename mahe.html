@@ -261,7 +261,6 @@ function sortFlat(list,s){
   else if(s==="author") list.sort((a,b)=>coll.compare(firstAuthorKey(a.authors),firstAuthorKey(b.authors))||coll.compare(a.series||"",b.series||"")||(a.seriesNumber||0)-(b.seriesNumber||0)||coll.compare(a.title,b.title));
   else if(s==="year") list.sort((a,b)=>(b.year||"").localeCompare(a.year||"")||coll.compare(a.title,b.title));
   else list.sort((a,b)=>(b.addedAt||"").localeCompare(a.addedAt||"")||coll.compare(a.title,b.title));
-  list.sort((a,b)=>rank(a)-rank(b));
   return list;
 }
 const fmtDate=d=>{try{return new Date(d+"T12:00:00").toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"})}catch(e){return d}};
@@ -275,11 +274,7 @@ function render(){
   if(s==="series"){
     const groups={}; let singles=[]; const secs=[];
     for(const b of hits){ if(b.series)(groups[b.series]=groups[b.series]||[]).push(b); else if(all||!b.owned) singles.push(b); }
-    const picks=[];
-    for(const n of Object.keys(groups)){ if(featSeries(n)) continue; for(const b of groups[n].filter(b=>rank(b)<999)) picks.push(b); groups[n]=groups[n].filter(b=>rank(b)>=999); if(!groups[n].length) delete groups[n]; }
-    for(const b of singles.filter(b=>rank(b)<999)) picks.push(b);
-    singles=singles.filter(b=>rank(b)>=999);
-    const names=Object.keys(groups).sort((a,b)=>rank({series:a})-rank({series:b})||coll.compare(a,b));
+    const names=Object.keys(groups).sort((a,b)=>coll.compare(a,b));
     for(const n of names){
       const g=groups[n].sort(bySeriesOrder), want=g.filter(b=>!b.owned), have=g.filter(b=>b.owned);
       const meta=seriesMeta[n]||{};
@@ -293,10 +288,9 @@ function render(){
         if(want.length) body+=`<div class="grid">${want.map(b=>card(b,false)).join("")}</div>`;
         if(have.length) body+=`<details class="home"${want.length?"":""}><summary>Déjà à la maison (${have.length})</summary><div class="grid">${have.map(b=>card(b,false)).join("")}</div></details>`;
       }
-      secs.push({r:rank({series:n}),h:`<section class="shelf"><div class="shelf-head"><h2>${esc(n)}</h2>${featSeries(n)?`<em class="fav">★ Coup de cœur</em>`:""}<span>${esc(authors)} · ${status}${checked}</span></div>${note}${body}</section>`});
+      secs.push({r:rank({series:n}),h:`<section class="shelf"><div class="shelf-head"><h2>${esc(n)}</h2><span>${esc(authors)} · ${status}${checked}</span></div>${note}${body}</section>`});
     }
-    if(picks.length){ picks.sort((a,b)=>rank(a)-rank(b)||coll.compare(a.title,b.title)); secs.push({r:Math.min(...picks.map(rank)),h:`<section class="shelf"><div class="shelf-head"><h2>Coups de cœur</h2><em class="fav">★</em><span>${picks.length} livre${picks.length>1?"s":""}</span></div><div class="grid">${picks.map(b=>card(b,true)).join("")}</div></section>`}); }
-    secs.sort((a,b)=>a.r-b.r); html+=secs.map(x=>x.h).join("");
+    html+=secs.map(x=>x.h).join("");
     if(singles.length){
       sortFlat(singles,"title");
       html+=`<section class="shelf">${names.length?`<div class="shelf-head"><h2>Autres livres</h2><span>${singles.length} livre${singles.length>1?"s":""}</span></div>`:""}<div class="grid">${singles.map(b=>card(b,true)).join("")}</div></section>`;
@@ -306,6 +300,8 @@ function render(){
     html=list.length?`<div class="grid">${list.map(b=>card(b,true)).join("")}</div>`:"";
   }
   if(io) io.disconnect();
+  const favs=wished.filter(b=>rank(b)<999).sort((a,b)=>rank(a)-rank(b)||(a.seriesNumber||99)-(b.seriesNumber||99)||coll.compare(a.title,b.title));
+  if(favs.length) html=`<section class="shelf favs"><div class="shelf-head"><h2>Coups de cœur</h2><em class="fav">★</em><span>${favs.length} livre${favs.length>1?"s":""}</span></div><div class="grid">${favs.map(b=>card(b,true)).join("")}</div></section>`+html;
   $("#grid").innerHTML=html;
   watchCovers($("#grid"),false);
   let k=0; for(const el of $("#grid").querySelectorAll(".book")){ el.style.setProperty("--i",Math.min(k++,12)); }
