@@ -65,11 +65,16 @@ button.danger{color:var(--danger);border-color:transparent;background:transparen
 .empty{border:1px dashed var(--line);border-radius:10px;padding:32px 20px;color:var(--muted);text-align:center}
 
 /* sheet */
-.veil{position:fixed;inset:0;background:rgba(10,12,22,.5);z-index:20;display:flex;align-items:flex-end;justify-content:center}
+.veil{position:fixed;inset:0;background:rgba(10,12,22,.4);z-index:20;display:flex;align-items:flex-end;justify-content:center}
 @media (min-width:720px){.veil{align-items:center;padding:24px}}
-.sheet{background:var(--surface);width:100%;max-width:760px;max-height:92vh;overflow:auto;border-radius:16px 16px 0 0;
+.sheet{background:var(--surface);width:100%;max-width:760px;max-height:72vh;max-height:72dvh;overflow:auto;overscroll-behavior:contain;border-radius:18px 18px 0 0;box-shadow:0 -8px 30px rgba(10,12,22,.25);
   padding:22px max(20px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px))}
-@media (min-width:720px){.sheet{border-radius:14px;padding:28px}}
+@media (min-width:720px){.sheet{border-radius:14px;padding:28px;max-height:86vh}}
+.sheet::before{content:"";display:block;width:40px;height:5px;border-radius:3px;background:var(--line);margin:-10px auto 12px}
+@media (min-width:720px){.sheet::before{display:none}}
+.veil{animation:fade .18s ease}.sheet{animation:up .22s ease}
+@keyframes fade{from{opacity:0}}@keyframes up{from{transform:translateY(40px)}}
+@media (prefers-reduced-motion:reduce){.veil,.sheet{animation:none}}
 .detail{display:grid;grid-template-columns:180px minmax(0,1fr);gap:24px}
 @media (max-width:560px){.detail{grid-template-columns:110px minmax(0,1fr);gap:16px}.syn{grid-column:1/-1}}
 .detail h2{font:400 clamp(22px,4.5vw,28px)/1.15 var(--f-display);margin:0 0 6px;text-wrap:balance}
