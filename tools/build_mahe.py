@@ -108,8 +108,8 @@ SERIES = {
         qprefix="", qkey="Kuefler",
         authors="Joseph Kuefler", publisher="Kimane",
         about="Une petite pelleteuse au grand cœur, sur son chantier, découvre l'amitié et la douceur au fil des saisons. Albums illustrés de Joseph Kuefler.",
-        owned=[("La pelleteuse et le papillon", "9782383222927"), "La pelleteuse et le caneton", "Nuit blanche pour la pelleteuse"],
-        wanted=[("La pelleteuse et la fleur", "9782383220831"), "La pelleteuse et le sapin de Noël"],
+        owned=[("La pelleteuse et le papillon", "9782383222927"), "La pelleteuse et le caneton", "Nuit blanche pour la pelleteuse", ("La pelleteuse et la fleur", "9782383220831")],
+        wanted=["La pelleteuse et le sapin de Noël"],
     ),
 }
 
