@@ -49,6 +49,16 @@ button.danger{color:var(--danger);border-color:transparent;background:transparen
 .shelf-head h2{font:400 clamp(19px,4vw,23px)/1.2 var(--f-display);margin:0;text-wrap:balance}
 .shelf-head span{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
 .tome{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+.book.owned .cover{opacity:.5;filter:saturate(.6)}
+.own{display:inline-block;font-size:11px;font-weight:600;color:var(--muted);margin-bottom:2px}
+.done{color:var(--accent);font-weight:600}
+details.home{border-top:1px dashed var(--line);padding-top:10px}
+details.home summary{cursor:pointer;color:var(--muted);font-size:14px;font-weight:600;list-style:none;display:flex;align-items:center;gap:6px}
+details.home summary::-webkit-details-marker{display:none}
+details.home summary::before{content:"▸";transition:transform .15s}
+details.home[open] summary::before{transform:rotate(90deg)}
+details.home .grid{margin-top:14px}
+.note{color:var(--muted);font-size:13px;margin:0}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:26px 18px}
 @media (max-width:480px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 12px}}
 .book{display:flex;flex-direction:column;gap:8px;background:none;border:0;padding:0;text-align:left;cursor:pointer;color:inherit;font:inherit;min-width:0;border-radius:6px}
@@ -118,9 +128,8 @@ img{max-width:100%}
       <option value="year">Parution récente</option>
     </select>
     <select id="filter" aria-label="Filtrer">
-      <option value="all">Tous les livres</option>
-      <option value="series">Sagas uniquement</option>
-      <option value="single">Hors saga</option>
+      <option value="wish">Idées de cadeau</option>
+      <option value="all">Tout, y compris ce qu'il a</option>
     </select>
   </div>
   <main class="shelves" id="grid" aria-live="polite"></main>
@@ -187,7 +196,8 @@ const coll=new Intl.Collator("fr",{numeric:true});
 const tomeLabel=b=>b.series?(b.seriesNumber?`Tome ${b.seriesNumber}`:"Saga"):"";
 function card(b,showSeries){
   const t=b.series&&b.seriesNumber?`<span class="tome">${showSeries?esc(b.series)+" · ":""}T${b.seriesNumber}</span>`:(showSeries&&b.series?`<span class="tome">${esc(b.series)}</span>`:"");
-  return `<button class="book" data-id="${esc(b.id)}"><div class="cover">${coverHTML(b)}</div><div class="meta">${t}<b>${esc(b.title)}</b><span>${esc(b.authors)}</span></div></button>`;
+  const own=b.owned?`<span class="own">Déjà à la maison</span>`:"";
+  return `<button class="book${b.owned?" owned":""}" data-id="${esc(b.id)}"><div class="cover">${coverHTML(b)}</div><div class="meta">${own||t}<b>${esc(b.title)}</b><span>${esc(b.authors)}</span></div></button>`;
 }
 function sortFlat(list,s){
   if(s==="title") list.sort((a,b)=>coll.compare(a.title,b.title));
@@ -196,34 +206,47 @@ function sortFlat(list,s){
   else list.sort((a,b)=>(b.addedAt||"").localeCompare(a.addedAt||"")||coll.compare(a.title,b.title));
   return list;
 }
+const fmtDate=d=>{try{return new Date(d+"T12:00:00").toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"})}catch(e){return d}};
+const bySeriesOrder=(a,b)=>(a.seriesNumber||999)-(b.seriesNumber||999)||(a.year||"").localeCompare(b.year||"")||coll.compare(a.title,b.title);
 function render(){
-  const q=fold($("#q").value.trim()), s=$("#sort").value, f=$("#filter").value;
-  let list=books.filter(b=>!q||fold(b.title+" "+b.authors+" "+(b.subtitle||"")+" "+(b.series||"")).includes(q));
-  const inSaga=b=>b.series&&seriesCount[b.series]>1;
-  if(f==="series") list=list.filter(inSaga); else if(f==="single") list=list.filter(b=>!inSaga(b));
+  const q=fold($("#q").value.trim()), s=$("#sort").value, f=$("#filter").value, all=f==="all";
+  const match=b=>!q||fold(b.title+" "+b.authors+" "+(b.subtitle||"")+" "+(b.series||"")).includes(q);
+  const hits=books.filter(match);
+  const wished=hits.filter(b=>!b.owned);
   let html="";
   if(s==="series"){
     const groups={}, singles=[];
-    for(const b of list){ if(b.series&&seriesCount[b.series]>1)(groups[b.series]=groups[b.series]||[]).push(b); else singles.push(b); }
+    for(const b of hits){ if(b.series)(groups[b.series]=groups[b.series]||[]).push(b); else if(all||!b.owned) singles.push(b); }
     const names=Object.keys(groups).sort((a,b)=>coll.compare(a,b));
     for(const n of names){
-      const g=groups[n].sort((a,b)=>(a.seriesNumber||99)-(b.seriesNumber||99)||(a.year||"").localeCompare(b.year||"")||coll.compare(a.title,b.title));
-      const authors=[...new Set(g.map(b=>(b.authors||"").split(",").length>2?"Luc Ferry et al.":b.authors))].join(" · ");
-      html+=`<section class="shelf"><div class="shelf-head"><h2>${esc(n)}</h2><span>${esc(authors)} · ${g.length} livre${g.length>1?"s":""}</span></div><div class="grid">${g.map(b=>card(b,false)).join("")}</div></section>`;
+      const g=groups[n].sort(bySeriesOrder), want=g.filter(b=>!b.owned), have=g.filter(b=>b.owned);
+      const meta=seriesMeta[n]||{};
+      const authors=[...new Set(g.map(b=>b.authors))].join(" · ");
+      const status=want.length?`${want.length} à offrir${have.length?` · ${have.length} déjà à la maison`:""}`:`<span class="done">Collection complète</span> · ${have.length} livre${have.length>1?"s":""} à la maison`;
+      const checked=meta.checkedAt?` · liste vérifiée le ${fmtDate(meta.checkedAt)}`:"";
+      const note=meta.note?`<p class="note">${esc(meta.note)}</p>`:(!want.length?`<p class="note">Mahé a tous les titres parus. Les nouveautés apparaîtront ici dès leur sortie.</p>`:"");
+      let body="";
+      if(all) body=`<div class="grid">${g.map(b=>card(b,false)).join("")}</div>`;
+      else{
+        if(want.length) body+=`<div class="grid">${want.map(b=>card(b,false)).join("")}</div>`;
+        if(have.length) body+=`<details class="home"${want.length?"":""}><summary>Déjà à la maison (${have.length})</summary><div class="grid">${have.map(b=>card(b,false)).join("")}</div></details>`;
+      }
+      html+=`<section class="shelf"><div class="shelf-head"><h2>${esc(n)}</h2><span>${esc(authors)} · ${status}${checked}</span></div>${note}${body}</section>`;
     }
     if(singles.length){
       sortFlat(singles,"title");
-      html+=`<section class="shelf">${names.length?`<div class="shelf-head"><h2>Livres hors saga</h2><span>${singles.length} livre${singles.length>1?"s":""}</span></div>`:""}<div class="grid">${singles.map(b=>card(b,true)).join("")}</div></section>`;
+      html+=`<section class="shelf">${names.length?`<div class="shelf-head"><h2>Autres livres</h2><span>${singles.length} livre${singles.length>1?"s":""}</span></div>`:""}<div class="grid">${singles.map(b=>card(b,true)).join("")}</div></section>`;
     }
   } else {
-    html=`<div class="grid">${sortFlat(list,s).map(b=>card(b,true)).join("")}</div>`;
+    const list=sortFlat((all?hits:wished).slice(),s);
+    html=list.length?`<div class="grid">${list.map(b=>card(b,true)).join("")}</div>`:"";
   }
   $("#grid").innerHTML=html;
-  const n=books.length;
-  $("#count").textContent=(q||f!=="all")?`${list.length} sur ${n} livres`:`${n} livres`;
-  const e=$("#empty"); e.hidden=!!list.length; if(!list.length) e.textContent=n?"Aucun livre ne correspond à cette recherche.":EMPTY_MSG;
-  $("#count").textContent=n?$("#count").textContent:"";
+  const n=books.length, nw=books.filter(b=>!b.owned).length;
+  $("#count").textContent=n?(q?`${wished.length} idée${wished.length>1?"s":""} sur ${nw} correspondent`:`${nw} idée${nw>1?"s":""} de cadeau`):"";
+  const e=$("#empty"); e.hidden=!!html; if(!html) e.textContent=n?(q?"Aucun livre ne correspond à cette recherche.":"Rien à offrir pour l'instant : Mahé a déjà tout !"):EMPTY_MSG;
 }
+let seriesMeta={};
 let seriesCount={};
 $("#grid").addEventListener("click",e=>{const b=e.target.closest(".book");if(b)showDetail(b.dataset.id)});
 $("#q").addEventListener("input",render);
@@ -248,6 +271,7 @@ function showDetail(id){
       <h2>${esc(b.title)}</h2>
       ${b.subtitle?`<p class="by" style="margin-bottom:4px">${esc(b.subtitle)}</p>`:""}
       <p class="by">${esc(b.authors)}</p>
+      ${b.owned?`<p class="by" style="margin-top:-6px"><span class="own">Déjà à la maison</span></p>`:""}
       ${b.series?`<p class="by" style="margin-top:-6px"><span class="tome">${esc(b.series)}${b.seriesNumber?" · tome "+b.seriesNumber:""}</span></p>`:""}
       ${facts.length?`<ul class="facts">${facts.map(f=>`<li>${esc(f)}</li>`).join("")}</ul>`:""}
       <div class="links">
@@ -261,7 +285,7 @@ function showDetail(id){
 }
 
 fetch(DATA,{cache:"no-cache"}).then(r=>r.json()).then(d=>{
-  books=d; seriesCount={}; for(const b of books) if(b.series) seriesCount[b.series]=(seriesCount[b.series]||0)+1; render();
+  if(Array.isArray(d)){books=d;seriesMeta={}}else{books=d.books||[];seriesMeta=d.series||{}} seriesCount={}; for(const b of books) if(b.series) seriesCount[b.series]=(seriesCount[b.series]||0)+1; render();
   const h=location.hash.slice(1); if(h) showDetail(h);
 }).catch(()=>{$("#count").textContent="";const e=$("#empty");e.hidden=false;e.textContent="La liste n'a pas pu être chargée. Rechargez la page."});
 </script>
