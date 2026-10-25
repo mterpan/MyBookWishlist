@@ -169,7 +169,9 @@ const olCover=isbn=>isbn?`https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg?de
 const gCover=id=>id?`https://books.google.com/books/content?id=${encodeURIComponent(id)}&printsec=frontcover&img=1&zoom=1`:"";
 const found={};
 const small=u=>u?u.replace(/fife=w\d+-h\d+/,"fife=w360-h540"):u;
+let local={};
 function sources(b){
+  if(local[b.id]) return [local[b.id]];  /* image stockée dans le dépôt */
   const o=olCover(b.isbn), g=b.cover?gCover(b.gid):"";
   return [...(b.covers||[]),small(b.cover),g,o,amzCover(b.isbn),"api"].filter(Boolean);
 }
@@ -303,7 +305,8 @@ function showDetail(id){
   $("#close").onclick=closeSheet;
 }
 
-fetch(DATA,{cache:"no-cache"}).then(r=>r.json()).then(d=>{
+Promise.all([fetch(DATA,{cache:"no-cache"}).then(r=>r.json()),fetch("covers/index.json",{cache:"no-cache"}).then(r=>r.ok?r.json():{}).catch(()=>({}))]).then(([d,m])=>{
+  local={}; for(const k in (m||{})) local[k]=m[k];
   books=d; seriesCount={}; for(const b of books) if(b.series) seriesCount[b.series]=(seriesCount[b.series]||0)+1; render();
   const h=location.hash.slice(1); if(h) showDetail(h);
 }).catch(()=>{$("#count").textContent="";const e=$("#empty");e.hidden=false;e.textContent="La liste n'a pas pu être chargée. Rechargez la page."});
