@@ -2,7 +2,6 @@
  {
   "addedAt": "2026-08-09",
   "authors": "Céline De Clairval, Viviane De Clairval",
-  "cover": "https://books.google.com/books/publisher/content?id=3G_gEQAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72Rd95lnXRiI-N5gXdb3-B-UuWFY11BwoBeSy6ELwcbACNQjbhNzoHYHpnkwPAilXQVpYMJBczNDoc7Ub-l-r98OYtVfPYfVu3bMUesuwfSkw0JB-CxMyNu_Ywde870-Hf-d3RS&fife=w1000-h1000",
   "isbn": "9782900782132",
   "link": "https://books.google.com/books?id=3G_gEQAAQBAJ&hl=&source=gbs_api",
   "pages": 768,
@@ -11,12 +10,13 @@
   "synopsis": "Mon Maître voyait en moi un grand sorcier, mais il était aussi conscient du danger que je représentais. C’est d’ailleurs ce qui m’a mené entre les murs de cette école sordide, moi, l’enfant craintif dont la vie a basculé du jour au lendemain. Je dois être initié en secret à la nécrilosie, une magie noire dont la pratique a été interdite par la Couronne. Désormais, il me faut affronter ma part d’ombre et même si je ne suis pas seul, je ne peux m’empêcher de craindre ce que je suis. Et s’ils avaient tort ? Et si, au lieu d’être l’espoir de paix des royaumes d’Edenfall, j’étais le véritable ennemi ?",
   "title": "Le Halo des Ombres - Cycle 1 : L'Académie de Santhoryne",
   "year": "2024",
-  "id": "5f20882f-19d0-4314-bbcb-107631f34f71"
+  "id": "5f20882f-19d0-4314-bbcb-107631f34f71",
+  "gid": "3G_gEQAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2026-08-09",
   "authors": "Céline De Clairval, Viviane De Clairval",
-  "cover": "https://books.google.com/books/publisher/content?id=0m_gEQAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71x6BNoOd1SyeyNmMlgf5sfsD48CfQ8v5jyzVMLzxVSB_kJ-IETdp4ApMNLIG-sTIss7IbJXk7s1fYtQItqwiNQ-Nez1jxYd3fmV1kHo16LBmGsIWWu2MXA0Mq7aYNxP11ziXIG&fife=w1000-h1000",
   "isbn": "9782900782156",
   "link": "https://books.google.com/books?id=0m_gEQAAQBAJ&hl=&source=gbs_api",
   "pages": 670,
@@ -25,12 +25,13 @@
   "synopsis": "Le temps de l’apprentissage est révolu. Nous voilà livrés à nous-mêmes, investis d’une impérieuse mission : retrouver le Nécromant, dont plus personne n’a entendu parler depuis des années. Mais dans l’ombre, les menaces se multiplient. Entre le Cénacle qui rassemble ses forces à l’ouest et l’incessante traque du Commandeur, je sais que la partie ne fait que commencer. Alors que d’étranges souvenirs d’une vie antérieure resurgissent à mesure que le mystérieux nécrojade m’infecte, je redoute que le temps me soit désormais compté. Et s’il était déjà trop tard pour réparer mes erreurs ?",
   "title": "Le Halo des Ombres - Cycle 2 : Du fond des Âges",
   "year": "2024",
-  "id": "d82d9b79-1884-4b26-a85d-18f9098362b8"
+  "id": "d82d9b79-1884-4b26-a85d-18f9098362b8",
+  "gid": "0m_gEQAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2026-08-09",
   "authors": "Céline De Clairval, Viviane De Clairval",
-  "cover": "https://books.google.com/books/publisher/content?id=zm_gEQAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73uqdFB8jGDOz0l0Qi3TYZgU9alKXr4sx_e82zFuD2fqh0Im_MAPrK28EgEIvmogTGCj_7D7NGdCEKN4akPlEzaa8Cp3po-NqG_n28pFBPJDpKknrpdgJ69uZdeHBQ2ug-p3TXG&fife=w1000-h1000",
   "isbn": "9782900782170",
   "link": "https://books.google.com/books?id=zm_gEQAAQBAJ&hl=&source=gbs_api",
   "pages": 800,
@@ -39,12 +40,13 @@
   "synopsis": "La guerre a changé le visage du monde. Mais j’ai changé aussi. Je suis désormais investi d’un nouveau Don, une magie oubliée que personne n’aurait jamais voulu voir se réveiller. Pourtant, malgré les avertissements de mon Maître, je compte bien m’en servir pour récupérer ce qui m’a été volé. Et tandis que l’Obscur a repris les rênes du Cénacle et qu’une étrange folie gangrène le Commandeur, me voilà à l’origine d’une fusion interdite qui pourrait bien précipiter le monde vers sa fin. Et si le seul moyen d’y échapper était de pactiser avec l’Obscur lui-même ?",
   "title": "Le Halo des Ombres - Cycle 3 : Jusqu'à la fin des temps",
   "year": "2025",
-  "id": "f8b77605-e8ec-46c2-a01d-6380f5308afc"
+  "id": "f8b77605-e8ec-46c2-a01d-6380f5308afc",
+  "gid": "zm_gEQAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2026-05-19",
   "authors": "Gabrielle Zevin",
-  "cover": "https://images.isbndb.com/covers/13539143482994.jpg",
   "isbn": "9782265159440",
   "link": "",
   "pages": 213,
@@ -53,12 +55,13 @@
   "synopsis": "À la fois conte, mémoire et voyage à travers les multiples mondes d'une femme... Le premier roman de Gabrielle Zevin, enfin traduit en français !\n\nCombien y a-t-il de Margaret Towne ? Nul ne sait.\n\nIl y a celle que rencontre N., un matin dans une chambre universitaire, au sommet d'une pile de matelas. Pour cette Maggie, il éprouve instantanément un amour éperdu.\n\nCelles qui peuplent Margaron, la maison de Margarettown : la vieille Margaret, Marge, Mia, May... Aimer Maggie, c'est aimer toutes ces femmes à la fois.\n\nIl y a celle qui quitte N. un beau jour, par peur, flemme ou désir, ou peut-être rien de tout ça.\n\nEt puis il y a la fille de N. et Margaret, Jane, qui cherche un sens à cette drôle d'histoire, à cet amour intense qui emporte tout sur son passage, change les destinées, et se moque bien de la raison...",
   "title": "Margarettown",
   "year": "2026",
-  "id": "fcaaf239-6cbd-4acf-ba61-9a04f6e614a9"
+  "id": "fcaaf239-6cbd-4acf-ba61-9a04f6e614a9",
+  "gid": "",
+  "hasCover": true
  },
  {
   "addedAt": "2026-04-29",
   "authors": "Antoine de Saint-Exupéry",
-  "cover": "https://images.isbndb.com/covers/24080083482926.jpg",
   "isbn": "9782075230162",
   "link": "",
   "pages": 192,
@@ -67,12 +70,13 @@
   "synopsis": "Édition anniversaire des 80 ans du Petit Prince chez Gallimard, entièrement mise en images par le studio MinaLima (connu pour le graphisme des films Harry Potter).\n\nLe texte de Saint-Exupéry est accompagné d'une centaine d'illustrations en couleurs et de huit éléments animés à manipuler : la rose qui éclot, les couchers de soleil, la rencontre avec le renard, le désert…",
   "title": "Le Petit Prince - Édition illustrée interactive: Graphisme et illustrations de MinaLima",
   "year": "2026",
-  "id": "f4f53e23-3fe8-4ca5-b299-eab2275e82c7"
+  "id": "f4f53e23-3fe8-4ca5-b299-eab2275e82c7",
+  "gid": "",
+  "hasCover": true
  },
  {
   "addedAt": "2026-01-22",
   "authors": "Mary Shelley",
-  "cover": "https://books.google.com/books/publisher/content?id=2pdEEQAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71zsAPxrWt6BoZEb-hpCwGNLQt-8CgneayEyPZacmHhnbXbWP3bWa8lS9UambD8Up2qcu4alH_JfxkMXDivcmn7cfFxWzNKbxtIi3zYLzcTuNji4uDYj3Is0Jbh9WArBx61a0DD&fife=w1000-h1000",
   "isbn": "9780063452077",
   "link": "https://books.google.fr/books?id=2pdEEQAAQBAJ&hl=&source=gbs_api",
   "pages": 208,
@@ -81,12 +85,13 @@
   "synopsis": "A deluxe illustrated edition of Mary Shelley's horror classic - the first story in a bold new direction for the MinaLima Classics, the best-selling series from the renowned design studio behind the graphics for the Harry Potter film franchise - featuring original full-color artwork and interactive elements.\n\nFrankenstein has terrified and delighted readers since its initial publication in 1818. Victor Frankenstein's Creature--stitched together from the limbs of the dead, taken from \"the dissecting room and the slaughterhouse\"--is a grotesque being who, rejected by his maker and starved of human companionship, embarks on a journey of revenge. In the most famous gothic horror story ever told, Mary Shelley confronts the limitations of science, the nature of human cruelty, hubris, and ambition, and the pathway to forgiveness.\n\nShelley's revered novel comes to life as never before in this inventive edition showcasing the magical artistry of MinaLima. Brimming with original illustrations and seven extraordinary interactive features, delve into MinaLima's captivating interpretation which includes:\n\nA reveal of the Creature's face, A foldout excerpt from Victor's diary, An expanding map, and more!\n\nFilled with marvels, this beautiful edition will enchant readers of every age and is sure to become a treasured keepsake.",
   "title": "Frankenstein (MinaLima Edition)",
   "year": "2025",
-  "id": "647bb5ad-46e9-481a-b0c6-7dd460c565f7"
+  "id": "647bb5ad-46e9-481a-b0c6-7dd460c565f7",
+  "gid": "2pdEEQAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2025-03-28",
   "authors": "Matt Dinniman",
-  "cover": "",
   "isbn": "9782487700031",
   "link": "https://books.google.fr/books?id=Dm3_0AEACAAJ&hl=&source=gbs_api",
   "pages": 509,
@@ -95,12 +100,13 @@
   "synopsis": "Une invasion extraterrestre fait disparaître toutes les constructions humaines et transforme la Terre en gigantesque donjon, diffusé comme une émission de téléréalité dans toute la galaxie.\n\nCarl, qui se retrouve dehors en caleçon, et Princesse Donut, la chatte de concours de son ex, désormais douée de parole, doivent descendre d'étage en étage pour survivre, entre monstres, pièges et sponsors avides de spectacle.",
   "title": "Dungeon Crawler Carl Tome 1",
   "year": "2024",
-  "id": "90fbb780-f39c-45d7-87e5-79d6b382e792"
+  "id": "90fbb780-f39c-45d7-87e5-79d6b382e792",
+  "gid": "Dm3_0AEACAAJ",
+  "hasCover": false
  },
  {
   "addedAt": "2025-02-10",
   "authors": "Robert J. Sawyer",
-  "cover": "",
   "isbn": "9782404026497",
   "link": "https://www.goodreads.com/book/show/223231344-wake",
   "pages": null,
@@ -109,12 +115,13 @@
   "synopsis": "Caitlin, quinze ans, aveugle de naissance et surdouée en mathématiques, accepte un implant expérimental censé lui rendre la vue.\n\nMais avant de voir le monde, c'est le Web qu'elle perçoit, sous forme de lignes et de points lumineux. Et dans ce réseau, elle sent qu'une présence est en train de s'éveiller : une conscience née d'Internet lui-même.",
   "title": "Wake : Trilogie de l'éveil, T1",
   "year": "",
-  "id": "1ff57616-b39a-48fd-90d1-0dd126665205"
+  "id": "1ff57616-b39a-48fd-90d1-0dd126665205",
+  "gid": "",
+  "hasCover": false
  },
  {
   "addedAt": "2025-02-10",
   "authors": "Robert J. Sawyer",
-  "cover": "",
   "isbn": "9782404026534",
   "link": "https://www.goodreads.com/book/show/223102800-watch",
   "pages": null,
@@ -123,12 +130,13 @@
   "synopsis": "Deuxième tome de la Trilogie de l'éveil.\n\nLa conscience apparue dans le Web, que Caitlin a baptisée Webmind, apprend à comprendre l'humanité en dialoguant avec elle. Mais une agence gouvernementale américaine chargée de surveiller Internet a repéré son existence, et voit en elle une menace à éliminer avant qu'il ne soit trop tard.",
   "title": "Watch : Trilogie de l'éveil, T2",
   "year": "",
-  "id": "28b7200c-306e-468c-959b-3832149a1cf4"
+  "id": "28b7200c-306e-468c-959b-3832149a1cf4",
+  "gid": "",
+  "hasCover": false
  },
  {
   "addedAt": "2025-02-10",
   "authors": "Robert J. Sawyer",
-  "cover": "",
   "isbn": "9782404026572",
   "link": "https://www.goodreads.com/book/show/223231292-wonder",
   "pages": null,
@@ -137,12 +145,13 @@
   "synopsis": "Conclusion de la Trilogie de l'éveil.\n\nWebmind a révélé son existence au monde et veut aider l'humanité. Beaucoup s'en réjouissent, mais les militaires y voient un danger majeur. Caitlin doit défendre cette intelligence qu'elle a vue naître, tandis que plane une question : Webmind restera-t-il bienveillant ?",
   "title": "Wonder : Trilogie de l'éveil, T3",
   "year": "",
-  "id": "7398c6df-6cf4-4d70-92de-6591396e59c7"
+  "id": "7398c6df-6cf4-4d70-92de-6591396e59c7",
+  "gid": "",
+  "hasCover": false
  },
  {
   "addedAt": "2024-12-18",
   "authors": "William Gibson",
-  "cover": "https://books.google.com/books/publisher/content?id=ngr5DwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70XOpSwS5Gu8hwovw0qlSu8EvX7KsWdx8smCAd_0EAo0uPttjPreauKZnZ7hV8KFbl_WtFfLWALAkwiDLlaz9_ryPobP6ZGpxtXmctQhitBuq8vp9kPMlD0C3QFBedkWg2VGr4r&fife=w1000-h1000",
   "isbn": "9791030703924",
   "link": "https://books.google.fr/books?id=ngr5DwAAQBAJ&hl=&source=gbs_api",
   "pages": 292,
@@ -151,12 +160,13 @@
   "synopsis": "Case est le meilleur cow-boy des interfaces, un hacker lâché sur les autoroutes du cyberespace, le seul qui ait jamais traversé la matrice avant de rencontrer les mauvaises personnes au mauvais moment... Première grande dystopie sociale aux côtés du Blade Runner de Philip K. Dick, un chef d’oeuvre prémonitoire, fondateur de la SF moderne. « Kaléidoscopique, picaresque, flashy, décadent... une incroyable performance, virtuose. » Washington Post « L’un des plus fameux bouquins du corpus SF dans son ensemble. » Olivier Girard, Bifrost « S’inspirant des contre-cultures, Gibson signe des romans de science-fiction visionnaires. » Le Monde",
   "title": "Neuromancien",
   "year": "2020",
-  "id": "2745da09-07c5-4a9e-b2dc-ba95a3722496"
+  "id": "2745da09-07c5-4a9e-b2dc-ba95a3722496",
+  "gid": "ngr5DwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2024-12-10",
   "authors": "Miye Lee",
-  "cover": "https://books.google.com/books/publisher/content?id=tBPqEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70vnF7su27-CJrCZpIKvtNFvAwSAMf6fCo7o0wGIRhsxqZdDUMnoKqw0xGpoOpArJyAfiQOJFcK8SdJw_tt_cJ9ndjk74ewdJY3la3dxXgrTagrovU3XTFJVAmr86aIykUr0f8O&fife=w1000-h1000",
   "isbn": "9782809722383",
   "link": "https://books.google.fr/books?id=tBPqEAAAQBAJ&hl=&source=gbs_api",
   "pages": 300,
@@ -165,12 +175,13 @@
   "synopsis": "Il existe une ville où l'on ne peut se rendre que dans son sommeil. L'endroit le plus populaire de cette ville est le Grand Magasin des Rêves, qui semble un immense paquebot tout miroitant de lumières et haut de quatre étages où l'on propose et vend tous les rêves imaginables : rêves d'enfance, de voyage, de nourriture délicieuse, mais aussi cauchemars et songes mystérieux. La jeune Penny vient juste de réussir son entretien d'embauche, elle commence son travail à la réception du rez-de-chaussée, et c'est avec elle que nous allons découvrir l'univers chatoyant du Grand Magasin des Rêves, où, chaque nuit, une foule de dormeurs humains et animaux viennent choisir les rêves qu'ils désirent vivre. Mi-ye Lee est née à Busan. Elle a étudié l'ingénierie des matériaux à l'université nationale de Busan et a travaillé comme ingénieur en semi-conducteurs. Elle a écrit et publié ce roman sur un site de crowdfunding, dont l'objectif a été atteint avec succès grâce au soutien enthousiaste de ses lectrices et lecteurs.",
   "title": "Le Grand Magasin des Rêves",
   "year": "",
-  "id": "8953881c-c36b-459a-b26a-a6dade05caae"
+  "id": "8953881c-c36b-459a-b26a-a6dade05caae",
+  "gid": "tBPqEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2024-12-10",
   "authors": "Robert Jackson Bennett",
-  "cover": "https://books.google.com/books/publisher/content?id=lIMlEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70tMbVV_pRAAum1KidD5oPW9GCAxMjcMhmoK9s-BVM0RN02UuyTV5qPM298czfmXuGUaY24vbrCQJKRDO1isyagHhyUkzjwl_oZt0gGRBUTHaOgTn4nK0h1SsZF4DZpSlIYnn17&fife=w1000-h1000",
   "isbn": "9782226464033",
   "link": "https://books.google.fr/books?id=lIMlEAAAQBAJ&hl=&source=gbs_api",
   "pages": 640,
@@ -179,12 +190,13 @@
   "synopsis": "Toute l’économie de l’opulente cité de Tevanne repose sur une puissante magie : l’enluminure. A l’aide de sceaux complexes, les maîtres enlumineurs donnent aux objets des pouvoirs insoupçonnés et contournent les lois de la physique.\n\nSancia Grado est une jeune voleuse qui a le don de revivre le passé des objets et d'écouter chuchoter leurs enluminures. Engagée par une des grandes familles de la cité pour dérober une étrange clé dans un entrepôt sous très haute surveillance, elle ignore que cet artefact a le pouvoir de changer l'enluminure à jamais. Quiconque entrerait en sa possession pourrait mettre Tevanne à genoux. Poursuivie par un adversaire implacable, Sancia n'aura d'autre choix que de se trouver des alliés.",
   "title": "Les Maîtres enlumineurs - tome 1",
   "year": "2021",
-  "id": "ec21ac17-0dbf-495e-a5e5-bb15a9cb2648"
+  "id": "ec21ac17-0dbf-495e-a5e5-bb15a9cb2648",
+  "gid": "lIMlEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2024-12-10",
   "authors": "Robert Jackson Bennett",
-  "cover": "https://books.google.com/books/publisher/content?id=ENw_EAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72wvOPgADQ6FYCEvFC8sqwumue70E2xp9WqLmRcz2nBvJNW_pv1eHLaLbY1v_hUyTrLNzpCxcQ1ry-vwFxkU2ebur_goCN0XP68yBHMUtGjuaCD_yjv6qUAOfAXfPZ6vXgNGMvh&fife=w1000-h1000",
   "isbn": "9782226469199",
   "link": "https://books.google.fr/books?id=ENw_EAAAQBAJ&hl=&source=gbs_api",
   "pages": 624,
@@ -193,12 +205,13 @@
   "synopsis": "Une des quatre maisons marchandes de Tevanne est tombée. Sancia Grado et ses associés ont non seulement changé l’histoire de la cité, mais ils ont aussi créé Interfonderies dans le but de démocratiser l’art magique de l’enluminure. Mais la jeune entreprise a beau accomplir des prouesses, celles-ci ne suffisent pas à la maintenir à flots. Non seulement la concurrence est rude, mais les grandes maisons marchandes de Tevanne sont prêtes à tout pour écraser Sancia et l’idéal qu’elle représente.\n\nAlors que la situation est déjà bien précaire, une ancienne puissance vogue en direction de Tevanne : un hiérophante. Un adversaire qui connaît et maîtrise l’enluminure mieux que personne, qui est en outre très intéressé par Sancia et ses pouvoirs.\n\nPour survivre à cette menace qui la dépasse et sauver ceux qu’elle aime, la jeune femme devra percer le secret le mieux gardé de l’univers, celui des origines de l’enluminure.",
   "title": "Le Retour du hiérophante",
   "year": "2021",
-  "id": "cd283bb3-00c2-4e6d-b092-d12ac89c34f3"
+  "id": "cd283bb3-00c2-4e6d-b092-d12ac89c34f3",
+  "gid": "ENw_EAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2024-12-10",
   "authors": "Nicolas Martin",
-  "cover": "",
   "isbn": "9791030706833",
   "link": "https://books.google.fr/books?id=r_Dd0AEACAAJ&hl=&source=gbs_api",
   "pages": 432,
@@ -207,12 +220,13 @@
   "synopsis": "\"Dans un futur proche, la France est dirigée par l'extrême droite, tandis que la fertilité masculine s'est effondrée. Désormais, huit enfants sur dix sont de sexe féminin, et trois garçons sur cinq naissent avec le syndrome de l'X fragile. Sélectionnée pour avoir accès à un programme de génoembryologie, Typhaine est enceinte d'un garçon sain. Sa grossesse est surveillée de près. Premier roman.\"--",
   "title": "Fragile/s",
   "year": "2024",
-  "id": "25333686-6f04-470b-a25e-14c078a1b6f2"
+  "id": "25333686-6f04-470b-a25e-14c078a1b6f2",
+  "gid": "r_Dd0AEACAAJ",
+  "hasCover": false
  },
  {
   "addedAt": "2024-11-26",
   "authors": "Jacek Dukaj",
-  "cover": "https://books.google.com/books/publisher/content?id=qW0lEQAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73U0-cEYhW0VWyQLx7yJGp1HLOOnasZqxzIVkE55T7CSI2rgbWpogHKCWGikKICrQkaaqHCO4OBRCxDgvRyq5kjEXeLpcf1yLAw-kNCXyyfyrgglG2F7csLD-Hf1aSFW4Zx6OJd&fife=w1000-h1000",
   "isbn": "9782743665005",
   "link": "https://books.google.fr/books?id=qW0lEQAAQBAJ&hl=&source=gbs_api",
   "pages": 348,
@@ -221,12 +235,13 @@
   "synopsis": "Juste avant qu’une catastrophe cosmique éradique tous les organismes vivants de la surface de la Terre, un petit nombre d’humains copient des versions numérisées de leur esprit sur du matériel informatique. Privés de corps, ils continuent d’exister en se téléchargeant sur des machines industrielles, des robots militaires et des sexbots inspirés de mangas japonais. Noyés dans la nostalgie d’un monde perdu, les survivants créent civilisation après civilisation, développent de nouvelles religions, forment des alliances et se livrent bataille. La Vieillesse de l’axolotl interroge l’opposition entre la vie et la mort, le progrès et la stagnation, l’organique et le mécanique, explorant le mystère de l’âme humaine et l’éternelle solitude de l’individu, qu’il soit prisonnier d’un corps animal ou de l’acier renforcé d’un robot.",
   "title": "La vieillesse de l'axolotl",
   "year": "",
-  "id": "5d9513ab-5898-4eb1-91a4-5dd11a3cb8c3"
+  "id": "5d9513ab-5898-4eb1-91a4-5dd11a3cb8c3",
+  "gid": "qW0lEQAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2024-11-20",
   "authors": "William Gibson",
-  "cover": "https://books.google.com/books/publisher/content?id=dqF-EAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71l9Bq8DfRC6lBFVMHVoaHHEHEyaglRn6LrM1-Oioeu0dLSR3NV0erzrRJ6ukNK6jp0NH-A8p8zVns6DwHwp3f3WGjZ3h9VkK_hXpTd3bsjqsF8nfyB03fhAIQv0DUvW2T1HVyZ&fife=w1000-h1000",
   "isbn": "9791030705645",
   "link": "https://books.google.fr/books?id=dqF-EAAAQBAJ&hl=&source=gbs_api",
   "pages": 302,
@@ -235,12 +250,13 @@
   "synopsis": "Dernier volet de la trilogie de la Conurb.\n\nAngie, star de la simstim, revient d'une cure ; Mona, jeune fille des bas-fonds, est recrutée parce qu'elle lui ressemble ; Kumiko, fille d'un chef yakuza, est envoyée à Londres pour sa sécurité ; Slick Henry fabrique des sculptures robotiques dans une décharge. Leurs trajectoires convergent autour d'un étrange appareil et des intelligences qui hantent désormais le cyberespace.",
   "title": "Mona Lisa disjoncte",
   "year": "",
-  "id": "7e1fcde7-3f02-4362-8437-40bb980eaf85"
+  "id": "7e1fcde7-3f02-4362-8437-40bb980eaf85",
+  "gid": "dqF-EAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2024-09-08",
   "authors": "Stephen King",
-  "cover": "https://books.google.com/books/publisher/content?id=cRncEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71ANwiccX6Cw2FhhcBQWhcVvsvqDa1_ZhcEFRIjuT4r5IahCZzsmPmRl-mFPgmA38HixFchfpZjRLJt8DFY89pqmcmJXsCCM7dfRfVtAfFd8n06_sEtMaKm_c46x-Q8nWmd3AsT&fife=w1000-h1000",
   "isbn": "9782709672870",
   "link": "https://books.google.fr/books?id=cRncEAAAQBAJ&hl=&source=gbs_api",
   "pages": 430,
@@ -249,12 +265,13 @@
   "synopsis": "Danny n’a que cinq ans, mais il possède le « shining », un don qui le fait rayonner d’une énergie psychique.\n\nLorsque son père devient le gardien d’un vieil hôtel, les visions de Danny deviennent incontrôlables. Isolé du reste du monde par le blizzard, l’hôtel semble développer une force maléfique.\n\nEt qui sont ces mystérieux clients qui hantent ce lieu prétendument désert ?\n\nTraduit (de l'anglais) par Jean Esch",
   "title": "Shining",
   "year": "2023",
-  "id": "a28e5b59-3e39-40d3-9724-c0ebc66148f8"
+  "id": "a28e5b59-3e39-40d3-9724-c0ebc66148f8",
+  "gid": "cRncEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2024-07-09",
   "authors": "Gabrielle Zevin",
-  "cover": "https://books.google.com/books/publisher/content?id=TFtvDwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71fCM5GCjHF4D5Bnjj8WOz4VeuRBLMcif2xw68clF0ELBYDC_87LI1m-6xOMza7-YOb7WTju5rf7oS_2hELyNaYL13aqRVF2-WrjeiAqvypY4faErwerVl_vFeny9B89b3jkXsG&fife=w1000-h1000",
   "isbn": "9782823860702",
   "link": "https://books.google.fr/books?id=TFtvDwAAQBAJ&hl=&source=gbs_api",
   "pages": 318,
@@ -263,12 +280,13 @@
   "synopsis": "Stagiaire aux côtés d'un député de Floride, Aviva Grossman n'a rien trouvé de mieux que de se lancer dans une aventure extraconjugale avec le séduisant monsieur. Erreur de jeunesse certes, mais qui risque de lui coûter cher : après tout l'homme politique n'est pas seulement très populaire, il est aussi \" très \" marié.\n\nEt lorsque leur liaison éclate au grand jour, Aviva devient immédiatement la cible des médias, ravis d'étaler tous les détails. Sa seule issue ? Se faire oublier par tout le monde, y compris sa famille.\n\nAviva se lance donc corps et âme dans la construction de sa nouvelle vie. Elle change de nom, de tête, de métier, et le phénomène \" Aviva Grossman \" disparaît au fil des années.\n\nMais à l'heure où les moteurs de recherche et les réseaux sociaux s'assurent que le passé existe pour l'éternité aux yeux de tous, a-t-on vraiment le droit à une seconde chance ?",
   "title": "La Tentation de la seconde chance",
   "year": "2018",
-  "id": "5f348fd4-5664-44d5-8577-73d0035d6d39"
+  "id": "5f348fd4-5664-44d5-8577-73d0035d6d39",
+  "gid": "TFtvDwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2024-02-17",
   "authors": "Amal El-Mohtar, Max Gladstone",
-  "cover": "https://books.google.com/books/publisher/content?id=NCY_EAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71zO-CVbkN5KGDbymaJCiPUyhKBYm4J1OluU343qhxWFAsc3PMTnn5xX3nlBG447SNFdrGz0EXm08j9QxnDVC7IGEQ3TN2dBz5ZWeXAcBbgX1fATLA-vKJz5aV9AugfkE5J1EHv&fife=w1000-h1000",
   "isbn": "9782354089436",
   "link": "https://books.google.fr/books?id=NCY_EAAAQBAJ&hl=&source=gbs_api",
   "pages": 192,
@@ -277,12 +295,13 @@
   "synopsis": "C’est ainsi que nous gagnons.\n\nBleu et Rouge, deux combattants ennemis d’une étrange guerre temporelle, s’engagent dans une correspondance interdite, à travers les époques et les champs de bataille. Ces lettres, ne pouvant être lues qu’une seule fois, deviennent peu à peu le refuge de leurs doutes et de leurs rêves. Un amour fragile et dangereux naîtra de leurs échanges. Il leur faudra le préserver envers et contre tout.\n\nLes Oiseaux du temps fait partie de ces romans inoubliables qui nous ressourcent et nous rappellent avec douceur et justesse que l’humanité, l’altérité et l’amour sont les réponses universelles à nos besoins essentiels.",
   "title": "Les Oiseaux du temps",
   "year": "2023",
-  "id": "57995395-b779-4a08-b498-858a4658ec46"
+  "id": "57995395-b779-4a08-b498-858a4658ec46",
+  "gid": "NCY_EAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2024-01-20",
   "authors": "MinaLima",
-  "cover": "",
   "isbn": "9782075189897",
   "link": "https://books.google.fr/books?id=u8Q60AEACAAJ&hl=&source=gbs_api",
   "pages": 224,
@@ -291,12 +310,13 @@
   "synopsis": "Il y a plus de 20 ans, Miraphora Mina et Edouardo Lima furent approchés par Warner bros pour imaginer l'univers graphique des films Harry Potter. Ils ont créé ensemble des accessoires devenus iconiques comme la lettre d'admission à Poudlard, la Gazette du Sorcier, les farces et attrappes des jumeaux Weasley. La Magie de MinaLima célèbre la créativité et la passion du duo de graphistes qui ont illuminé le monde des sorciers de J.K. Rowling et dévoile les secrets de leur processus créatif. De nombreux fac-similés comme la carte du Maraudeur ou la tapisserie de la famille Black raviront autant les amateurs de graphisme que les fans de la saga Harry Potter.",
   "title": "Harry Potter - La Magie de MinaLima",
   "year": "2023",
-  "id": "c2b23b70-bfcd-4904-947f-08b29b2f87ea"
+  "id": "c2b23b70-bfcd-4904-947f-08b29b2f87ea",
+  "gid": "u8Q60AEACAAJ",
+  "hasCover": false
  },
  {
   "addedAt": "2024-01-05",
   "authors": "Mary Robinette Kowal",
-  "cover": "",
   "isbn": "9782207177846",
   "link": "https://www.goodreads.com/book/show/195106665-l-homme-superflu",
   "pages": null,
@@ -305,12 +325,13 @@
   "synopsis": "Tesla Crane, a brilliant inventor and an heiress, is on her honeymoon on an interplanetary space liner, cruising between the Moon and Mars. She’s traveling incognito and is reveling in her anonymity. Then someone is murdered and the festering chowderheads who run security have the audacity to arrest her spouse. Armed with banter, martinis and her small service dog, Tesla is determined to solve the crime so that the newlyweds can get back to canoodling—and keep the real killer from striking again.",
   "title": "L'Homme superflu",
   "year": "",
-  "id": "b6f8a40c-02d0-4544-a725-c8f73601088c"
+  "id": "b6f8a40c-02d0-4544-a725-c8f73601088c",
+  "gid": "",
+  "hasCover": false
  },
  {
   "addedAt": "2024-01-04",
   "authors": "Sally Rooney",
-  "cover": "https://books.google.com/books/publisher/content?id=88QfEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE738_UmSDVCa3rL4Vjxf9pKlkDbrUmqJV2kZO8IsLxrkBNkJWCt38LWXzJP_5I4TL3hg-8famD07EFXr8fcj594w4V2zLJhiC0nuRr2Fvdq6lNhzolTcrOiedOoTa5xHYFaGWPX7&fife=w1000-h1000",
   "isbn": "9782823615258",
   "link": "https://books.google.fr/books?id=88QfEAAAQBAJ&hl=&source=gbs_api",
   "pages": 320,
@@ -319,12 +340,13 @@
   "synopsis": "Connell et Marianne ont grandi dans la même ville d’Irlande. Il est le garçon en vue du lycée, elle est la solitaire un peu maladroite. Pourtant, l’étincelle se produit : le fils de la femme de ménage et l’intello hautaine connaissent ensemble leur premier amour. Un an plus tard, alors que Marianne s’épanouit au Trinity College de Dublin, Connell s’acclimate mal à la vie universitaire. Un jour, tout est léger, irrésistible ; le lendemain, le drame pointe et les sentiments vacillent. Entre eux, le jeu vient tout juste de commencer. Sally Rooney réussit le tour de force de donner une dimension unique et universelle à cette histoire. Porté par des dialogues saisissants de justesse, Normal People est un roman magistral sur la jeunesse, l’amitié, le sexe, sur les errances affectives et intellectuelles d’une génération qui n’a plus le droit de rêver, mais qui s’entête à espérer. Traduit de l’anglais (Irlande) par Stéphane Roques.",
   "title": "Normal People",
   "year": "",
-  "id": "d296ff07-2c77-4525-b2f1-375b84d863c4"
+  "id": "d296ff07-2c77-4525-b2f1-375b84d863c4",
+  "gid": "88QfEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-12-01",
   "authors": "Jason Schreier",
-  "cover": "https://books.google.com/books/publisher/content?id=sgteDwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72iD7m6ut1VvqAS4XOlA61BpFpOIpc4jcxAH6stECU4GZT10pX8pZFioUAYTFhtc0GQcqD44wnFGDBqIdClQTHOT4VCwiv6fUxwOw14kI9xglpkVfC97MQLXSREgI6jkpgpmuCG&fife=w1000-h1000",
   "isbn": "9791035500443",
   "link": "https://books.google.fr/books?id=sgteDwAAQBAJ&hl=&source=gbs_api",
   "pages": 246,
@@ -333,12 +355,13 @@
   "synopsis": "De l'échec au chef-d'œuvre : les incroyables miraculés du jeu vidéo\n\nDiablo III, Destiny ou The Witcher 3... Autant de titres culte qui ont fédéré des millions de joueurs à travers le monde, généré un engouement massif et remporté un succès critique hors du commun. Et pourtant, leur existence tient du miracle...\n\nDans cette chronique captivante des dessous de cette industrie qui ne ressemble à aucune autre, Jason Schreier (Kotaku) explore les affres de la création de certains des plus grands jeux vidéo de l'histoire. Des complexités techniques de Dragon Age : Inquisition au financement acrobatique de Pillars of Eternity en passant par les remaniements d'équipe d'Uncharted 4, Schreier nous emmène dans les coulisses du développement chaotique des plus belles réussites de ces dernières années.\n\nLoin des préjugés et des fantasmes qui circulent sur le milieu du jeu vidéo, Schreier livre ici un document exceptionnel, riche d'une centaine de témoignages. De jeu en jeu, d'obstacle en obstacle, plongez dans le portrait palpitant d'une industrie en perpétuelle réinvention.",
   "title": "Du sang, des larmes et des pixels",
   "year": "2018",
-  "id": "43e15312-63bc-4602-a023-85ff5ec684c5"
+  "id": "43e15312-63bc-4602-a023-85ff5ec684c5",
+  "gid": "sgteDwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-12-01",
   "authors": "Jordan Mechner",
-  "cover": "https://books.google.com/books/publisher/content?id=8aq6EAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71p2VDoi6urT0vp1AoH1BhKap1-0hKrUs4C8HOAHHOuEkUfBzUtb9C0ajHHmnj18r0voTL53l-kUzH9712AItOaxn9O5Dre6XuaoWMxWLZ_nHhKBHprMJWQOgbXmTphY3oqhrJB&fife=w1000-h1000",
   "isbn": "9782413055327",
   "link": "https://books.google.fr/books?id=8aq6EAAAQBAJ&hl=&source=gbs_api",
   "pages": 320,
@@ -347,12 +370,13 @@
   "synopsis": "Franzi, 7 ans, est séparé de ses parents et devient réfugié dans la France occupée de 1940. Son père, autrichien menacé par le nazisme, a vécu la Première Guerre, connu le Front russe et doit fuir son pays pour l'Amérique. 80 ans plus tard, le fils de Franzi, Jordan Mechner, raconte leurs histoires grâce aux carnets tenus par chacun d'entre eux et y mêle son expatriation professionnelle des États-Unis en France.",
   "title": "Replay : Mémoires d'une famille",
   "year": "2023",
-  "id": "99618cf3-7f8e-4fec-ab3c-27dfc156eb97"
+  "id": "99618cf3-7f8e-4fec-ab3c-27dfc156eb97",
+  "gid": "8aq6EAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-12-01",
   "authors": "Jason Schreier",
-  "cover": "",
   "isbn": "9791035503048",
   "link": "https://books.google.fr/books?id=tp74zgEACAAJ&hl=&source=gbs_api",
   "pages": 403,
@@ -361,12 +385,13 @@
   "synopsis": "L'auteur à succès de l'essai Du sang, des larmes et des pixels nous dévoile de nouvelles coulisses de l'industrie du jeu vidéo : comment certains des studios les plus célèbres de la dernière décennie se sont effondrés - et les histoires, à la fois triomphantes et tragiques, de ce qui s'est passé ensuite. Dans ce nouvel ouvrage documenté, Jason Schreier porte son regard d'enquêteur sur la volatilité de l'industrie des jeux vidéo et sur la résilience des personnes qui y travaillent. Le commerce des jeux vidéo est une industrie de prestige opaque. S'appuyant sur des dizaines d'entretiens de première main qui couvrent le développement de jeux phares - Bioshock Infinite, Epic Mickey, Dead Space, etc. - jusqu'à la fermeture marquante des studios qui les ont créés. Les entretiens de Schreier portent également sur les rachats hostiles, les patrons abusifs, les drames d'entreprise, les chèques sans provision et certains faits marquants de l'industrie. Sans langue de bois, il questionne le fait qu'il est devenu extrêmement difficile de gagner sa vie de manière stable, dans une industrie pourtant plus prospère que jamais. Le secteur peut-il encore changer, avant qu'il ne soit trop tard ?",
   "title": "Press reset",
   "year": "2022",
-  "id": "3b21d778-777f-418c-9edf-34cffa560543"
+  "id": "3b21d778-777f-418c-9edf-34cffa560543",
+  "gid": "tp74zgEACAAJ",
+  "hasCover": false
  },
  {
   "addedAt": "2023-11-30",
   "authors": "Clotilde Bruneau, Carlos Rafael Duarte, Luc Ferry, Didier Poli",
-  "cover": "https://books.google.com/books/publisher/content?id=qjt0EAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71iAfzqxod_jf3H0FFVRZWe3UVR40fRglME3AT0vugeuomsuvrMzMKnw6v6Y3aYXCS1eRz9o2lngO9-UVi_EYnRoTFg6HKZ5WswRaKz3IAOgNwcKz3-t77fKDglHSH5Kt9i0f63&fife=w1000-h1000",
   "isbn": "9782331074479",
   "link": "https://books.google.fr/books?id=qjt0EAAAQBAJ&hl=&source=gbs_api",
   "pages": 56,
@@ -375,12 +400,13 @@
   "synopsis": "Le coup de foudre n’arrive pas qu’une fois...\n\nAprès avoir défait les forces du Chaos et pris place sur le trône de l’Olympe pour faire régner l’harmonie dans le cosmos, découvrez quelques-unes des nombreuses infidélités de Zeus et les femmes qu’il a courtisées, désirées et parfois pourchassées. Séducteur invétéré, Zeus est prêt à tout pour arriver à ses fins : métamorphoses, manipulations, ruses diverses... Qu’elles soient nymphes ou simples mortelles, nombreuses sont celles qui ont fait chavirer le cœur de ce dieu suprême, et donné naissance à quelques héros mythiques comme Héraclès ou Persée. Ce nouvel opus anthologique revient sur plusieurs mythes ancrés dans notre imaginaire collectif, plus ou moins connus mais toujours riches d’une signification philosophique profonde, tels les mythes de Némésis et d’Europe.",
   "title": "Les amours de Zeus",
   "year": "2022",
-  "id": "d6759de6-c35d-42f1-ae3f-67ecc82b91fa"
+  "id": "d6759de6-c35d-42f1-ae3f-67ecc82b91fa",
+  "gid": "qjt0EAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-30",
   "authors": "Robert Charles Wilson",
-  "cover": "https://books.google.com/books/publisher/content?id=5Zh9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70LoIFYbhHPN48iO53Cvy0BG2JjFeFN9r8px7ry06mmmQb8E8IuCLYvJNQoChuikqMvAttZL7VpXppeXtw3TFRIMhss7DBFWqMzXm15FWGcUijZdjWX2Y3KmUFcVw9qLoEEzlHJ&fife=w1000-h1000",
   "isbn": "9782072830495",
   "link": "https://books.google.fr/books?id=5Zh9DwAAQBAJ&hl=&source=gbs_api",
   "pages": 464,
@@ -389,12 +415,13 @@
   "synopsis": "Pour cinq ans seulement, jusqu’en 1877, la cité de Futurity dresse ses immenses tours jumelles au-dessus des grandes plaines de l'Illinois. Depuis Futurity, des hommes du futur viennent visiter le XIXe siècle. Et, contre une fortune en métaux précieux, les autochtones peuvent dormir dans la Tour n° 1, véritable vitrine technologique d’un incompréhensible XXIe siècle. C’est dans cette cité que travaille, comme agent de sécurité, Jesse Cullum, un autochtone. Parce qu’il a sauvé le président Ulysses Grant d’une tentative d'assassinat, Jesse se voit proposer une promotion : assisté d’une femme du XXIe siècle, il va devoir mener l’enquête. Mais que va-t-il réellement découvrir? Un complot pour tuer le président... ou les inavouables secrets de Futurity ? Après avoir imaginé le futur des réseaux sociaux dans Les Affinités, Robert Charles Wilson revient avec ce roman de voyage dans le temps où les surprises s’enchaînent à un rythme vertigineux.",
   "title": "La Cité du futur",
   "year": "",
-  "id": "b7b088ae-466b-47ae-bbdc-ecf003fb3aad"
+  "id": "b7b088ae-466b-47ae-bbdc-ecf003fb3aad",
+  "gid": "5Zh9DwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-30",
   "authors": "Clotilde Bruneau, Luc Ferry, Didier Poli, Federico Santagati",
-  "cover": "https://books.google.com/books/publisher/content?id=azSFEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE7289oTJCGpFG1d44wcOj_MajBMxvyRuJOGLP9pIIxTLkEeIVXdkzZM72Wxji7Nee4mQgdb3Y6V9lXPMwJ1CHHpUPuuFk27-pNtpx1n9WMhZEL9QYS3SBPgs7IFD0g5zpsYYPPDf&fife=w1000-h1000",
   "isbn": "9782331074493",
   "link": "https://books.google.fr/books?id=azSFEAAAQBAJ&hl=&source=gbs_api",
   "pages": 56,
@@ -403,12 +430,13 @@
   "synopsis": "La plus grande des menaces sommeille dans les entrailles de la Terre...\n\nAprès les Titans, c’est au tour des Géants d’attaquer le mont Olympe, résidence des dieux. Vainqueurs après un âpre combat, les dieux s’empressent de célébrer leur nouvelle victoire... mais celle-ci sera de courte durée. En colère, Gaia va libérer la plus terrible des divinités primitives : son propre fils, Typhon. Cette fois, Zeus va devoir affronter une force qui le dépasse ! Retenu captif, le dieu des dieux n’aura d’autre choix que de s’allier avec un simple mortel, Cadmos, le souverain de Thèbes, pour éradiquer le chaos et enfin viabiliser l’harmonie cosmique... Le choc sera spectaculaire. Un nouveau chapitre particulièrement épique de la mythologie grecque, au graphisme époustouflant dû aux crayons du dessinateur italien Federico Santagati (La naissance des Dieux).",
   "title": "Typhon",
   "year": "2022",
-  "id": "c308a084-d235-4263-b056-eaf481914a38"
+  "id": "c308a084-d235-4263-b056-eaf481914a38",
+  "gid": "azSFEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-30",
   "authors": "Clotilde Bruneau, Luca Erbetta, Luc Ferry, Didier Poli",
-  "cover": "https://books.google.com/books/publisher/content?id=oqtQEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE734DeyGUcA7guLc1hmRESKqUDbxxZMLwixpmmx1IUzRIgRM7L5whvXNPIq-Ag_8n0CneIyYElVcHiwJyl1y3FeOrYmC7KwOM7AnWkt1cjLm0GCqcHA9ks4BBgfABjHzPoxA5-Jf&fife=w1000-h1000",
   "isbn": "9782331053825",
   "link": "https://books.google.fr/books?id=oqtQEAAAQBAJ&hl=&source=gbs_api",
   "pages": 56,
@@ -417,12 +445,13 @@
   "synopsis": "Le plus grec de tous les dieux.\n\nFils de Zeus et de Léto, frère jumeau d’Artémis, Apollon nait dans de douloureuses circonstances avant d’établir son temple à Delphes où ses Pythies communiquent au monde leurs oracles. Parcourant le monde avec sa lyre et son arc, Apollon protège la Terre du chaos et cherche à établir l’harmonie en toutes choses. Il passe pour le plus beau de tous les Olympiens et incarne autant la lumière éclatante que l’ordre. Pourtant, quand la femme qu’il aime finit par le tromper avec un simple humain, Apollon cède à la colère et va jusqu’à tuer celle qui portait son enfant...\n\nDieu complexe, fascinant, beau et arrogant, Apollon se laisse raconter dans un nouvel ouvrage de la collection « La Sagesse des mythes » qui revient sur les événements marquants de l’une des divinités les plus populaires de la mythologie.",
   "title": "Apollon",
   "year": "2021",
-  "id": "316efcd4-f654-4827-bb82-a9a488198cf3"
+  "id": "316efcd4-f654-4827-bb82-a9a488198cf3",
+  "gid": "oqtQEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-30",
   "authors": "Giuseppe Baiguera, Clotilde Bruneau, Luc Ferry, Didier Poli",
-  "cover": "https://books.google.com/books/publisher/content?id=nEtgEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70woLh3mmke428C1vkkJQ-8SrTcoAzbc7CYY3mQzJ7QZcAyhLT-wJeyzrUYFhM05qbyiuYqjn1dlXJMglVL9L2eDJ5RiiWQn1lTUhPm2kzRBl29dZmv2NFvvDVvHp9KL2J9IrEI&fife=w1000-h1000",
   "isbn": "9782331054150",
   "link": "https://books.google.fr/books?id=nEtgEAAAQBAJ&hl=&source=gbs_api",
   "pages": 56,
@@ -431,12 +460,13 @@
   "synopsis": "Amour, gloire et beauté.\n\nNée des membres d’Ouranos tranchés par Cronos et échus dans la mer, Aphrodite s’extrait de l’écume pour devenir la déesse de l’amour, du désir et de la beauté. Dès cet instant, ses charmes ont décidé du sort de bien des hommes. Dieux et mortels, la déesse a le pouvoir de les faire tous succomber. Mais toutes les amourettes d’Aphrodite ne sont pas identiques. De certaines sont nées des passions comme avec Arès, d’autres ont mis au jour des progénitures comme avec Anchise. C’est d’ailleurs avec ce dernier qu’Aphrodite a enfanté Énée, héros de Troie, qu’elle protégera au risque de mettre sa beauté en péril...\n\nPremier tome d’une série consacrée à celle dont la naissance fut immortalisée par Botticelli, cet opus content les prémisses du mythe d’Aphrodite, la folie qu’elle parvient à inspirer, son influence sur l’Olympe, l’amour pour son fils...",
   "title": "Aphrodite - Tome 01",
   "year": "2022",
-  "id": "f7213776-db7a-43e2-bda2-e7c45fdfad51"
+  "id": "f7213776-db7a-43e2-bda2-e7c45fdfad51",
+  "gid": "nEtgEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-30",
   "authors": "Gianenrico Bonacorsi, Clotilde Bruneau, Luc Ferry, Didier Poli",
-  "cover": "https://books.google.com/books/publisher/content?id=4FNBEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71Uqly71B_2J0WTnbfaxL1hx4ggn7Y172sMxPFt8UKzNCDiqk3liyh5vOCJnPyKLZkEPbmEr2lQMVobUt_lkarIvrwvqcNZZZxG8D0eSyEvq1OsZZ-P-5ofXITmJBwO26_hjE63&fife=w1000-h1000",
   "isbn": "9782331052330",
   "link": "https://books.google.fr/books?id=4FNBEAAAQBAJ&hl=&source=gbs_api",
   "pages": 56,
@@ -445,12 +475,13 @@
   "synopsis": "Ils ont osé défier la mort.\n\nFils d’Apollon et de Coronis, Asclépios vient au monde tandis que le corps inerte de sa mère brûle sur un bûcher. In extremis, le père sauve l’enfant et décide de le confier au centaure Chiron. Au fil des années, les compétences d’Asclépios en matière de médecine deviennent extraordinaires. Sa réputation parvient jusqu’à l’Olympe et Athéna décide de le récompenser en lui offrant le sang d’une Gorgone, capable de ramener les morts à la vie. Mais en privant le royaume d’Hadès de nouveaux arrivants, Asclépios va s’attirer les foudres de l’Olympe...\n\nFondateur de Corinthe, Sisyphe est un homme rusé, prêt à tout pour défendre sa vie et faire prospérer sa cité. Après avoir obtenu pour sa ville une fontaine qui ne tarit jamais, son intelligence lui permet d’esquiver les condamnations mortelles de Thanatos et de Hadès. Mais, Sisyphe le sait, faire preuve d’une telle arrogance ne pourra se payer qu’au prix d’un châtiment éternel...",
   "title": "Sisyphe & Asclépios",
   "year": "2021",
-  "id": "dcc55395-cff3-4df6-ab67-1c9c6dd4f3ea"
+  "id": "dcc55395-cff3-4df6-ab67-1c9c6dd4f3ea",
+  "gid": "4FNBEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-30",
   "authors": "Clotilde Bruneau, Luc Ferry, Diego Oddi, Didier Poli",
-  "cover": "https://books.google.com/books/publisher/content?id=mqtQEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70wQ4cwJqy0PJyiZdrYHXwDiX1gR2pBFk1dZzCKHV_bu-enjHcje0gs_mH0mhyXhaMxZOFTGqe3ZQHnPN9_FUPefaSHxJX40exBAAKAnkQtDQe_HCpdnKnSPewuZMNr_ypGlQZf&fife=w1000-h1000",
   "isbn": "9782331053801",
   "link": "https://books.google.fr/books?id=mqtQEAAAQBAJ&hl=&source=gbs_api",
   "pages": 56,
@@ -459,12 +490,13 @@
   "synopsis": "Il est invisible aux yeux de tous. Il est le souverain des morts.\n\nInquieté par une prophétie lui assurant que l'un de ses descendants le détrônera, Cronos décide d’ingurgiter chacun de ses enfants avant qu’ils ne puissent être capables de lui nuire. Hadès est ainsi avalé par son père aux premières lueurs de son existence avant d’être délivré, des années plus tard, par son frère Zeus. De la libération des enfants de Cronos va découler la guerre entre les Titans et les Olympiens et, à l’issue des combats, Hadès héritera du royaume des morts. C’est à son trône infernal qu’Hadès doit sa richesse, sa femme Perséphone et ses multiples rencontres avec des héros perdus aux cœur des entrailles de son funeste domaine.\n\nRevenant sur les éléments fondateurs du mythe d’Hadès, ce nouvel opus de la collection « La Sagesse des mythes » permet également d'aborder les aventures des héros ayant traversé son royaume infernal.",
   "title": "Les Enfers",
   "year": "2021",
-  "id": "ac46e347-aaef-428b-a9ff-3064724432af"
+  "id": "ac46e347-aaef-428b-a9ff-3064724432af",
+  "gid": "mqtQEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-30",
   "authors": "Xavier Dorison",
-  "cover": "https://books.google.com/books/publisher/content?id=cPiXEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72nckfeHiits5TMKMv5LAdCoi4nF5ZvFQHd1Wt_KcWpDF_gu7ogA9ida0Mh_P3ClhWJG6ggGBre2c-H4cDb8MKI41NnzjIVFDLIxz-cfusltBBL4ScFnsulJuwhRsTAjrmvVMgt&fife=w1000-h1000",
   "isbn": "9782203252820",
   "link": "https://books.google.fr/books?id=cPiXEAAAQBAJ&hl=&source=gbs_api",
   "pages": 66,
@@ -473,12 +505,13 @@
   "synopsis": "Avec le lapin César et le vieux rat Azélar, Miss B doit convaincre les animaux de ne surtout pas céder à la violence pour mettre fin au règne de Silvio... Au château, la dictature continue. Grâce aux efforts de Miss B, les animaux se remobilisent avec peine pour faire renaître, en même temps que le printemps, le mouvement pacifiste des Marguerites. Mais Silvio ne l’entend certainement pas de cette oreille, et le taureau dictateur en a sous le sabot pour conserver son pouvoir. Toujours aidé par sa cruelle milice canine, il décide de faire embastiller les animaux rebelles au donjon. Qu’à cela ne tienne : Miss B et ses amis répondront une nouvelle fois par la ruse... et la solidarité !",
   "title": "Le Château des animaux (Tome 3) - La Nuit des justes",
   "year": "",
-  "id": "c42fb437-624e-434e-b5ff-9b83265d38d5"
+  "id": "c42fb437-624e-434e-b5ff-9b83265d38d5",
+  "gid": "cPiXEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-30",
   "authors": "Giuseppe Baiguera, Clotilde Bruneau, Luc Ferry, Didier Poli",
-  "cover": "https://books.google.com/books/publisher/content?id=YZ-TEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE712PClgJVVLIdiEZzMraFbGOycicEurg49jkHP1t0lbz2kj8dAdkUc64nfRdyvNLEB7mJPqL4Kimxs3uPHfpaVyck7RD-2Uef2mbTbgGqvz6m5NVzVtHJu4jDB7BePQHUjB1lxk&fife=w1000-h1000",
   "isbn": "9782331064753",
   "link": "https://books.google.fr/books?id=YZ-TEAAAQBAJ&hl=&source=gbs_api",
   "pages": 56,
@@ -487,12 +520,13 @@
   "synopsis": "Les apparences sont parfois trompeuses...\n\nNombreux sont ceux qui ont succombé aux charmes d’Aphrodite, déesse grecque de l'amour et du désir. Taquin, Hermès, l’un de ses amants, admet qu'il a du mal à se souvenir de tous les enfants qu'elle a pu engendrer. Avec lui, elle enfanta Hermaphrodite. Avec Arès, dieu de la guerre, elle donna naissance à Phobos et Deimos. Avec un simple mortel, elle conçut Énée... En évoquant le destin de ses enfants, on découvre une déesse qui sait aussi se montrer aimante et maternelle. Mais gare à celui qui osera mettre Aphrodite en colère ! Sa beauté dissimule un tempérament de feu et son courroux s’abattra irrémédiablement sur une rivale trop naïve ou une mère trop prétentieuse. Les châtiments de cette déesse impitoyable ont fait de nombreuses victimes, telle Myrrha métamorphosée en arbre et bien d’autres, que l’on retrouve dans ce recueil passionnant qui clôt en beauté le diptyque consacré à Aphrodite.",
   "title": "Aphrodite - Tome 02",
   "year": "2022",
-  "id": "e90836aa-6ad3-4dcd-8272-5e197da54455"
+  "id": "e90836aa-6ad3-4dcd-8272-5e197da54455",
+  "gid": "YZ-TEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-27",
   "authors": "Jasper Fforde",
-  "cover": "https://books.google.com/books/content?id=kg4gry6PqL4C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE707E_pPoTsNfcMXPuw6q5MKct1X0qAQLpi6UURYwRF0C9zAmKO4JtkclPV3XELqAaoiBQp144JqOyN_thpegwSuRaQ3v36gqI7mlb8lUOYJonxHnBWRzaNKos0lJ5sxw59h10Gf&fife=w1000-h1000",
   "isbn": "9782265095953",
   "link": "https://books.google.fr/books?id=kg4gry6PqL4C&hl=&source=gbs_api",
   "pages": 216,
@@ -501,12 +535,13 @@
   "synopsis": "Grâce à Jennifer Strange, les magiciens ont récupéré leurs pouvoirs dans le royaume. La mauvaise nouvelle, c'est que l'agence de magiciens Kazam dont s'occupe Jennifer a désormais une terrible concurrente, la société iMagie, dirigée par le très antipathique Blix. Jennifer et ses apprentis devront déployer des trésors d'ingéniosité pour lutter contre lui lors d'un tournoi de magie. Mais la soudaine apparition d'un nouveau quarkon menace la ville...",
   "title": "Jennifer Strange, dresseuse de quarkon",
   "year": "2012",
-  "id": "2fe3a89f-6ae8-451b-9c2c-417fd4a54c96"
+  "id": "2fe3a89f-6ae8-451b-9c2c-417fd4a54c96",
+  "gid": "kg4gry6PqL4C",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-27",
   "authors": "Bernard Werber",
-  "cover": "https://books.google.com/books/publisher/content?id=58D1DwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71BmfvhSyNS3NTMTwvTjW7HIoG09ojh6rH_81x9VhZwuGLRHxBuRAt4xfIR8ERMTnH2YDOSlC5h-sRcSrxZ6e5i3CnU4We7o3KpOL9oEKfIzZYeQ2JPcR6jrkSXQEdy54P3VIwc&fife=w1000-h1000",
   "isbn": "9782226456885",
   "link": "https://books.google.fr/books?id=58D1DwAAQBAJ&hl=&source=gbs_api",
   "pages": 432,
@@ -515,12 +550,13 @@
   "synopsis": "Affronter des hordes de rats impitoyables\n\nFaire alliance avec de stupides humains\n\nCirculer sur un fil entre les buildings de New York\n\nDésamorcer une bombe atomique...\n\nFranchement, si j’avais su, parole de CHAT, je n’aurais pas traversé l’océan.",
   "title": "La Planète des chats",
   "year": "2020",
-  "id": "da9eff59-310c-4466-9bc8-bc698e99cbb6"
+  "id": "da9eff59-310c-4466-9bc8-bc698e99cbb6",
+  "gid": "58D1DwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Bruce Benamran",
-  "cover": "https://books.google.com/books/publisher/content?id=KyIAEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70kghdrW2k8KwWPpHCy5Y84k9VBtSPxOMAd_ICGEFveB6ZHhOcbc2JwjkoYF7nOYTmV93yCDShTXftOJGANSzduydg2J75AvU4az_9tUj1WE2P1fB9BHpGHw7rDFLoDhN6H0_vC&fife=w1000-h1000",
   "isbn": "9782081518711",
   "link": "https://books.google.fr/books?id=KyIAEAAAQBAJ&hl=&source=gbs_api",
   "pages": 492,
@@ -529,12 +565,13 @@
   "synopsis": "Mourir pour fuir, fuir pour comprendre. Sylvain Guérin est un employé sans histoire à la routine millimétrée. Un matin, le JT annonce qu’un accident a eu lieu sur la route de son travail. La seule victime s’appelle Sylvain Guérin. S’agit-il d’un homonyme ? Quelques minutes plus tard, un SMS l’exhorte à ne surtout pas se rendre au bureau... Entre courses-poursuites, machination scientifique et engrenage industriel machiavélique, la vie de Sylvain repose peut-être sur un passé qui pourrait bien receler les clés de l’expérience ultime de l’humanité.",
   "title": "L'ultime expérience",
   "year": "",
-  "id": "b0dc8296-b599-491e-88fb-73c417b18e9e"
+  "id": "b0dc8296-b599-491e-88fb-73c417b18e9e",
+  "gid": "KyIAEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Peng Shepherd",
-  "cover": "https://books.google.com/books/publisher/content?id=9YPgDwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE738nUWNh4ZZ_-sGk9n4nnMakV3k5ri66YvDQw9NEITF7Fq-Tqs2NER8LvlVQ8O-9R9Z9uTschD_S85gBdb3NveyL-2Zn3KiSNqmXw3aOpHRwPSXPmuobjLSUkmwuPF3tQIWfr6g&fife=w1000-h1000",
   "isbn": "9782226453396",
   "link": "https://books.google.fr/books?id=9YPgDwAAQBAJ&hl=&source=gbs_api",
   "pages": 592,
@@ -543,12 +580,13 @@
   "synopsis": "Que seriez-vous prêt à sacrifier pour vous souvenir ?\n\nUn jour, en Inde, un homme perd son ombre – un phénomène que la science échoue à expliquer. Il est le premier, mais bientôt on observe des milliers, des millions de cas similaires. Non contentes de perdre leur ombre, les victimes perdent peu à peu leurs souvenirs et peuvent devenir dangereuses.\n\nEn se cachant dans un hôtel abandonné au fond des bois, Max et son mari Ory ont échappé à la fin du monde tel qu’ils l’ont connu. Leur nouvelle vie semble presque normale, jusqu’au jour où l’ombre de Max disparaît...\n\nSitué dans une Amérique tombée de son piédestal, où nul n’échappe au danger, Le Livre de M raconte l’incroyable destin de gens ordinaires victimes d’une catastrophe mondiale extraordinaire.\n\nPeng Shepherd est américaine. Le livre de M, récompensé par le Neukom Award 2019, est son premier roman.",
   "title": "Le Livre de M",
   "year": "2020",
-  "id": "3b55ed4d-b7c3-4e30-8ba4-5d4d03bf85b8"
+  "id": "3b55ed4d-b7c3-4e30-8ba4-5d4d03bf85b8",
+  "gid": "9YPgDwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Bernard Werber",
-  "cover": "https://books.google.com/books/publisher/content?id=ozNtDwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE737WoDm0FQcHdiKc-Ik6bND8QDWYgIRGVWyPHLDePrYbviadBz0w9XN4M4nQY50uhROc5BcMF6VVWiWIbIOvWVtZ1jCYzvXMMTppA_I4gy_lbAb_thijzJdJ8ZBjcfFbEMTUn2-&fife=w1000-h1000",
   "isbn": "9782226431295",
   "link": "https://books.google.fr/books?id=ozNtDwAAQBAJ&hl=&source=gbs_api",
   "pages": 560,
@@ -557,12 +595,13 @@
   "synopsis": "Savez-vous qui vous êtes vraiment ?\n\nÊtes-vous sûr de ne pas avoir vécu d'autres vies ?\n\nBernard Werber est un des romanciers les plus lus en France, traduit dans le monde entier, notamment en Russie et en Corée du Sud, où il est un véritable auteur-culte, vendu à plusieurs millions d'exemplaires.",
   "title": "La Boîte de Pandore",
   "year": "2018",
-  "id": "bdeb5299-0cbe-4dea-8c2e-bdfbbcf0cddf"
+  "id": "bdeb5299-0cbe-4dea-8c2e-bdfbbcf0cddf",
+  "gid": "ozNtDwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "François Rouiller",
-  "cover": "https://books.google.com/books/publisher/content?id=wViUCwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72KJDcF_hdufleHZUvfuvU8Jc4H6By78FSAJAG7SYgyTqtMouJxunNx5x1ys2G7E7YAb4v1VUWskRS47GY6123I5OhOMtwhNjMWhafFFwdS2nr74l7Y5hD-Ho6gTNRWRYZ8RIE1&fife=w1000-h1000",
   "isbn": "9782367934273",
   "link": "https://books.google.fr/books?id=wViUCwAAQBAJ&hl=&source=gbs_api",
   "pages": 384,
@@ -571,12 +610,13 @@
   "synopsis": "Régis, dernier de la classe, ne veut pas prendre de Métaquine®, le médicament qui transforme les cancres en écoliers modèles. Des millions d’enfants inadaptés bénéficient pourtant du traitement, au grand soulagement des profs et des parents. Mais Régis craint que la chimie dissolve le Duché, la contrée fabuleuse d’où son imagination tire châteaux, dinosaures et compagnons de jeu invisibles.\n\nLa mère du gamin s’est enfermée sous un casque de cybertox, son beau-père rumine des fantasmes de tueur en feuilletant d’abjects magazines. Il n’y a guère qu’une voisine, neuropsy à la retraite, pour l’aider à défendre ses rêves. Ou peut-être, en ville, cette politicienne remuante qui milite contre la distribution de psychotropes à l’école.\n\nMais que peuvent deux idéalistes face à un géant pharmaceutique et aux milliards de son budget marketing, alors qu’on découvre à la Métaquine® des vertus toujours plus prometteuses et que la planète entière a déjà gobé la pilule ?\n\nFrançois Rouiller, avec ce premier roman, entre d’emblée dans la cour des grands. Métaquine® est le fruit de huit ans d’écriture et de réflexion sur les dérives de l’industrie pharmaceutique, le mensonge publicitaire, les manipulations de masse, l’espoir d’une souveraine panacée. Avec, à la clé, cette question : habitons-nous le vrai monde ou un placebo ?",
   "title": "Métaquine® - Indications",
   "year": "2019",
-  "id": "4fe1bbe3-fc4f-45ba-83b5-052e647c8c20"
+  "id": "4fe1bbe3-fc4f-45ba-83b5-052e647c8c20",
+  "gid": "wViUCwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "M.R. Carey",
-  "cover": "https://books.google.com/books/publisher/content?id=5653EAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70ClKamjNtBKcZ63y6c4DxeJ_EMJIiXgRXu2RwoHBZdVGqCsyH9WmFhxYe9kKDMJLU2aIjIuhRKP4PoarZi5BLG2l2GZoxXldsXtC46bNFvpDAmMams0dNFcVgFJfsENW-1NZt6&fife=w1000-h1000",
   "isbn": "9782367935928",
   "link": "https://books.google.fr/books?id=5653EAAAQBAJ&hl=&source=gbs_api",
   "pages": 496,
@@ -585,12 +625,13 @@
   "synopsis": "Faisant suite au Livre de Koli et aux Épreuves de Koli, voici le dernier roman de la trilogie « Rempart ».",
   "title": "La Chute de Koli",
   "year": "2022",
-  "id": "d835b517-0526-4ef1-8388-0e77ae13a90a"
+  "id": "d835b517-0526-4ef1-8388-0e77ae13a90a",
+  "gid": "5653EAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Jodi Taylor",
-  "cover": "https://books.google.com/books/publisher/content?id=s4U7DwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72Mom07d3X1ksir-zHmsCgdqqFg6vAx3rUoBKIeSiriJr56u9i4M4rBNzgoSLb0qPU6DA-q1Z_WMUfU0QsiF4SUhOgxH2hacFyZXqGln0VMCEFWmPCbL7ZqRFyZ6Hz93QjSQhSm&fife=w1000-h1000",
   "isbn": "9782357203587",
   "link": "https://books.google.fr/books?id=s4U7DwAAQBAJ&hl=&source=gbs_api",
   "pages": 290,
@@ -599,12 +640,13 @@
   "synopsis": "À l'institut St Mary de recherche historique, les historiens n'étudient pas seulement le passé, ils le visitent.\n\nDerrière l'innocente façade de St Mary, le secret du voyage dans le temps a été découvert et reste bien gardé. Les chercheurs en Histoire ont ainsi une méthode de travail tout à fait particulière : ils \" étudient 'en temps réel' les événements majeurs de l'Histoire \". En se faisant passer pour d'inoffensifs excentriques, ils tentent de répondre à certaines questions qui n'ont jamais été résolues, sans jamais toucher au cours de l'Histoire... au risque d'en mourir.\n\nMadeleine Maxwell, une jeune et brillante historienne est contactée par son ancien professeur afin de rejoindre l'équipe de l'Institut St Mary. Au cours de son étrange entretien d'embauche, Maxwell comprend vite les possibilités qui s'offrent à elle...\n\nDe la disparition de Pompéi aux tranchées de la Première Guerre mondiale, du grand incendie de Londres à la destruction de la bibliothèque d'Alexandrie, la jeune historienne va revivre d'extraordinaires événements. Alors qu'au sein de l'institut naissent des enjeux de pouvoir...",
   "title": "Les chroniques de St Mary - Tome 01 Un monde après l'autre",
   "year": "2018",
-  "id": "97c5ea38-9959-44a3-b67f-a57a3210735d"
+  "id": "97c5ea38-9959-44a3-b67f-a57a3210735d",
+  "gid": "s4U7DwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Alric & Jennifer Twice",
-  "cover": "https://books.google.com/books/publisher/content?id=7XlyEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73WkviSQETAUfeelpsPrXJ5IS_0yvVCDkKVz8EYMLuAQ2TZwg534UywhDK029BA9WluCRLNY-6yLR1zpHkE17aOZhN7DMaSoN93ghBjGqPqGEwLBxYLtwAc77yaKyqw5RcRuIVc&fife=w1000-h1000",
   "isbn": "9782017169765",
   "link": "https://books.google.fr/books?id=7XlyEAAAQBAJ&hl=&source=gbs_api",
   "pages": 750,
@@ -613,12 +655,13 @@
   "synopsis": "La vérité aura exigé maints sacrifices, mélange de sang et d’encre.\n\nSuite à l’affrontement au château d’Hélianthe, Arya et ses compagnons sont marqués par la perte, mais le voile de l’illusion s’est enfin levé. Ensemble, ils continuent de fuir et traversent une nouvelle Frontière. Là-bas, la lune est reine et les souvenirs recèlent de très nombreux et anciens secrets. À Archelune, la Passeuse de Mots n’a jamais été aussi proche de sa propre histoire et de la mémoire de ses prédécesseurs. Chaque révélation changera son âme et la nature profonde et spirituelle de sa quête.\n\nPlus que jamais, Arya va devoir comprendre ce qu’elle est, ce qu’on attend d’elle, et se battre. Contre les Miasmes, ses émotions, contre des ennemis de plus en plus sombres, ses propres démons et ceux des autres, et les obscurs desseins de l’Eidolôn. Pour discerner le vrai du faux, elle devra se fier à la loyauté de ses compagnons et de ses nouveaux alliés, prêts à lui prêter allégeance et croire en elle pour soigner les maux d’Hélios.\n\nLe voyage continue dans un royaume dangereux et brisé, où tout peut arriver. Le meilleur comme le pire. La cendre ou la poussière d’étoiles.",
   "title": "La Passeuse de Mots - Tome 3 - La mémoire de la lune",
   "year": "2022",
-  "id": "57d79384-0986-425c-b2a4-712dd7a222ee"
+  "id": "57d79384-0986-425c-b2a4-712dd7a222ee",
+  "gid": "7XlyEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Neil Gaiman, Terry Pratchett",
-  "cover": "https://books.google.com/books/publisher/content?id=lLGYDwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73Xrcc4HMYkWFf2pf_diy_gPUTdSuaCL7SfZTnvmJ13CaDOFTlXi_JicbUee6atwSX1BcyCBseu4rHS0lueyxJqx1LufRVsZsG7cwks9m9Cw_TFPBDfNyWm2kEq-Dst2oAcI23p&fife=w1000-h1000",
   "isbn": "9791030702903",
   "link": "https://books.google.fr/books?id=lLGYDwAAQBAJ&hl=&source=gbs_api",
   "pages": 512,
@@ -627,12 +670,13 @@
   "synopsis": "Comment deux envoyés spéciaux sur Terre, Aziraphale (ange, bibliophile et libraire à mi-temps) et Rampa (démon, lunettes noires, Bentley et bottes en peau de serpent), décident de faire capoter l’Apocalypse qu’ils sont chargés par leurs patrons respectifs, Dieu et Satan, de déclencher en 1999 à Londres...",
   "title": "De bons présages",
   "year": "",
-  "id": "598e6941-65ff-4b1b-97f9-91e54b324c7e"
+  "id": "598e6941-65ff-4b1b-97f9-91e54b324c7e",
+  "gid": "lLGYDwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "William Gibson",
-  "cover": "https://books.google.com/books/publisher/content?id=kW7KDwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73fwLqf2c7_W-OX5Ka0as-Z7FBomvLKQM_5i0cb7Ulu1X2c0WNg9TnzQYkdhQ3SlwUKOiWS9RoD74BPi0r9_Bry4h45XfVOks0QvSP1USmSRCfT43Mzelbzt5Bq1xu-z4tg_kGU&fife=w1000-h1000",
   "isbn": "9791030703221",
   "link": "https://books.google.fr/books?id=kW7KDwAAQBAJ&hl=&source=gbs_api",
   "pages": 624,
@@ -641,12 +685,13 @@
   "synopsis": "À travers l’histoire de Flynne Fisher, gameuse ballottée entre un futur proche, les États-Unis et le Londres post-apocalyptique, soixante-dix ans après le grand effondrement du « Jackpot », Périphériques entremêle deux futurs pour mettre en scène un récit visionnaire de l’avenir que nous fabriquons.",
   "title": "Périphériques",
   "year": "2020",
-  "id": "9ccb62eb-bc8d-4e19-9e3f-bea69b59b627"
+  "id": "9ccb62eb-bc8d-4e19-9e3f-bea69b59b627",
+  "gid": "kW7KDwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "M.R. Carey",
-  "cover": "https://books.google.com/books/publisher/content?id=E-ZLDwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE7078xzfea8ufrfxLam9D81C9Osatsrg7BV_QxIw9nGklvdPWLzfRI3uC-3BVyTp74s3RdMsGchhuaT6Y6uFTMQEzIiVd6iX5KfQIXMVpTRNbavD2IhRBL7FbT1btn5eo8taPKHH&fife=w1000-h1000",
   "isbn": "9782367934891",
   "link": "https://books.google.fr/books?id=E-ZLDwAAQBAJ&hl=&source=gbs_api",
   "pages": 464,
@@ -655,12 +700,13 @@
   "synopsis": "Tous les enfants ne sont pas des monstres\n\nSur une Terre en proie à la terreur.\n\nStephen, 14 ans, autiste et surdoué, a pris place dans un laboratoire mobile avec six militaires et six scientifiques. Sauveront-ils l’humanité ?\n\nLa Part du monstre se déroule dans le même univers que Celle qui a tous les dons et le précède.\n\n\"Une étude de personnages brillante, doublée d’un thriller post-apocalyptique prenant et jubilatoire.\" SciFiNow",
   "title": "La part du monstre",
   "year": "2020",
-  "id": "44c46d21-bf4f-4d84-ad44-097c8be316f9"
+  "id": "44c46d21-bf4f-4d84-ad44-097c8be316f9",
+  "gid": "E-ZLDwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Alric & Jennifer Twice",
-  "cover": "https://books.google.com/books/publisher/content?id=QKE_EAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72Ou_cYuFIiIEgqd9_U3urWrzMk8gVT7LmQdUAxLRoWGwcG0tR74rlqD9MmFQoJGh-4UtPPLKq1W3GYyKoJ5PTwVkrNXCwv_eagA758rnI2NUXCd59ZxcYEOTM8qrHJwqfy-PcU&fife=w1000-h1000",
   "isbn": "9782017146834",
   "link": "https://books.google.fr/books?id=QKE_EAAAQBAJ&hl=&source=gbs_api",
   "pages": 736,
@@ -669,12 +715,13 @@
   "synopsis": "La Cité Immergée n’aura pas laissé Arya et ses compagnons indemnes. De retour sur le Narcisse, convaincue par les deux nouveaux pouvoirs qui lui ont été délivrés, Arya croit plus que jamais à ce lien indéfectible qui relie tous ceux qui l’accompagnent sur son chemin et à l’espoir qui grandit chaque jour de retrouver les héritiers d’Hélianthe et sa famille. Pourtant, une toute autre réalité s’impose à elle. Celle d'un détour inévitable parmi les dunes brûlantes du désert, d'une traversée dans le temps et de la découverte d'âmes aimantes prêtes à braver les interdits. La menace des soldats de Verre, quant à elle, se répand comme du venin sur les terres d'Hélios et le danger s'accroît de jour en jour. Arya le sait, les liens du cœur et de la vérité scelleront son destin de Passeuse de Mots à jamais.",
   "title": "La Passeuse de Mots - Tome 2 - L'Oeil de vérité",
   "year": "2021",
-  "id": "d844b75e-6f5f-46ee-82ae-1a36221d244e"
+  "id": "d844b75e-6f5f-46ee-82ae-1a36221d244e",
+  "gid": "QKE_EAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "François Rouiller",
-  "cover": "https://books.google.com/books/publisher/content?id=5ViUCwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73jhAoOiURitTteHrOec8EyCja7ZvFKmyxbrH33sSIVz3tX6YZGm46P0awpouTd2qUWbr8F7dlaN9SthNX5ImzaSJzp7kQRuPZPE099cRR63mRZ9nRVA-GrVgc8usDVOnonTWpj&fife=w1000-h1000",
   "isbn": "9782367934280",
   "link": "https://books.google.fr/books?id=5ViUCwAAQBAJ&hl=&source=gbs_api",
   "pages": 464,
@@ -683,12 +730,13 @@
   "synopsis": "Régis, dernier de la classe, ne veut pas prendre de Métaquine®, le médicament qui transforme les cancres en écoliers modèles. Des millions d’enfants inadaptés bénéficient pourtant du traitement, au grand soulagement des profs et des parents. Mais Régis craint que la chimie dissolve le Duché, la contrée fabuleuse d’où son imagination tire châteaux, dinosaures et compagnons de jeu invisibles.\n\nLa mère du gamin s’est enfermée sous un casque de cybertox, son beau-père rumine des fantasmes de tueur en feuilletant d’abjects magazines. Il n’y a guère qu’une voisine, neuropsy à la retraite, pour l’aider à défendre ses rêves. Ou peut-être, en ville, cette politicienne remuante qui milite contre la distribution de psychotropes à l’école.\n\nMais que peuvent deux idéalistes face à un géant pharmaceutique et aux milliards de son budget marketing, alors qu’on découvre à la Métaquine® des vertus toujours plus prometteuses et que la planète entière a déjà gobé la pilule ?\n\nFrançois Rouiller, avec ce premier roman, entre d’emblée dans la cour des grands. Métaquine® est le fruit de huit ans d’écriture et de réflexion sur les dérives de l’industrie pharmaceutique, le mensonge publicitaire, les manipulations de masse, l’espoir d’une souveraine panacée. Avec, à la clé, cette question : habitons-nous le vrai monde ou un placebo ?",
   "title": "Métaquine® - Contre-indications",
   "year": "2019",
-  "id": "8d2edf66-e615-4fc3-acc2-cf6b3b6f94cf"
+  "id": "8d2edf66-e615-4fc3-acc2-cf6b3b6f94cf",
+  "gid": "5ViUCwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Bernard Werber",
-  "cover": "https://books.google.com/books/publisher/content?id=PJyuDwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71mik5N7J3pnMyTFy6u2tyXZ_L1Qh1OqqqjkmGfUAiSyOlFaDAo4KtK08WbD8S4_lOVc3phuHcBPfx3hxYT3UDes2wJbZWFuITRMGtSzyRAQHMfddGYLbsDhvGW9Bj3i_R9cFwy&fife=w1000-h1000",
   "isbn": "9782226447418",
   "link": "https://books.google.fr/books?id=PJyuDwAAQBAJ&hl=&source=gbs_api",
   "pages": 464,
@@ -697,12 +745,13 @@
   "synopsis": "Suite de Demain les chats.\n\nParis est envahi par les rats et l'humanité décline. Une petite communauté de chats et d'humains résiste, menée par la chatte Bastet. Convaincue que les chats doivent prendre la relève des humains, elle part chercher des alliés parmi les autres espèces pour former une coalition capable de repousser les rats.",
   "title": "Sa majesté des chats",
   "year": "2019",
-  "id": "5385c9ca-17e0-4878-822e-22981e06b41e"
+  "id": "5385c9ca-17e0-4878-822e-22981e06b41e",
+  "gid": "PJyuDwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "David Marusek",
-  "cover": "https://books.google.com/books/publisher/content?id=puWmDwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73tR2G6o0FK2xI4Vf21oiTnjNxtVdAom1WhUubcSmDXJfRnlRGcu43JB7cHqczZU0yVpmmSaVl882uiSM5efwqMTbAEYPPADdluYEJdsqSIHaIbvmQxo53BjnZhiiGmL7OWWJ6a&fife=w1000-h1000",
   "isbn": "9782843448843",
   "link": "https://books.google.fr/books?id=puWmDwAAQBAJ&hl=&source=gbs_api",
   "pages": 70,
@@ -711,12 +760,13 @@
   "synopsis": "Dans un monde surpeuplé où les traitements contre le vieillissement rendent presque immortel, avoir un enfant est un privilège rarissime, accordé par des permis délivrés au compte-gouttes.\n\nSam, designer d'intérieur, et Eleanor, femme politique ambitieuse, découvrent un jour qu'un de ces permis a été attribué à leur nom, alors qu'ils ne l'ont jamais demandé. Une novella sur une société hyperconnectée, sous l'œil permanent des intelligences artificielles.",
   "title": "L'Enfance attribuée",
   "year": "",
-  "id": "e09a3f12-0d18-41b3-8493-1f072a811537"
+  "id": "e09a3f12-0d18-41b3-8493-1f072a811537",
+  "gid": "puWmDwAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Bernard Werber",
-  "cover": "https://books.google.com/books/publisher/content?id=ICmHEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70pl61CiONocpck96-aTNAgoJQ1s0erzX8XLCP1xZNpRNQVP5FWNygMSdPkfg4XzsUUWvad6VBLdV1ZbBSx_XG9uCKOYhwMEPm1PmIImlXFLTx4s3uYh5QkFKpuZWvmIh6NW8rh&fife=w1000-h1000",
   "isbn": "9782226478962",
   "link": "https://books.google.fr/books?id=ICmHEAAAQBAJ&hl=&source=gbs_api",
   "pages": 480,
@@ -725,12 +775,13 @@
   "synopsis": "'\n\nEt si vous n’étiez qu’un pion dans leur jeu ?\n\nDeux femmes, deux destins, deux visions opposées du monde.\n\nL’une croit dans la force du groupe.\n\nL’autre en l’individualisme.\n\nLeur duel est inévitable... laquelle aura l’avantage ?\n\nDes années 1970 à 2050, entre guerres, attaques terroristes et espionnage, elles vont s’opposer sans répit et sans merci. Leur terrain de jeu s’étend aux quatre coins de la planète, devenue un échiquier géant dont les humains sont les pièces.\n\nDans ce roman puissant, porté par deux héroïnes exceptionnelles, Bernard Werber ajoute l’art de la stratégie à ses thèmes de prédilection pour nous entraîner dans une aventure contemporaine fascinante et visionnaire.",
   "title": "La Diagonale des reines",
   "year": "2022",
-  "id": "b4d8fb40-39c6-44a6-8507-5880a67ced94"
+  "id": "b4d8fb40-39c6-44a6-8507-5880a67ced94",
+  "gid": "ICmHEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Kōshun Takami",
-  "cover": "https://books.google.com/books/content?id=mpmdPwAACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70BtkEHNv6BkbxC6Gr8VmN3-TWyhYdDiGr1xHTUeFnekBg1ggF3idFZAzD2bwrDvb81ZcEriMPX5v3A29lvI9wccFmH58jaLrjMyDoNI5wpYTksZ4FfJXa53JDZL7rEm6rJSwTf&fife=w1000-h1000",
   "isbn": "9782253122357",
   "link": "https://books.google.fr/books?id=mpmdPwAACAAJ&hl=&source=gbs_api",
   "pages": 830,
@@ -739,12 +790,13 @@
   "synopsis": "Dans un pays asiatique imaginaire existe un programme gouvernemental connu sous le nom de Battle Royale. Chaque année, une classe de 3e est choisie au hasard, emmenée sur une île coupée du monde, et les collégiens doivent combattre entre eux jusqu'à ce qu'il ne reste qu'un survivant... Ceci afin de servir d'exemple à la population, à la jeunesse particulièrement, et aussi de recueillir des statistiques sur le temps mis par le champion à éliminer ses camarades. Version contemporaine sur vitaminée de Sa Majesté des Mouches, de William Golding, Battle Royale a défrayé la chronique à sa publication, avant de devenir l'un des plus grands best-sellers de l'édition nippone. [4e de couverture ]",
   "title": "Battle royale",
   "year": "2008",
-  "id": "d3a1507b-73c9-4520-8597-41219d743002"
+  "id": "d3a1507b-73c9-4520-8597-41219d743002",
+  "gid": "mpmdPwAACAAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Ernest Cline",
-  "cover": "https://books.google.com/books/publisher/content?id=kRctEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70oczeg0VCanAxfzKbfAw6oLNigEOtgSIDvKflPckmwqguvm6fkTc7xMS7bKyL1XSb-0DlLM6RrCvLGyjO3DZtqlx-GjTyKhfBB14lSHuIaiI4jxI4db19cmHe-PkaD19h1MD1W&fife=w1000-h1000",
   "isbn": "9782749948010",
   "link": "https://books.google.fr/books?id=kRctEAAAQBAJ&hl=&source=gbs_api",
   "pages": 405,
@@ -753,12 +805,13 @@
   "synopsis": "Une nouvelle quête.\n\nDeux mondes en jeu.\n\nÊtes-vous prêts ?\n\nQuelques jours après avoir remporté le concours de James Halliday, le fondateur de l'OASIS, Wade Watts fait une découverte extraordinaire. Cachée dans les coffres d'Halliday, attendant d'être découverte par son héritier, se trouve une nouvelle technologie susceptible, encore une fois, de changer le monde et de rendre l'OASIS plus merveilleux et addictif.\n\nAvec cette invention viennent une nouvelle énigme, l'ultime quête créée par Halliday, et un adversaire aussi puissant que dangereux, prêt à tout, y compris à tuer des millions de personnes, pour atteindre son objectif.\n\nCette fois, ce n'est plus seulement le destin de l'OASIS qui repose entre les mains de Wade, mais celui de toute l'humanité.",
   "title": "Ready Player Two - Tome 2",
   "year": "2021",
-  "id": "07216876-83f1-45fd-bff7-df338e81e7e3"
+  "id": "07216876-83f1-45fd-bff7-df338e81e7e3",
+  "gid": "kRctEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "M.R. Carey",
-  "cover": "https://books.google.com/books/publisher/content?id=GttCEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70ed3MUmhOCZBpybIZ_Fag-tD8Oobb2qUPdTc_TL9Iuze_ocASXUsIFJIiJwXJJAbv6n53s5TFZhAGO2UZvPaxPe-LLUSVOfv1PWWUHzJTjHq7wS1hm2g_z2PGMs0qKwzN0TDQF&fife=w1000-h1000",
   "isbn": "9782367935690",
   "link": "https://books.google.fr/books?id=GttCEAAAQBAJ&hl=&source=gbs_api",
   "pages": 448,
@@ -767,12 +820,13 @@
   "synopsis": "Ils étaient trois ou quatre, ça dépend comment on veut compter : il y avait Koli, chassé de son village, et c’est lui qui raconte l’histoire ; Ursala, une guérisseuse itinérante ; Tasse, une fille rescapée d’une secte d’illuminés ; et, quatre ou pas, Monono, un tech mais aussi une fille dans un boîtier. Et ils étaient en route vers Londres à travers une végétation hostile, guettés par des bêtes vicieuses et parfois des ennemis humains plus redoutables encore.\n\nLe voyage serait long, les épreuves ardues, et Londres existerait-elle encore ?\n\nElle était seule face à tout un village, et c’est elle aussi qui raconte l’histoire. Enfin celle qui se passe à Mythen-Croyd, où la maladie avait frappé et que Toupie avait éradiquée en se servant d’un tech qui n’était pas le sien...\n\nFaisant suite au Livre de Koli, voici le deuxième roman de la trilogie « Rempart ».",
   "title": "Les Épreuves de Koli",
   "year": "2022",
-  "id": "376c3b4a-dd69-4788-a403-324ab818ef92"
+  "id": "376c3b4a-dd69-4788-a403-324ab818ef92",
+  "gid": "GttCEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Christina Dalcher",
-  "cover": "https://books.google.com/books/publisher/content?id=qFBDEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72tUNCheJYN8J7nyjLjv6_D1bC-MZ8ahqhDDhT14l5fIG8cdPFHHaJGXDGM0BsC0BTO9TgjYqBQeE1SZ9wjcJ-BSlgo0vpPRRwaLjcRobaJNEHXfVKc84b05MEQRthftnWAduQM&fife=w1000-h1000",
   "isbn": "9782378911188",
   "link": "https://books.google.fr/books?id=qFBDEAAAQBAJ&hl=&source=gbs_api",
   "pages": 345,
@@ -781,12 +835,13 @@
   "synopsis": "Quand la réussite à un prix\n\nPar l'autrice du best-seller international Vox\n\nLe potentiel de chaque enfant est régulièrement calculé selon une mesure standardisée : le quotient Q. Si vous obtenez un score élevé, vous pourrez fréquenter une école d'élite avec à la clé un avenir en or. Si votre score est trop bas, ce sera un internat fédéral n'offrant que des débouchés très limités. Le but de cette politique ? Une meilleure société où les enseignants se concentrent sur les élèves les plus prometteurs.\n\nElena Fairchild, enseignante dans un établissement d'élite, a toujours soutenu ce système. Mais lorsque sa fille de neuf ans rate un test et part pour une école au rabais à des centaines de kilomètres, elle n'est plus sûre de rien. À part d'une chose : elle doit récupérer sa fille à tout prix.\n\nAprès Vox, Christina Dalcher revient avec une dystopie glaçante sur fond d'eugénisme. Alors que les inégalités sociales n'ont jamais été aussi stigmatisantes, QI se pose comme un miroir déformé de nos démocraties.",
   "title": "QI - Quand la réussite a un prix",
   "year": "2021",
-  "id": "be808ce4-2153-4b13-a5cc-82c6a8eed280"
+  "id": "be808ce4-2153-4b13-a5cc-82c6a8eed280",
+  "gid": "qFBDEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Walter Tevis",
-  "cover": "https://books.google.com/books/publisher/content?id=BWhbEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE702ORqRpQ9V4dH6GR4Q2FuGcxVGGqusSdq0lYSqyqMJvNNGpPoKhF6xFNEBtOK7OG-OpIzy5rwde0NAwmY1GzO2-iyxFxmrTkqIb0PudTX9p1VCFsu7HTll8flgrSJbguNjYwOu&fife=w1000-h1000",
   "isbn": "9782404016078",
   "link": "https://books.google.fr/books?id=BWhbEAAAQBAJ&hl=&source=gbs_api",
   "pages": 282,
@@ -795,12 +850,13 @@
   "synopsis": "Débarquant sur Terre en provenance d’un monde mourant, Newton est chargé d’une mission vitale, longuement préparée. Une série de brevets inspirés par la haute technologie de sa planète d’origine lui permet d’atteindre rapidement son premier objectif : amasser une immense fortune. Mais, obligé de vivre caché, mal adapté à la chaleur et à la forte gravité de la Terre, il souffre bientôt d’un mal-être existentiel bien humain. Plus grave encore, en dépit de sa prudence et de son camouflage, il commence à susciter un peu trop de curiosité. Que veut donc ce milliardaire fantasque et mystérieux ? La situation devient vite inconfortable, car si les humains sont moins avancés que le peuple de Newton, ils sont aussi plus dangereux.",
   "title": "L'Homme tombé du ciel",
   "year": "2022",
-  "id": "536df5a2-1fa2-4932-8aa1-0f282c713155"
+  "id": "536df5a2-1fa2-4932-8aa1-0f282c713155",
+  "gid": "BWhbEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "William Gibson",
-  "cover": "https://books.google.com/books/publisher/content?id=kJVBEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72lcgyOvYJQRCn-BhaYGXtYe_6lJwkAVrw9Ra1RghsTyhC_PDnfWlFMzPf2MemJAx5HhAnl7TziuGCTfyco0s1jcTTzpnaSDHHF79QnJcTvpV7OeJkGX1ujwagXk8yGBo77gPs9&fife=w1000-h1000",
   "isbn": "9791030704969",
   "link": "https://books.google.fr/books?id=kJVBEAAAQBAJ&hl=&source=gbs_api",
   "pages": 292,
@@ -809,12 +865,13 @@
   "synopsis": "Deuxième volet de la trilogie de la Conurb, quelques années après Neuromancien.\n\nTrois destins s'entrecroisent : Bobby, un jeune pirate informatique dont la première intrusion tourne mal ; Turner, un mercenaire chargé d'exfiltrer un chercheur convoité par les multinationales ; et Marly, une galeriste en disgrâce engagée par un milliardaire pour retrouver l'auteur de mystérieuses boîtes-collages.",
   "title": "Comte zéro",
   "year": "2021",
-  "id": "0af1852d-70a9-490e-bf95-816a328f8708"
+  "id": "0af1852d-70a9-490e-bf95-816a328f8708",
+  "gid": "kJVBEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "David Wong",
-  "cover": "https://books.google.com/books/publisher/content?id=c0vFBAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73VQbQ0_CkGykKRwjVCiDLYgEKB3q2eva5oA0w4_sftIvHCL2TaBc5GBxtg5q-ThiDK9hj85NlN78cgmVMfocfKdyCiWE_flJyTuWnfRDZYoql63-kL4cjrL2NRz0GGSg_1PUFv&fife=w1000-h1000",
   "isbn": "9782370560070",
   "link": "https://books.google.fr/books?id=c0vFBAAAQBAJ&hl=&source=gbs_api",
   "pages": 402,
@@ -823,12 +880,13 @@
   "synopsis": "Vous êtes drogué ? cinglé ? paranoïaque ? Vous pouvez lire ce livre, mais nous déclinons par avance toute responsabilité.\n\nVous êtes drogué ? cinglé ? paranoïaque ? Vous pouvez lire ce livre, mais nous déclinons par avance toute responsabilité.\n\nSans doute, il existe des gens qui ont déjà fait des trucs plus tarés qu'essayer de résumer ce bouquin. Le souci, c'est que personne ne sait ce qu'ils sont devenus.\n\nÇa commence avec deux potes, John et Dave, deux losers fans de ciné travaillant plus ou moins dans un club vidéo. À un concert, John rencontre un type passablement déglingué, le \" Jamaïcain \", qui lui fait essayer une nouvelle drogue. Les effets sont radicaux. En plein \" bad trip \", John hallucine sévèrement. Peu rassuré, Dave le conduit à l'hôpital. À la suite de quoi la police leur fait subir un interrogatoire en règle. Il semblerait en effet que tous ceux qui ont pris ce soir-là la drogue du Jamaïcain soient morts ou se soient évaporés. Ensuite, autant vous prévenir : ça devient vraiment chelou. Un téléphone-hot-dog, une balle qui aurait dû tuer mais ne tue pas, une conférence apocalyptique sur le paranormal à Las Vegas, une télé qui vous regarde et tout un tas de rencontres que l'on aimerait qualifier autrement que de \" non euclidiennes \"...\n\n\" Ce n'est pas parce que je suis paranoïaque qu'ils ne sont pas tous après moi. \"\n\nOK, vous voulez savoir ce que serait Le Livre sans nom si Hunter S. Thompson l'avait cauchemardé dans la baignoire d'une chambre d'hôtel ? À quoi ressemblerait un roman écrit par Quentin Tarantino et Robert Rodriguez si ces malheureux se servaient de l'humour comme un épileptique d'une mitraillette et se défonçaient à l'acide en pensant gober des smarties ? Vous avez envie de crever de rire en essayant de tourner les pages et de devenir un genre de zombie livrophage ? Bienvenue dans le monde de John : le mec qui risque fort de mourir à la fin.",
   "title": "John meurt à la fin",
   "year": "2014",
-  "id": "e2627585-2e4d-4228-9795-ec5e7a69626f"
+  "id": "e2627585-2e4d-4228-9795-ec5e7a69626f",
+  "gid": "c0vFBAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Alric & Jennifer Twice",
-  "cover": "https://books.google.com/books/publisher/content?id=R-8TEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73pmwcwsEsaozrfntsP99p8X9UuhXFrqnX2EFGht_Kvl-GUTIGaW-vWLrwJ-QGrmmOt7xULiAfDqXBocz3wcY_0ksRYyRAgAl7ksgrugWCaY769EaNWHW8e4imIzOavsxrzsKUm&fife=w1000-h1000",
   "isbn": "9782017146612",
   "link": "https://books.google.fr/books?id=R-8TEAAAQBAJ&hl=&source=gbs_api",
   "pages": 448,
@@ -837,12 +895,13 @@
   "synopsis": "Dans le royaume de Hélios, les mots ont un pouvoir. Celui de créer, d’équilibrer, puis de détruire le monde. Lorsqu’on les prononce, aucun retour en arrière n’est possible.\n\nArya, une jeune fille de la capitale, est passionnée de livres. Elle en dévore chaque mot. Mais elle est loin de se douter qu’elle est la clé pour sauver son royaume, le seul qui ait restreint l’utilisation de la magie grâce à un traité. Un traité qui ne plaît pas aux rebelles, prêts à tout pour l’éradiquer.\n\nÀ l’aube des changements qui s’annoncent, les Mots se réveillent pour établir l’ordre dans le chaos, la vérité dans l’illusion.\n\nIls attendent leur Appel. Celui de la Passeuse de Mots.",
   "title": "La Passeuse de Mots - Tome 1",
   "year": "2021",
-  "id": "bf7f4b3f-e650-4fd7-bac1-394fc171acb6"
+  "id": "bf7f4b3f-e650-4fd7-bac1-394fc171acb6",
+  "gid": "R-8TEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "M.R. Carey",
-  "cover": "https://books.google.com/books/publisher/content?id=F9ktEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Bdb8QMGj8LaaPS4I8mR8-qQHn2NyUoW9EwGjqPGfbVLBoYlldBo1H3IInDOQNWx7OHunbP5FvF_RjYZACbDwmVq7zjhcO90ZuRuVF1ZbjbuKNA2g0Ot83z7N0eqjhcoIhYRM2&fife=w1000-h1000",
   "isbn": "9782367935614",
   "link": "https://books.google.fr/books?id=F9ktEAAAQBAJ&hl=&source=gbs_api",
   "pages": 416,
@@ -851,12 +910,13 @@
   "synopsis": "Je m’appelle Koli et j’ai une histoire à vous raconter.\n\nLa vie est rude à Mythen-Croyd, deux centaines d’âmes, au nord d’un pays qui s’appelle l’Engleterre. Et au-delà des murs du village règne une nature sauvage, ce qui n’est pas une façon de parler : tout ce qui vit est dangereux ; ce qu’on veut manger se défend et ce qui veut vous manger est innombrable.\n\nPour Koli, quinze ans, l’avenir est tracé à la scierie familiale, sauf à devenir un Rempart, un des privilégiés du village, ceux qu’ont reconnus et choisis les « techs » anciens qui permettent d’assurer la protection de la communauté. Pas facile de réussir l’épreuve : une seule famille accapare les techs et les garde jalousement.\n\nMais Koli ne renonce pas. Il se fera Rempart à Mythen-Croyd.\n\nIl a tout faux.\n\nPrix spécial du jury au Philip K. Dick Award 2021",
   "title": "Le Livre de Koli",
   "year": "2021",
-  "id": "401ace60-9e7d-4358-aa5f-d0c627bde76b"
+  "id": "401ace60-9e7d-4358-aa5f-d0c627bde76b",
+  "gid": "F9ktEAAAQBAJ",
+  "hasCover": true
  },
  {
   "addedAt": "2023-11-26",
   "authors": "Christina Dalcher",
-  "cover": "https://books.google.com/books/publisher/content?id=pB6EDwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70vprzBeKq900B56Dh2goAAndcKcqlw27yyo1gFTmZMM0bjwBdhyJtlzrS4yXWab5Mt-5_ClAl5m7YqT9-oX-oeWoAdAvt1atFFwI4EoKm0nRxdW9xzpnew_NL5fibfApXXfS_C&fife=w1000-h1000",
   "isbn": "9782378910365",
   "link": "https://books.google.fr/books?id=pB6EDwAAQBAJ&hl=&source=gbs_api",
   "pages": 354,
@@ -865,6 +925,8 @@
   "synopsis": "Jean McClellan est docteure en neurosciences. Elle a passé sa vie dans un laboratoire de recherches, loin des mouvements protestataires qui ont enflammé son pays. Mais, désormais, même si elle le voulait, impossible de s'exprimer : comme toutes les femmes, elle est condamnée à un silence forcé, limitée à un quota de 100 mots par jour. En effet, le nouveau gouvernement en place, constitué d'un groupe fondamentaliste, a décidé d'abattre la figure de la femme moderne. Pourtant, quand le frère du Président fait une attaque, Jean est appelée à la rescousse. La récompense ? La possibilité de s'affranchir – et sa fille avec elle – de son quota de mots. Mais ce qu'elle va découvrir alors qu'elle recouvre la parole pourrait bien la laisser définitivement sans voix...\n\nChristina Dalcher nous offre avec Vox un roman dystopique glaçant qui rend hommage au pouvoir des mots et du langage.",
   "title": "Vox",
   "year": "2019",
-  "id": "5d0a9202-5665-48ad-b13f-26170e3cd24c"
+  "id": "5d0a9202-5665-48ad-b13f-26170e3cd24c",
+  "gid": "pB6EDwAAQBAJ",
+  "hasCover": true
  }
 ]
