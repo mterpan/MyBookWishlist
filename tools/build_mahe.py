@@ -55,12 +55,12 @@ SERIES = {
         authors="d'après la série de Joe Brumm", publisher="Hachette Jeunesse",
         about="Les albums tirés du dessin animé Bluey : la petite chienne Bluey, sa sœur Bingo et leurs parents inventent des jeux à partir du quotidien.",
         owned=[("Papa-Robot", "9782017291886"), ("Mini Bluey", "9782017291947"), ("Camping", "9782017246657"),
-               ("La nuit de Noël", "9782017292159"), ("La mauvaise humeur", "9782017292104")],
+               ("La nuit de Noël", "9782017292159")],
         wanted=[("La plage", "9782017194095", "2023"), ("La course des bébés", "9782017291800"),
                 ("Le grand bain de Noël", "9782017291855"), ("Papa met Bingo et Bluey au lit", "9782017291879", "2024"),
                 ("C'est l'heure de dormir", "9782017291923", "2025"), ("Monsieur Licorne", "9782017291954", "2025"),
                 ("J'aime ma famille", "9782017292012", "2025"), ("Le conte de fées", "9782017292036", "2025"),
-                ("Le trajet en voiture", "9782017292050", "2025"), ("Le barbecue", "9782017292029", "2025"),
+                ("La mauvaise humeur", "9782017292104", "2025"), ("Le trajet en voiture", "9782017292050", "2025"), ("Le barbecue", "9782017292029", "2025"),
                 ("Calypso - La maîtresse", "9782017292081", "2025"), ("L'école des mamans", "9782017292098", "2025"),
                 ("Les reines", "9782017292173", "2025"), ("Imitation", "9782017292227", "2026"),
                 ("La chambre", "9782017292234", "2026"), ("La cabane à outils", "9782017292272", "2026"),
@@ -138,19 +138,6 @@ for name, s in SERIES.items():
             # requête de couverture : titre + série pour les titres courts
             b["coverQuery"] = f"{s['qprefix']} {title} {s['qkey']}".strip()
             books.append(b)
-
-# Collection presse Disney : représentée par des numéros
-name = "Mes petits livres d'or Disney"
-series_meta[name] = {"checkedAt": TODAY,
-    "about": "Collection Hachette Collections vendue en kiosque et par abonnement : un grand classique Disney ou Pixar par numéro, en petit format relié doré.",
-    "note": "Mahé a les numéros 1 à 83. Les numéros suivants se commandent à l'unité sur le site d'Hachette Collections."}
-books.append({"id": "livres-or-disney-1-83", "title": "Numéros 1 à 83", "authors": "Disney", "publisher": "Hachette Collections",
-              "series": name, "seriesNumber": 1, "owned": True, "isbn": "", "year": "", "addedAt": TODAY, "gid": "", "cover": "", "noCover": True,
-              "synopsis": "Les 83 premiers numéros de la collection, déjà à la maison."})
-books.append({"id": "livres-or-disney-84-plus", "title": "Numéros 84 et suivants", "authors": "Disney", "publisher": "Hachette Collections",
-              "series": name, "seriesNumber": 84, "isbn": "", "year": "", "addedAt": TODAY, "gid": "", "cover": "", "noCover": True,
-              "link": "https://www.hachette-collections.com/",
-              "synopsis": "N'importe quel numéro à partir du 84 fera plaisir. Les numéros se commandent à l'unité sur le site d'Hachette Collections (rubrique « Commander un numéro »)."})
 
 json.dump({"series": series_meta, "books": books}, open("mahe.json", "w"), ensure_ascii=False, indent=1)
 print(len(books), "livres,", sum(1 for b in books if not b.get("owned")), "souhaités")

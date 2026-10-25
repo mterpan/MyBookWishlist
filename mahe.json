@@ -27,11 +27,6 @@
   "La Pelleteuse": {
    "checkedAt": "2026-10-25",
    "about": "Une petite pelleteuse au grand cœur, sur son chantier, découvre l'amitié et la douceur au fil des saisons. Albums illustrés de Joseph Kuefler."
-  },
-  "Mes petits livres d'or Disney": {
-   "checkedAt": "2026-10-25",
-   "about": "Collection Hachette Collections vendue en kiosque et par abonnement : un grand classique Disney ou Pixar par numéro, en petit format relié doré.",
-   "note": "Mahé a les numéros 1 à 83. Les numéros suivants se commandent à l'unité sur le site d'Hachette Collections."
   }
  },
  "books": [
@@ -1319,22 +1314,6 @@
    "coverQuery": "Bluey La nuit de Noël Hachette"
   },
   {
-   "id": "bluey-la-mauvaise-humeur",
-   "title": "La mauvaise humeur",
-   "authors": "d'après la série de Joe Brumm",
-   "publisher": "Hachette Jeunesse",
-   "series": "Bluey",
-   "seriesNumber": null,
-   "isbn": "9782017292104",
-   "year": "",
-   "synopsis": "",
-   "addedAt": "2026-10-25",
-   "gid": "",
-   "cover": "",
-   "owned": true,
-   "coverQuery": "Bluey La mauvaise humeur Hachette"
-  },
-  {
    "id": "bluey-la-plage",
    "title": "La plage",
    "authors": "d'après la série de Joe Brumm",
@@ -1453,6 +1432,21 @@
    "gid": "",
    "cover": "",
    "coverQuery": "Bluey Le conte de fées Hachette"
+  },
+  {
+   "id": "bluey-la-mauvaise-humeur",
+   "title": "La mauvaise humeur",
+   "authors": "d'après la série de Joe Brumm",
+   "publisher": "Hachette Jeunesse",
+   "series": "Bluey",
+   "seriesNumber": null,
+   "isbn": "9782017292104",
+   "year": "2025",
+   "synopsis": "",
+   "addedAt": "2026-10-25",
+   "gid": "",
+   "cover": "",
+   "coverQuery": "Bluey La mauvaise humeur Hachette"
   },
   {
    "id": "bluey-le-trajet-en-voiture",
@@ -2833,38 +2827,6 @@
    "gid": "",
    "cover": "",
    "coverQuery": "La pelleteuse et le sapin de Noël Kuefler"
-  },
-  {
-   "id": "livres-or-disney-1-83",
-   "title": "Numéros 1 à 83",
-   "authors": "Disney",
-   "publisher": "Hachette Collections",
-   "series": "Mes petits livres d'or Disney",
-   "seriesNumber": 1,
-   "owned": true,
-   "isbn": "",
-   "year": "",
-   "addedAt": "2026-10-25",
-   "gid": "",
-   "cover": "",
-   "noCover": true,
-   "synopsis": "Les 83 premiers numéros de la collection, déjà à la maison."
-  },
-  {
-   "id": "livres-or-disney-84-plus",
-   "title": "Numéros 84 et suivants",
-   "authors": "Disney",
-   "publisher": "Hachette Collections",
-   "series": "Mes petits livres d'or Disney",
-   "seriesNumber": 84,
-   "isbn": "",
-   "year": "",
-   "addedAt": "2026-10-25",
-   "gid": "",
-   "cover": "",
-   "noCover": true,
-   "link": "https://www.hachette-collections.com/",
-   "synopsis": "N'importe quel numéro à partir du 84 fera plaisir. Les numéros se commandent à l'unité sur le site d'Hachette Collections (rubrique « Commander un numéro »)."
   }
  ]
 }
