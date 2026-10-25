@@ -130,10 +130,6 @@ img{max-width:100%}
       <option value="author">Auteur (A–Z)</option>
       <option value="year">Parution récente</option>
     </select>
-    <select id="filter" aria-label="Filtrer">
-      <option value="wish">Idées de cadeau</option>
-      <option value="all">Tout, y compris ce qu'il a</option>
-    </select>
   </div>
   <main class="shelves" id="grid" aria-live="polite"></main>
   <div class="empty" id="empty" hidden></div>
@@ -232,7 +228,7 @@ function sortFlat(list,s){
 const fmtDate=d=>{try{return new Date(d+"T12:00:00").toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"})}catch(e){return d}};
 const bySeriesOrder=(a,b)=>(a.seriesNumber||999)-(b.seriesNumber||999)||(a.year||"").localeCompare(b.year||"")||coll.compare(a.title,b.title);
 function render(){
-  const q=fold($("#q").value.trim()), s=$("#sort").value, f=$("#filter").value, all=f==="all";
+  const q=fold($("#q").value.trim()), s=$("#sort").value, all=false;
   const match=b=>!q||fold(b.title+" "+b.authors+" "+(b.subtitle||"")+" "+(b.series||"")).includes(q);
   const hits=books.filter(match);
   const wished=hits.filter(b=>!b.owned);
@@ -274,7 +270,6 @@ let seriesCount={};
 $("#grid").addEventListener("click",e=>{const b=e.target.closest(".book");if(b)showDetail(b.dataset.id)});
 $("#q").addEventListener("input",render);
 $("#sort").addEventListener("change",()=>{render();try{localStorage.setItem("view",$("#sort").value)}catch(e){}});
-$("#filter").addEventListener("change",render);
 try{const s=localStorage.getItem("view");if(s)$("#sort").value=s}catch(e){}
 
 function openSheet(html){$("#sheet").innerHTML=html;$("#veil").hidden=false;document.body.style.overflow="hidden";$("#sheet").scrollTop=0}
