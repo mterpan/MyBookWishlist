@@ -320,17 +320,18 @@
  {
   "addedAt": "2024-09-08",
   "authors": "Stephen King",
-  "isbn": "9782709672870",
-  "link": "https://books.google.fr/books?id=cRncEAAAQBAJ&hl=&source=gbs_api",
+  "isbn": "9782709672566",
+  "link": "https://www.editions-jclattes.fr/livre/shining-edition-collector-9782709672566/",
   "pages": 430,
   "publisher": "JC Lattès",
   "subtitle": "",
-  "synopsis": "Danny n’a que cinq ans, mais il possède le « shining », un don qui le fait rayonner d’une énergie psychique.\n\nLorsque son père devient le gardien d’un vieil hôtel, les visions de Danny deviennent incontrôlables. Isolé du reste du monde par le blizzard, l’hôtel semble développer une force maléfique.\n\nEt qui sont ces mystérieux clients qui hantent ce lieu prétendument désert ?\n\nTraduit (de l'anglais) par Jean Esch",
-  "title": "Shining",
+  "synopsis": "Édition collector reliée parue chez JC Lattès en 2023, avec une nouvelle traduction du roman.\n\nDanny n’a que cinq ans, mais il possède le « shining », un don qui le fait rayonner d’une énergie psychique.\n\nLorsque son père devient le gardien d’un vieil hôtel, les visions de Danny deviennent incontrôlables. Isolé du reste du monde par le blizzard, l’hôtel semble développer une force maléfique.\n\nEt qui sont ces mystérieux clients qui hantent ce lieu prétendument désert ?\n\nTraduit (de l'anglais) par Jean Esch",
+  "title": "Shining – édition collector",
   "year": "2023",
   "id": "a28e5b59-3e39-40d3-9724-c0ebc66148f8",
-  "gid": "cRncEAAAQBAJ",
-  "cover": "https://books.google.com/books/publisher/content?id=cRncEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71ANwiccX6Cw2FhhcBQWhcVvsvqDa1_ZhcEFRIjuT4r5IahCZzsmPmRl-mFPgmA38HixFchfpZjRLJt8DFY89pqmcmJXsCCM7dfRfVtAfFd8n06_sEtMaKm_c46x-Q8nWmd3AsT&fife=w1000-h1000"
+  "gid": "",
+  "cover": "",
+  "covers": []
  },
  {
   "addedAt": "2024-07-09",
@@ -898,23 +899,6 @@
   "id": "d3a1507b-73c9-4520-8597-41219d743002",
   "gid": "mpmdPwAACAAJ",
   "cover": "https://books.google.com/books/content?id=mpmdPwAACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70BtkEHNv6BkbxC6Gr8VmN3-TWyhYdDiGr1xHTUeFnekBg1ggF3idFZAzD2bwrDvb81ZcEriMPX5v3A29lvI9wccFmH58jaLrjMyDoNI5wpYTksZ4FfJXa53JDZL7rEm6rJSwTf&fife=w1000-h1000"
- },
- {
-  "addedAt": "2023-11-26",
-  "authors": "Ernest Cline",
-  "isbn": "9782749948010",
-  "link": "https://books.google.fr/books?id=kRctEAAAQBAJ&hl=&source=gbs_api",
-  "pages": 405,
-  "publisher": "Michel Lafon",
-  "subtitle": "",
-  "synopsis": "Une nouvelle quête.\n\nDeux mondes en jeu.\n\nÊtes-vous prêts ?\n\nQuelques jours après avoir remporté le concours de James Halliday, le fondateur de l'OASIS, Wade Watts fait une découverte extraordinaire. Cachée dans les coffres d'Halliday, attendant d'être découverte par son héritier, se trouve une nouvelle technologie susceptible, encore une fois, de changer le monde et de rendre l'OASIS plus merveilleux et addictif.\n\nAvec cette invention viennent une nouvelle énigme, l'ultime quête créée par Halliday, et un adversaire aussi puissant que dangereux, prêt à tout, y compris à tuer des millions de personnes, pour atteindre son objectif.\n\nCette fois, ce n'est plus seulement le destin de l'OASIS qui repose entre les mains de Wade, mais celui de toute l'humanité.",
-  "title": "Ready Player Two - Tome 2",
-  "year": "2021",
-  "id": "07216876-83f1-45fd-bff7-df338e81e7e3",
-  "gid": "kRctEAAAQBAJ",
-  "cover": "https://books.google.com/books/publisher/content?id=kRctEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70oczeg0VCanAxfzKbfAw6oLNigEOtgSIDvKflPckmwqguvm6fkTc7xMS7bKyL1XSb-0DlLM6RrCvLGyjO3DZtqlx-GjTyKhfBB14lSHuIaiI4jxI4db19cmHe-PkaD19h1MD1W&fife=w1000-h1000",
-  "series": "Ready Player One",
-  "seriesNumber": 2
  },
  {
   "addedAt": "2023-11-26",

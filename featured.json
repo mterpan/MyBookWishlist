@@ -1,7 +1,22 @@
 {
- "_note": "Séries mises en avant, par ordre de préférence. Elles apparaissent en premier sur les deux listes.",
- "series": [
-  "Éditions MinaLima",
-  "La Pelleteuse"
+ "_note": "Mises en avant, par ordre de préférence : une série, un auteur ou un livre (id). Elles apparaissent en premier sur les listes.",
+ "items": [
+  {
+   "series": "Éditions MinaLima"
+  },
+  {
+   "series": "La Pelleteuse"
+  },
+  {
+   "id": "a28e5b59-3e39-40d3-9724-c0ebc66148f8",
+   "label": "Shining (édition collector)"
+  },
+  {
+   "author": "Gabrielle Zevin"
+  },
+  {
+   "id": "9ccb62eb-bc8d-4e19-9e3f-bea69b59b627",
+   "label": "Périphériques"
+  }
  ]
 }

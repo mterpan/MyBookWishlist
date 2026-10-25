@@ -228,7 +228,8 @@ function card(b,showSeries){
   return `<button class="book" data-id="${esc(b.id)}"><div class="cover">${coverHTML(b)}</div><div class="meta">${t}<b>${esc(b.title)}</b><span>${esc(b.authors)}</span></div></button>`;
 }
 let featured=[];
-const rank=b=>{const i=featured.indexOf(b.series);return i<0?999:i};
+const rank=b=>{const i=featured.findIndex(f=>(f.series&&f.series===b.series)||(f.id&&f.id===b.id)||(f.author&&(b.authors||"").includes(f.author)));return i<0?999:i};
+const featSeries=n=>featured.some(f=>f.series===n);
 function sortFlat(list,s){
   if(s==="title") list.sort((a,b)=>coll.compare(a.title,b.title));
   else if(s==="author") list.sort((a,b)=>coll.compare(firstAuthorKey(a.authors),firstAuthorKey(b.authors))||coll.compare(a.series||"",b.series||"")||(a.seriesNumber||0)-(b.seriesNumber||0)||coll.compare(a.title,b.title));
@@ -244,14 +245,20 @@ function render(){
   if(f==="series") list=list.filter(inSaga); else if(f==="single") list=list.filter(b=>!inSaga(b));
   let html="";
   if(s==="series"){
-    const groups={}, singles=[];
+    const groups={}; let singles=[]; const secs=[];
     for(const b of list){ if(b.series&&seriesCount[b.series]>1)(groups[b.series]=groups[b.series]||[]).push(b); else singles.push(b); }
+    const picks=[];
+    for(const n of Object.keys(groups)){ if(featSeries(n)) continue; for(const b of groups[n].filter(b=>rank(b)<999)) picks.push(b); groups[n]=groups[n].filter(b=>rank(b)>=999); if(!groups[n].length) delete groups[n]; }
+    for(const b of singles.filter(b=>rank(b)<999)) picks.push(b);
+    singles=singles.filter(b=>rank(b)>=999);
     const names=Object.keys(groups).sort((a,b)=>rank({series:a})-rank({series:b})||coll.compare(a,b));
     for(const n of names){
       const g=groups[n].sort((a,b)=>(a.seriesNumber||99)-(b.seriesNumber||99)||(a.year||"").localeCompare(b.year||"")||coll.compare(a.title,b.title));
       const authors=[...new Set(g.map(b=>(b.authors||"").split(",").length>2?"Luc Ferry et al.":b.authors))].join(" · ");
-      html+=`<section class="shelf"><div class="shelf-head"><h2>${esc(n)}</h2>${featured.includes(n)?`<em class="fav">★ Coup de cœur</em>`:""}<span>${esc(authors)} · ${g.length} livre${g.length>1?"s":""}</span></div><div class="grid">${g.map(b=>card(b,false)).join("")}</div></section>`;
+      secs.push({r:rank({series:n}),h:`<section class="shelf"><div class="shelf-head"><h2>${esc(n)}</h2>${featSeries(n)?`<em class="fav">★ Coup de cœur</em>`:""}<span>${esc(authors)} · ${g.length} livre${g.length>1?"s":""}</span></div><div class="grid">${g.map(b=>card(b,false)).join("")}</div></section>`});
     }
+    if(picks.length){ picks.sort((a,b)=>rank(a)-rank(b)||coll.compare(a.title,b.title)); secs.push({r:Math.min(...picks.map(rank)),h:`<section class="shelf"><div class="shelf-head"><h2>Coups de cœur</h2><em class="fav">★</em><span>${picks.length} livre${picks.length>1?"s":""}</span></div><div class="grid">${picks.map(b=>card(b,true)).join("")}</div></section>`}); }
+    secs.sort((a,b)=>a.r-b.r); html+=secs.map(x=>x.h).join("");
     if(singles.length){
       sortFlat(singles,"title");
       html+=`<section class="shelf">${names.length?`<div class="shelf-head"><h2>Livres hors saga</h2><span>${singles.length} livre${singles.length>1?"s":""}</span></div>`:""}<div class="grid">${singles.map(b=>card(b,true)).join("")}</div></section>`;
@@ -310,7 +317,7 @@ function showDetail(id){
 }
 
 Promise.all([fetch(DATA,{cache:"no-cache"}).then(r=>r.json()),fetch("covers/index.json",{cache:"no-cache"}).then(r=>r.ok?r.json():{}).catch(()=>({})),fetch("featured.json",{cache:"no-cache"}).then(r=>r.ok?r.json():{}).catch(()=>({}))]).then(([d,m,fe])=>{
-  featured=(fe&&fe.series)||[];
+  featured=(fe&&fe.items)||[];
   local={}; for(const k in (m||{})) local[k]=m[k];
   books=d; seriesCount={}; for(const b of books) if(b.series) seriesCount[b.series]=(seriesCount[b.series]||0)+1; render();
   const h=location.hash.slice(1); if(h) showDetail(h);
