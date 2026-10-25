@@ -52,7 +52,7 @@ SERIES = {
                 "Azuro et la fée des glaces", "Azuro au royaume des dragons", "Azuro et le défi du Père Noël",
                 "Azuro et la dernière licorne", "Azuro et la sorcière", "Azuro et le château oublié",
                 "Azuro sur la piste de Jippy", "Azuro et l'île fantastique", "Azuro, il faut sauver la Lune !",
-                "Azuro et le cristal chantant", "Azuro, un cadeau magique pour maman", "Azuro et les dragons"],
+                "Azuro et le cristal chantant", "Azuro, un cadeau magique pour maman"],
     ),
     "Bluey": dict(
         qprefix="Bluey", qkey="Hachette",

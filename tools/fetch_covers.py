@@ -6,7 +6,7 @@ pages lisent en premier. Un livre déjà couvert n'est jamais retéléchargé.
 """
 import io, json, os, re, sys, time, urllib.parse
 import requests
-from PIL import Image
+from PIL import Image, ImageChops
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "covers")
@@ -75,13 +75,37 @@ def candidates(b):
         urls.append(f"https://covers.openlibrary.org/b/isbn/{isbn}-L.jpg?default=false")
         urls.append(f"https://media.e.leclerc/{isbn}_1?fit=fit&fmt=jpg&qlt=85&wid=600&hei=600")
         urls.append(f"https://ssr.fidelio.ca/Public/img/catalog/cover/{isbn}.jpg")
-        urls.append(("page", f"https://www.placedeslibraires.fr/livre/{isbn}"))
         urls.append(("page", f"https://www.decitre.fr/rechercher/result?q={isbn}"))
+        urls.append(("page", f"https://www.placedeslibraires.fr/livre/{isbn}"))
         urls.append(("lazy", f"isbn:{isbn}"))
     q = b.get("coverQuery") or f"{b.get('title','')} {(b.get('authors') or '').split(',')[0]}"
     urls.append(("lazy", q))
     urls.append(("ol", q))
     return urls
+
+# empreintes d'images génériques (« visuel à venir »…) à refuser
+BAD_HASHES = ["0000000011001000110101001001010011011100111100001100110000000000"]
+
+def dhash(im, n=8):
+    g = im.convert("L").resize((n + 1, n))
+    px = list(g.getdata())
+    return "".join("1" if px[r*(n+1)+c] > px[r*(n+1)+c+1] else "0" for r in range(n) for c in range(n))
+
+def is_placeholder(im):
+    h = dhash(im)
+    return any(sum(a != b for a, b in zip(h, bad)) <= 8 for bad in BAD_HASHES)
+
+def trim(im):
+    """Retire les bandes unies (noires ou blanches) autour de la couverture."""
+    corner = im.getpixel((0, 0))
+    if sum(corner) / 3 > 40:  # seulement les bandes noires (format « letterbox »)
+        return im
+    bg = Image.new(im.mode, im.size, corner)
+    diff = ImageChops.add(ImageChops.difference(im, bg), ImageChops.difference(im, bg), 2.0, -30)
+    box = diff.getbbox()
+    if box and (box[2] - box[0]) > im.size[0] * 0.4 and (box[3] - box[1]) > im.size[1] * 0.4:
+        return im.crop(box)
+    return im
 
 def fetch_image(url):
     try:
@@ -94,7 +118,10 @@ def fetch_image(url):
         # rejette les pixels vides, les vignettes minuscules et les formats non « livre »
         if w < 80 or h < 80 or h < w * 0.5:
             return None
-        im = im.convert("RGB")
+        im = trim(im.convert("RGB"))
+        w, h = im.size
+        if is_placeholder(im):
+            return None
         # rejette les images quasi unies (pages « image non disponible »)
         small = im.resize((24, 24))
         px = list(small.getdata())
@@ -121,6 +148,13 @@ def main():
         path = os.path.join(ROOT, index.pop(bid))
         if os.path.exists(path):
             os.remove(path)
+    for bid, rel in list(index.items()):
+        path = os.path.join(ROOT, rel)
+        try:
+            if is_placeholder(Image.open(path)):
+                os.remove(path); index.pop(bid)
+        except Exception:
+            index.pop(bid, None)
     added, missing = [], []
     for b in books:
         bid = b["id"]
