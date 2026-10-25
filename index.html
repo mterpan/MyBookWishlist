@@ -121,7 +121,7 @@ const gCover=id=>id?`https://books.google.com/books/content?id=${encodeURICompon
 const found={};
 function sources(b){
   const o=olCover(b.isbn), g=b.cover?gCover(b.gid):"";
-  return [b.cover,g,o,amzCover(b.isbn),"api"].filter(Boolean);
+  return [...(b.covers||[]),b.cover,g,o,amzCover(b.isbn),"api"].filter(Boolean);
 }
 function isbn10(i){
   if(!i||i.length!==13||!i.startsWith("978"))return "";

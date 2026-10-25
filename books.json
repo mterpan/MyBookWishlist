@@ -117,7 +117,13 @@
   "year": "",
   "id": "1ff57616-b39a-48fd-90d1-0dd126665205",
   "gid": "",
-  "cover": ""
+  "cover": "",
+  "covers": [
+   "https://media.e.leclerc/9782404080475_1?fit=fit&op_sharpen=1&resmode=bilin&fmt=webP&qlt=85&trim=0.5%2Cwhites&wid=450&hei=450",
+   "https://images-na.ssl-images-amazon.com/images/P/2404080474.01.LZZZZZZZ.jpg",
+   "https://ssr.fidelio.ca/Public/img/catalog/cover/9782404080475.jpg",
+   "https://images.centprod.com/3025598259309/b8YX9E9LrAtjpiHzIS2-S14jbqEWSjefVAE-nyqcq9taJ2SszZD9NQ-cover-thumb.jpg"
+  ]
  },
  {
   "addedAt": "2025-02-10",
@@ -132,7 +138,12 @@
   "year": "",
   "id": "28b7200c-306e-468c-959b-3832149a1cf4",
   "gid": "",
-  "cover": ""
+  "cover": "",
+  "covers": [
+   "https://media.e.leclerc/9782404080482_1?fit=fit&op_sharpen=1&resmode=bilin&fmt=webP&qlt=85&trim=0.5%2Cwhites&wid=450&hei=450",
+   "https://images-na.ssl-images-amazon.com/images/P/2404080482.01.LZZZZZZZ.jpg",
+   "https://ssr.fidelio.ca/Public/img/catalog/cover/9782404080482.jpg"
+  ]
  },
  {
   "addedAt": "2025-02-10",
@@ -147,7 +158,12 @@
   "year": "",
   "id": "7398c6df-6cf4-4d70-92de-6591396e59c7",
   "gid": "",
-  "cover": ""
+  "cover": "",
+  "covers": [
+   "https://media.e.leclerc/9782404080499_1?fit=fit&op_sharpen=1&resmode=bilin&fmt=webP&qlt=85&trim=0.5%2Cwhites&wid=450&hei=450",
+   "https://images-na.ssl-images-amazon.com/images/P/2404080490.01.LZZZZZZZ.jpg",
+   "https://ssr.fidelio.ca/Public/img/catalog/cover/9782404080499.jpg"
+  ]
  },
  {
   "addedAt": "2024-12-18",
@@ -312,7 +328,11 @@
   "year": "2023",
   "id": "c2b23b70-bfcd-4904-947f-08b29b2f87ea",
   "gid": "u8Q60AEACAAJ",
-  "cover": ""
+  "cover": "",
+  "covers": [
+   "https://ssr.fidelio.ca/Public/img/catalog/cover/9782075189897.jpg",
+   "https://media.e.leclerc/9782075189897_1?fit=fit&op_sharpen=1&resmode=bilin&fmt=webP&qlt=85&trim=0.5%2Cwhites&wid=450&hei=450"
+  ]
  },
  {
   "addedAt": "2024-01-05",
@@ -387,7 +407,11 @@
   "year": "2022",
   "id": "3b21d778-777f-418c-9edf-34cffa560543",
   "gid": "tp74zgEACAAJ",
-  "cover": ""
+  "cover": "",
+  "covers": [
+   "https://media.e.leclerc/9791035503048_1?fit=fit&op_sharpen=1&resmode=bilin&fmt=webP&qlt=85&trim=0.5%2Cwhites&wid=450&hei=450",
+   "https://ssr.fidelio.ca/Public/img/catalog/cover/9791035503048.jpg"
+  ]
  },
  {
   "addedAt": "2023-11-30",
