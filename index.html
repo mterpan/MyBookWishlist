@@ -43,6 +43,12 @@ button{font:600 14px/1 var(--f-body);border-radius:8px;padding:10px 14px;cursor:
 button.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 button.danger{color:var(--danger);border-color:transparent;background:transparent;padding-inline:4px}
 
+.shelves{display:flex;flex-direction:column;gap:34px}
+.shelf{display:flex;flex-direction:column;gap:14px}
+.shelf-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.shelf-head h2{font:400 clamp(19px,4vw,23px)/1.2 var(--f-display);margin:0;text-wrap:balance}
+.shelf-head span{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+.tome{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:26px 18px}
 @media (max-width:480px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 12px}}
 .book{display:flex;flex-direction:column;gap:8px;background:none;border:0;padding:0;text-align:left;cursor:pointer;color:inherit;font:inherit;min-width:0;border-radius:6px}
@@ -100,13 +106,20 @@ img{max-width:100%}
   </header>
   <div class="tools">
     <div class="search"><input id="q" type="search" placeholder="Chercher un titre ou un auteur" aria-label="Chercher"></div>
-    <select id="sort" aria-label="Trier">
+    <select id="sort" aria-label="Affichage">
+      <option value="series">Regroupés par saga</option>
       <option value="added">Ajoutés récemment</option>
       <option value="title">Titre (A–Z)</option>
       <option value="author">Auteur (A–Z)</option>
+      <option value="year">Parution récente</option>
+    </select>
+    <select id="filter" aria-label="Filtrer">
+      <option value="all">Tous les livres</option>
+      <option value="series">Sagas uniquement</option>
+      <option value="single">Hors saga</option>
     </select>
   </div>
-  <main class="grid" id="grid" aria-live="polite"></main>
+  <main class="shelves" id="grid" aria-live="polite"></main>
   <div class="empty" id="empty" hidden></div>
 </div>
 <div class="veil" id="veil" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true"></div></div>
@@ -164,22 +177,52 @@ function coverHTML(b){
   if(list[0]==="api") return ph+`<img alt="" data-id="${esc(b.id)}" data-i="-1" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" onload="coverOk(this)" onerror="nextCover(this)">`;
   return ph+`<img src="${esc(list[0])}" alt="" loading="lazy" referrerpolicy="no-referrer" data-id="${esc(b.id)}" data-i="0" onload="coverOk(this)" onerror="nextCover(this)">`;
 }
-function render(){
-  const q=fold($("#q").value.trim()); const s=$("#sort").value;
-  let list=books.filter(b=>!q||fold(b.title+" "+b.authors+" "+(b.subtitle||"")).includes(q));
-  const coll=new Intl.Collator("fr");
+const coll=new Intl.Collator("fr",{numeric:true});
+const tomeLabel=b=>b.series?(b.seriesNumber?`Tome ${b.seriesNumber}`:"Saga"):"";
+function card(b,showSeries){
+  const t=b.series&&b.seriesNumber?`<span class="tome">${showSeries?esc(b.series)+" · ":""}T${b.seriesNumber}</span>`:(showSeries&&b.series?`<span class="tome">${esc(b.series)}</span>`:"");
+  return `<button class="book" data-id="${esc(b.id)}"><div class="cover">${coverHTML(b)}</div><div class="meta">${t}<b>${esc(b.title)}</b><span>${esc(b.authors)}</span></div></button>`;
+}
+function sortFlat(list,s){
   if(s==="title") list.sort((a,b)=>coll.compare(a.title,b.title));
-  else if(s==="author") list.sort((a,b)=>coll.compare(firstAuthorKey(a.authors),firstAuthorKey(b.authors))||coll.compare(a.title,b.title));
+  else if(s==="author") list.sort((a,b)=>coll.compare(firstAuthorKey(a.authors),firstAuthorKey(b.authors))||coll.compare(a.series||"",b.series||"")||(a.seriesNumber||0)-(b.seriesNumber||0)||coll.compare(a.title,b.title));
+  else if(s==="year") list.sort((a,b)=>(b.year||"").localeCompare(a.year||"")||coll.compare(a.title,b.title));
   else list.sort((a,b)=>(b.addedAt||"").localeCompare(a.addedAt||"")||coll.compare(a.title,b.title));
-  $("#grid").innerHTML=list.map(b=>`<button class="book" data-id="${esc(b.id)}"><div class="cover">${coverHTML(b)}</div><div class="meta"><b>${esc(b.title)}</b><span>${esc(b.authors)}</span></div></button>`).join("");
+  return list;
+}
+function render(){
+  const q=fold($("#q").value.trim()), s=$("#sort").value, f=$("#filter").value;
+  let list=books.filter(b=>!q||fold(b.title+" "+b.authors+" "+(b.subtitle||"")+" "+(b.series||"")).includes(q));
+  const inSaga=b=>b.series&&seriesCount[b.series]>1;
+  if(f==="series") list=list.filter(inSaga); else if(f==="single") list=list.filter(b=>!inSaga(b));
+  let html="";
+  if(s==="series"){
+    const groups={}, singles=[];
+    for(const b of list){ if(b.series&&seriesCount[b.series]>1)(groups[b.series]=groups[b.series]||[]).push(b); else singles.push(b); }
+    const names=Object.keys(groups).sort((a,b)=>coll.compare(a,b));
+    for(const n of names){
+      const g=groups[n].sort((a,b)=>(a.seriesNumber||99)-(b.seriesNumber||99)||(a.year||"").localeCompare(b.year||"")||coll.compare(a.title,b.title));
+      const authors=[...new Set(g.map(b=>(b.authors||"").split(",").length>2?"Luc Ferry et al.":b.authors))].join(" · ");
+      html+=`<section class="shelf"><div class="shelf-head"><h2>${esc(n)}</h2><span>${esc(authors)} · ${g.length} livre${g.length>1?"s":""}</span></div><div class="grid">${g.map(b=>card(b,false)).join("")}</div></section>`;
+    }
+    if(singles.length){
+      sortFlat(singles,"title");
+      html+=`<section class="shelf">${names.length?`<div class="shelf-head"><h2>Livres hors saga</h2><span>${singles.length} livre${singles.length>1?"s":""}</span></div>`:""}<div class="grid">${singles.map(b=>card(b,true)).join("")}</div></section>`;
+    }
+  } else {
+    html=`<div class="grid">${sortFlat(list,s).map(b=>card(b,true)).join("")}</div>`;
+  }
+  $("#grid").innerHTML=html;
   const n=books.length;
-  $("#count").textContent=q?`${list.length} sur ${n} livres`:`${n} livres`;
+  $("#count").textContent=(q||f!=="all")?`${list.length} sur ${n} livres`:`${n} livres`;
   const e=$("#empty"); e.hidden=!!list.length; if(!list.length) e.textContent="Aucun livre ne correspond à cette recherche.";
 }
+let seriesCount={};
 $("#grid").addEventListener("click",e=>{const b=e.target.closest(".book");if(b)showDetail(b.dataset.id)});
 $("#q").addEventListener("input",render);
-$("#sort").addEventListener("change",()=>{render();try{localStorage.setItem("sort",$("#sort").value)}catch(e){}});
-try{const s=localStorage.getItem("sort");if(s)$("#sort").value=s}catch(e){}
+$("#sort").addEventListener("change",()=>{render();try{localStorage.setItem("view",$("#sort").value)}catch(e){}});
+$("#filter").addEventListener("change",render);
+try{const s=localStorage.getItem("view");if(s)$("#sort").value=s}catch(e){}
 
 function openSheet(html){$("#sheet").innerHTML=html;$("#veil").hidden=false;document.body.style.overflow="hidden";$("#sheet").scrollTop=0}
 function closeSheet(){$("#veil").hidden=true;document.body.style.overflow="";openId=null;if(location.hash)history.replaceState(null,"",location.pathname)}
@@ -198,6 +241,7 @@ function showDetail(id){
       <h2>${esc(b.title)}</h2>
       ${b.subtitle?`<p class="by" style="margin-bottom:4px">${esc(b.subtitle)}</p>`:""}
       <p class="by">${esc(b.authors)}</p>
+      ${b.series?`<p class="by" style="margin-top:-6px"><span class="tome">${esc(b.series)}${b.seriesNumber?" · tome "+b.seriesNumber:""}</span></p>`:""}
       ${facts.length?`<ul class="facts">${facts.map(f=>`<li>${esc(f)}</li>`).join("")}</ul>`:""}
       <div class="links">
         ${b.isbn?`<span class="notice">ISBN ${esc(b.isbn)}</span>`:""}
@@ -210,7 +254,7 @@ function showDetail(id){
 }
 
 fetch("books.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{
-  books=d; render();
+  books=d; seriesCount={}; for(const b of books) if(b.series) seriesCount[b.series]=(seriesCount[b.series]||0)+1; render();
   const h=location.hash.slice(1); if(h) showDetail(h);
 }).catch(()=>{$("#count").textContent="";const e=$("#empty");e.hidden=false;e.textContent="La liste n'a pas pu être chargée. Rechargez la page."});
 </script>
