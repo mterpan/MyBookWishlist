@@ -49,6 +49,7 @@ button.danger{color:var(--danger);border-color:transparent;background:transparen
 .shelf{display:flex;flex-direction:column;gap:14px}
 .shelf-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;border-bottom:1px solid var(--line);padding-bottom:8px}
 .shelf-head h2{font:400 clamp(19px,4vw,23px)/1.2 var(--f-display);margin:0;text-wrap:balance}
+.fav{font-style:normal;font-size:12px;font-weight:600;color:var(--accent-ink);background:var(--accent);border-radius:999px;padding:2px 9px;letter-spacing:.02em}
 .shelf-head span{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
 .tome{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:26px 18px}
@@ -226,11 +227,14 @@ function card(b,showSeries){
   const t=b.series&&b.seriesNumber?`<span class="tome">${showSeries?esc(b.series)+" · ":""}T${b.seriesNumber}</span>`:(showSeries&&b.series?`<span class="tome">${esc(b.series)}</span>`:"");
   return `<button class="book" data-id="${esc(b.id)}"><div class="cover">${coverHTML(b)}</div><div class="meta">${t}<b>${esc(b.title)}</b><span>${esc(b.authors)}</span></div></button>`;
 }
+let featured=[];
+const rank=b=>{const i=featured.indexOf(b.series);return i<0?999:i};
 function sortFlat(list,s){
   if(s==="title") list.sort((a,b)=>coll.compare(a.title,b.title));
   else if(s==="author") list.sort((a,b)=>coll.compare(firstAuthorKey(a.authors),firstAuthorKey(b.authors))||coll.compare(a.series||"",b.series||"")||(a.seriesNumber||0)-(b.seriesNumber||0)||coll.compare(a.title,b.title));
   else if(s==="year") list.sort((a,b)=>(b.year||"").localeCompare(a.year||"")||coll.compare(a.title,b.title));
   else list.sort((a,b)=>(b.addedAt||"").localeCompare(a.addedAt||"")||coll.compare(a.title,b.title));
+  list.sort((a,b)=>rank(a)-rank(b));
   return list;
 }
 function render(){
@@ -242,11 +246,11 @@ function render(){
   if(s==="series"){
     const groups={}, singles=[];
     for(const b of list){ if(b.series&&seriesCount[b.series]>1)(groups[b.series]=groups[b.series]||[]).push(b); else singles.push(b); }
-    const names=Object.keys(groups).sort((a,b)=>coll.compare(a,b));
+    const names=Object.keys(groups).sort((a,b)=>rank({series:a})-rank({series:b})||coll.compare(a,b));
     for(const n of names){
       const g=groups[n].sort((a,b)=>(a.seriesNumber||99)-(b.seriesNumber||99)||(a.year||"").localeCompare(b.year||"")||coll.compare(a.title,b.title));
       const authors=[...new Set(g.map(b=>(b.authors||"").split(",").length>2?"Luc Ferry et al.":b.authors))].join(" · ");
-      html+=`<section class="shelf"><div class="shelf-head"><h2>${esc(n)}</h2><span>${esc(authors)} · ${g.length} livre${g.length>1?"s":""}</span></div><div class="grid">${g.map(b=>card(b,false)).join("")}</div></section>`;
+      html+=`<section class="shelf"><div class="shelf-head"><h2>${esc(n)}</h2>${featured.includes(n)?`<em class="fav">★ Coup de cœur</em>`:""}<span>${esc(authors)} · ${g.length} livre${g.length>1?"s":""}</span></div><div class="grid">${g.map(b=>card(b,false)).join("")}</div></section>`;
     }
     if(singles.length){
       sortFlat(singles,"title");
@@ -305,7 +309,8 @@ function showDetail(id){
   $("#close").onclick=closeSheet;
 }
 
-Promise.all([fetch(DATA,{cache:"no-cache"}).then(r=>r.json()),fetch("covers/index.json",{cache:"no-cache"}).then(r=>r.ok?r.json():{}).catch(()=>({}))]).then(([d,m])=>{
+Promise.all([fetch(DATA,{cache:"no-cache"}).then(r=>r.json()),fetch("covers/index.json",{cache:"no-cache"}).then(r=>r.ok?r.json():{}).catch(()=>({})),fetch("featured.json",{cache:"no-cache"}).then(r=>r.ok?r.json():{}).catch(()=>({}))]).then(([d,m,fe])=>{
+  featured=(fe&&fe.series)||[];
   local={}; for(const k in (m||{})) local[k]=m[k];
   books=d; seriesCount={}; for(const b of books) if(b.series) seriesCount[b.series]=(seriesCount[b.series]||0)+1; render();
   const h=location.hash.slice(1); if(h) showDetail(h);
