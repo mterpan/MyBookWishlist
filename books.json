@@ -1,5 +1,26 @@
 [
  {
+  "addedAt": "2026-10-25",
+  "authors": "Robert Louis Stevenson",
+  "cover": "https://www.librest.com/cache/img/livres/004/9782080499004.jpg",
+  "covers": [
+   "https://media.e.leclerc/9782080499004_1?fit=fit&op_sharpen=1&resmode=bilin&fmt=webP&qlt=85&trim=0.5%2Cwhites&wid=450&hei=450",
+   "https://images-na.ssl-images-amazon.com/images/P/2080499005.01.LZZZZZZZ.jpg"
+  ],
+  "isbn": "9782080499004",
+  "link": "https://www.flammarion-jeunesse.fr/lile-au-tresor/9782080499004",
+  "pages": 416,
+  "publisher": "Flammarion Jeunesse",
+  "subtitle": "",
+  "synopsis": "Jim Hawkins, douze ans, met la main sur la carte d'un trésor caché sur une île lointaine. Il embarque à bord de l'Hispaniola, où il croise le chemin de l'inquiétant Long John Silver.\n\nCette édition de la collection des classiques illustrés MinaLima est entièrement mise en images et animée par le studio, avec des éléments à manipuler et des pop-up.",
+  "title": "L'Île au trésor",
+  "year": "2026",
+  "id": "ile-au-tresor-minalima",
+  "gid": "",
+  "series": "Éditions MinaLima",
+  "seriesNumber": null
+ },
+ {
   "addedAt": "2026-08-09",
   "authors": "Céline De Clairval, Viviane De Clairval",
   "isbn": "9782900782132",

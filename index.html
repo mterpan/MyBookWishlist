@@ -245,7 +245,7 @@ function showDetail(id){
       ${facts.length?`<ul class="facts">${facts.map(f=>`<li>${esc(f)}</li>`).join("")}</ul>`:""}
       <div class="links">
         ${b.isbn?`<span class="notice">ISBN ${esc(b.isbn)}</span>`:""}
-        ${b.link?`<a href="${esc(b.link)}" target="_blank" rel="noopener">Voir sur Google Livres</a>`:""}
+        ${b.link?`<a href="${esc(b.link)}" target="_blank" rel="noopener">${b.link.includes("google")?"Voir sur Google Livres":"Voir la fiche éditeur"}</a>`:""}
       </div>
     </div>
     <div class="syn"><p class="label">Résumé</p>${syn}</div>
