@@ -1,27 +1,27 @@
 {
  "series": {
   "P'tit Loup": {
-   "checkedAt": "2026-10-25",
+   "checkedAt": "2026-11-01",
    "about": "Les petites histoires du quotidien de P'tit Loup, pour les tout-petits : le pot, le dodo, les émotions, la famille, les premières fois. Albums cartonnés, collection Auzou éveil."
   },
   "Les émotions de Gaston": {
-   "checkedAt": "2026-10-25",
+   "checkedAt": "2026-11-01",
    "about": "Gaston, la licorne à la crinière arc-en-ciel, apprend à reconnaître et à apaiser ses émotions. Chaque petit album cartonné aborde une émotion et propose un exercice simple pour retrouver le calme."
   },
   "Azuro": {
-   "checkedAt": "2026-10-25",
+   "checkedAt": "2026-11-01",
    "about": "Les aventures d'Azuro, un petit dragon bleu au grand cœur, et de ses amis, dans un monde de chevaliers, de fées et de créatures magiques."
   },
   "Bluey": {
-   "checkedAt": "2026-10-25",
+   "checkedAt": "2026-11-01",
    "about": "Les albums tirés du dessin animé Bluey : la petite chienne Bluey, sa sœur Bingo et leurs parents inventent des jeux à partir du quotidien."
   },
   "Les Histoires de Flash McQueen": {
-   "checkedAt": "2026-10-25",
+   "checkedAt": "2026-11-01",
    "about": "De courtes histoires inédites avec Flash McQueen et ses amis de Radiator Springs, tirées de l'univers Cars. Petits albums numérotés."
   },
   "La Pelleteuse": {
-   "checkedAt": "2026-10-25",
+   "checkedAt": "2026-11-01",
    "about": "Une petite pelleteuse au grand cœur, sur son chantier, découvre l'amitié et la douceur au fil des saisons. Albums illustrés de Joseph Kuefler."
   }
  },
@@ -1424,6 +1424,21 @@
    "gid": "",
    "cover": "",
    "coverQuery": "Azuro, un cadeau magique pour maman Souillé"
+  },
+  {
+   "id": "azuro-azuro-et-le-dragon-de-noel",
+   "title": "Azuro et le dragon de Noël",
+   "authors": "Olivier Souillé, Laurent Souillé, Jérémie Fleury",
+   "publisher": "Auzou",
+   "series": "Azuro",
+   "seriesNumber": null,
+   "isbn": "9791039577687",
+   "year": "2026",
+   "synopsis": "Une nouvelle aventure d'Azuro et de la Brigade des Dragons, placée sous le signe de Noël. Album de Noël 2026 (date de parution exacte non précisée par les libraires).",
+   "addedAt": "2026-11-01",
+   "gid": "",
+   "cover": "",
+   "coverQuery": "Azuro et le dragon de Noël Souillé"
   },
   {
    "id": "bluey-papa-robot",
