@@ -119,6 +119,41 @@ for name, s in SERIES.items():
             b["coverQuery"] = f"{s['qprefix']} {title} {s['qkey']}".strip()
             books.append(b)
 
+# Livres hors série ajoutés à la main (dates fixes)
+STANDALONE = [
+ {
+  "id": "chevalier-chouette",
+  "title": "Chevalier Chouette",
+  "authors": "Christopher Denise",
+  "publisher": "L'École des loisirs (Kaléidoscope)",
+  "series": None,
+  "seriesNumber": None,
+  "isbn": "9782211335713",
+  "year": "2024",
+  "addedAt": "2026-11-02",
+  "gid": "",
+  "cover": "",
+  "coverQuery": "Chevalier Chouette Christopher Denise",
+  "synopsis": "Une petite chouette rêve de devenir chevalier. Admise à l'école de chevalerie, elle monte la garde la nuit et doit affronter un dragon affamé, avec plus d'astuce et de gentillesse que de force.\n\nUn album sur la persévérance et la bravoure des plus petits."
+ },
+ {
+  "id": "mon-amour-desbordes",
+  "title": "Mon amour",
+  "authors": "Astrid Desbordes, Pauline Martin",
+  "publisher": "Albin Michel Jeunesse",
+  "series": None,
+  "seriesNumber": None,
+  "isbn": "9782226315243",
+  "year": "2015",
+  "addedAt": "2026-11-02",
+  "gid": "",
+  "cover": "",
+  "coverQuery": "Mon amour Astrid Desbordes Pauline Martin",
+  "synopsis": "Archibald demande à sa maman si elle l'aimera toute la vie. Elle lui répond par une série de situations opposées, sage ou en colère, près ou loin, pour lui montrer que son amour ne change jamais.\n\nUn album très tendre sur l'amour inconditionnel."
+ }
+]
+books += STANDALONE
+
 ISBN = json.load(open("tools/isbn.json"))
 for b in books:
     if not b.get("isbn") and b["title"] in ISBN:
