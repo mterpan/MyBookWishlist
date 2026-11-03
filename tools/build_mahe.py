@@ -126,8 +126,8 @@ STANDALONE = [
   "title": "Chevalier Chouette",
   "authors": "Christopher Denise",
   "publisher": "L'École des loisirs (Kaléidoscope)",
-  "series": None,
-  "seriesNumber": None,
+  "series": "Chevalier Chouette",
+  "seriesNumber": 1,
   "isbn": "9782211335713",
   "year": "2024",
   "addedAt": "2026-11-02",
@@ -150,9 +150,40 @@ STANDALONE = [
   "cover": "",
   "coverQuery": "Mon amour Astrid Desbordes Pauline Martin",
   "synopsis": "Archibald demande à sa maman si elle l'aimera toute la vie. Elle lui répond par une série de situations opposées, sage ou en colère, près ou loin, pour lui montrer que son amour ne change jamais.\n\nUn album très tendre sur l'amour inconditionnel."
+ },
+ {
+  "id": "chevalier-chouette-petite-oiselle",
+  "title": "Chevalier Chouette et Petite Oiselle",
+  "authors": "Christopher Denise",
+  "publisher": "L'École des loisirs (Kaléidoscope)",
+  "series": "Chevalier Chouette",
+  "seriesNumber": 2,
+  "isbn": "9782378882839",
+  "year": "2025",
+  "addedAt": "2026-11-03",
+  "gid": "",
+  "cover": "",
+  "coverQuery": "Chevalier Chouette et Petite Oiselle Christopher Denise",
+  "synopsis": "Chevalier Chouette, capitaine de la garde de nuit, suit une routine bien réglée : il veille sur le château toute la nuit et se repose le matin. Jusqu'au jour où une petite oiselle vient bousculer ses habitudes… et lui prouver qu'on a toujours besoin d'un plus petit que soi."
+ },
+ {
+  "id": "chevalier-chouette-prepare-noel",
+  "title": "Chevalier Chouette prépare Noël",
+  "authors": "Christopher Denise",
+  "publisher": "Kaléidoscope",
+  "series": "Chevalier Chouette",
+  "seriesNumber": 3,
+  "isbn": "9782378883126",
+  "year": "2025",
+  "addedAt": "2026-11-03",
+  "gid": "",
+  "cover": "",
+  "coverQuery": "Chevalier Chouette prépare Noël Christopher Denise",
+  "synopsis": "Chevalier Chouette et Petite Oiselle attendent Noël avec impatience. Le jeune lecteur les aide à tout préparer pour la fête."
  }
 ]
 books += STANDALONE
+series_meta["Chevalier Chouette"] = {"checkedAt": "2026-11-03", "about": "Les aventures d'une petite chouette devenue chevalier, qui veille sur le château la nuit et règle les problèmes avec astuce et gentillesse plutôt qu'avec la force. Albums de Christopher Denise, aux illustrations dorées et nocturnes."}
 
 ISBN = json.load(open("tools/isbn.json"))
 for b in books:
