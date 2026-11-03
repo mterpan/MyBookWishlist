@@ -290,11 +290,11 @@ function render(){
       }
       secs.push({r:rank({series:n}),h:`<section class="shelf"><div class="shelf-head"><h2>${esc(n)}</h2><span>${esc(authors)} · ${status}${checked}</span></div>${note}${body}</section>`});
     }
-    html+=secs.map(x=>x.h).join("");
     if(singles.length){
       sortFlat(singles,"title");
       html+=`<section class="shelf">${names.length?`<div class="shelf-head"><h2>Autres livres</h2><span>${singles.length} livre${singles.length>1?"s":""}</span></div>`:""}<div class="grid">${singles.map(b=>card(b,true)).join("")}</div></section>`;
     }
+    html+=secs.map(x=>x.h).join("");
   } else {
     const list=sortFlat((all?hits:wished).slice(),s);
     html=list.length?`<div class="grid">${list.map(b=>card(b,true)).join("")}</div>`:"";
