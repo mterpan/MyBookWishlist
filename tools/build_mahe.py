@@ -8,31 +8,6 @@ def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s).strip("-")[:60]
 
 SERIES = {
-    "P'tit Loup": dict(
-        qprefix="", qkey="Lallemand",
-        authors="Orianne Lallemand, Éléonore Thuillier", publisher="Auzou",
-        about="Les petites histoires du quotidien de P'tit Loup, pour les tout-petits : le pot, le dodo, les émotions, la famille, les premières fois. Albums cartonnés, collection Auzou éveil.",
-        owned=["P'tit Loup aime sa mamie", "P'tit Loup ne dort pas à la maison", "P'tit Loup va sur le pot",
-               "P'tit Loup et la chasse aux œufs de Pâques", "P'tit Loup et les émotions",
-               "P'tit Loup aime les bébés animaux", "P'tit Loup au parc animalier", "P'tit Loup se balade en forêt"],
-        wanted=["P'tit Loup rentre à l'école", "P'tit Loup aime son doudou", "P'tit Loup a peur du noir",
-                "P'tit Loup prépare Noël", "P'tit Loup n'aime que les pâtes", "P'tit Loup dit toujours non",
-                "P'tit Loup a un bobo", "P'tit Loup part en vacances", "P'tit Loup ne veut pas partager",
-                "P'tit Loup aime sa nounou", "P'tit Loup s'habille tout seul", "Au dodo, P'tit Loup !",
-                "P'tit Loup fait une colère", "P'tit Loup part en voyage", "P'tit Loup apprend à jardiner",
-                "P'tit Loup est le roi de la galette", "P'tit Loup fête son anniversaire", "P'tit Loup va chez le docteur",
-                "P'tit Loup fait du ski", "P'tit Loup se lave tout seul", "P'tit Loup veut être le chef",
-                "P'tit Loup ne veut pas dormir", "P'tit Loup aime sa maman", "P'tit Loup n'a plus besoin de tétine",
-                "P'tit Loup va chez papi et mamie", "P'tit Loup aime son papa", "P'tit Loup aime sa maîtresse",
-                "P'tit Loup ne veut pas ranger", "P'tit Loup aime le Père Noël", "P'tit Loup fait des bêtises",
-                "P'tit Loup est poli", "P'tit Loup se déguise", "P'tit Loup veut devenir pompier",
-                "P'tit Loup ne veut pas aller à l'école", "P'tit Loup visite Paris", "P'tit Loup fête Halloween",
-                "P'tit Loup aime les livres", "P'tit Loup fait des crêpes",
-                "P'tit Loup à la piscine", "P'tit Loup ne met plus de couches", "P'tit Loup a un animal de compagnie",
-                "P'tit Loup passe une journée sans écran", "P'tit Loup apprend à s'habiller", "P'tit Loup attend le Père Noël",
-                "P'tit Loup aime l'école", "P'tit Loup à la ferme", "P'tit Loup va à la plage", "P'tit Loup veut tout faire comme un grand",
-                ("P'tit Loup adore les dinosaures", "9791039577403", "2026")],
-    ),
     "Les émotions de Gaston": dict(
         qprefix="Gaston", qkey="Chien Chow Chine",
         authors="Aurélie Chien Chow Chine", publisher="Hachette Enfants",
